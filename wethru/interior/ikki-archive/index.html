@@ -34,7 +34,7 @@ const CONFIG = {
     }
   },
 
-  intro: "공간 디자이너 출신이 직접 설계하고 시공합니다. 시공 뒤 관리도 맡습니다. 송정동 카페 한가운데 큰 나무도, 울산 어느 집 수납장 밑 작은 이끼정원도 그렇게 만들었습니다.",
+  intro: "공간 디자이너 출신이 직접 설계하고 시공합니다.\n송정동 카페 한가운데 큰 나무도, 울산 어느 집\n수납장 밑 작은 이끼정원도 그렇게 만들었습니다.",
   facts: [["작업 지역", "부산, 경남, 울산"], ["시공 전", "3D 시안으로 먼저 맞춰 봅니다"], ["수상", "2017 한국공간디자인 공모전 동상"]],
 
   chapter: {
@@ -268,7 +268,7 @@ html[lang="en"] .hcopy h1{font-size:clamp(40px,10.6vw,104px)}
 
 /* ---------- intro ---------- */
 .intro{padding:88px var(--g) 80px}
-.intro p.lead{margin:0;text-wrap:pretty;font-family:var(--kr-l);font-weight:var(--kr-lw);font-size:24px;line-height:1.66;letter-spacing:var(--kr-lt);max-width:19em}
+.intro p.lead{margin:0;white-space:pre-line;text-wrap:pretty;font-family:var(--kr-l);font-weight:var(--kr-lw);font-size:24px;line-height:1.66;letter-spacing:var(--kr-lt);max-width:19em}
 html[lang="en"] .intro p.lead{letter-spacing:-.01em;line-height:1.5}
 .facts{display:grid;gap:0;margin:48px 0 0;padding:0;border-top:1px solid var(--line)}
 .facts div{display:grid;grid-template-columns:96px 1fr;gap:12px;padding:14px 0;border-bottom:1px solid var(--line)}
@@ -680,7 +680,7 @@ document.addEventListener('DOMContentLoaded', function () {
     const top = topRow.height + (wide ? 4 : 12);
     /* phone: the piece sits above the copy. desktop: it runs the full height on the right and the copy sits beside it */
     const avail = wide ? H - top - 36 : H - top - copy.height - 16;
-    G.ph = Math.max(200, Math.min(avail, (wide ? W * 0.42 : W * 0.8) / P.ratio));
+    G.ph = Math.max(200, Math.min(avail, (wide ? W * 0.48 : W * 0.9) / P.ratio));
     G.pw = G.ph * P.ratio;
     G.px = wide ? Math.min(W - G.pw - W * 0.04, W * 0.68 - G.pw / 2) : (W - G.pw) / 2;
     G.py = top + Math.max(0, (avail - G.ph) * 0.5);
