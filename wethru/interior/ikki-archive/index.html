@@ -27,15 +27,9 @@ const CONFIG = {
     kr: "부산에서 실내조경과 이끼정원, 행잉 작품을 만듭니다.",
     caption: "행잉 작품, 2024",
     post: "https://www.instagram.com/p/DDzKkebPn4x/",
-    cue: "아래로 내리면 작품이 한 층씩 걸립니다",
+    cue: "작품이 위에서 아래로 천천히 완성됩니다",
     piece: {
       ratio: 730 / 938, tip: { x: 45.92, y: 5.4 },
-      layers: [
-        { key: "cone",    src: "assets/hang_cone.webp",    x: 34.26, y: 5.22,  w: 26.28 },
-        { key: "middle",  src: "assets/hang_middle.webp",  x: 27.59, y: 26.27, w: 49.52 },
-        { key: "ring",    src: "assets/hang_ring.webp",    x: 20.46, y: 47.6, w: 66.2 },
-        { key: "strands", src: "assets/hang_strands.webp", x: 22.97, y: 70.34, w: 61.66 }
-      ],
       all: "assets/hang_all.webp"
     }
   },
@@ -67,14 +61,25 @@ const CONFIG = {
     { src: "img/09.jpg", w: 480, h: 640, title: "울산 주거공간",        meta: "2025, 주거", post: "https://www.instagram.com/p/DMUmUskRQpq/", alt: "벽면 수납장 아래에 심은 식물" }
   ],
 
-  howSub: "보통 이 순서로 진행합니다.",
-  process: [
-    { name: "상담",    desc: "전화나 인스타그램 DM으로 연락 주세요." },
-    { name: "3D 시안", desc: "시공 전에 3D로 먼저 맞춰 봅니다. 그래야 현장에서 고칠 일이 줄어듭니다." },
-    { name: "시공",    desc: "식물과 이끼, 돌을 현장에서 직접 심고 놓습니다." },
-    { name: "관리",    desc: "원하시면 시공 뒤 유지관리와 보수도 맡습니다." }
+  howSub: "현장 정보와 참고 자료를 확인한 뒤, 디자인 컨설팅부터 시공까지 순서대로 진행합니다.",
+  inquiryProcess: [
+    { name: "현장 위치 및 상세 규모", desc: "현장 위치와 공간의 상세 규모를 알려 주세요." },
+    { name: "CAD 도면 및 SketchUp 파일", desc: "도면이나 SketchUp 파일을 보내주시면 더 자세한 상담이 가능합니다." },
+    { name: "현재 현장 사진", desc: "현재 상태를 파악할 수 있도록 다양한 각도에서 촬영한 사진을 보내 주세요." },
+    { name: "레퍼런스 자료", desc: "현장에 적용하고 싶은 사진, 동영상, 손그림 등 참고 자료를 보내 주세요." },
+    { name: "수용 가능한 예산", desc: "예산 범위에 맞춰 디자인 방향과 시공 범위를 함께 조율합니다." }
   ],
-  services: ["주거공간 플랜테리어", "카페와 매장 실내조경", "이끼정원", "행잉 작품", "조화 인테리어", "사무실과 학원", "전시와 팝업", "정원 유지관리"],
+  buildProcess: [
+    { name: "시공 의뢰", desc: "문의 내용을 바탕으로 프로젝트 범위와 요청 사항을 확인합니다." },
+    { name: "디자인 컨설팅 및 현장 미팅", desc: "필요한 경우 현장을 확인하고 공간에 맞는 디자인 방향을 협의합니다." },
+    { name: "제안서 및 견적서 안내", desc: "디자인 제안과 시공 범위, 예상 비용을 안내합니다." },
+    { name: "계약 및 시공 일정 조율", desc: "계약 후 자재와 현장 여건에 맞춰 시공 일정을 확정합니다." },
+    { name: "시공", desc: "협의한 디자인과 범위에 맞춰 현장에서 시공을 진행합니다." }
+  ],
+  services: [
+    { name: "실내 플랜테리어", items: ["주거공간", "상업공간", "전시와 팝업", "사무공간", "이끼정원", "행잉 인스톨레이션 (실내·실외)"] },
+    { name: "실외 조경", items: ["숙박시설·스테이", "카페 외부 조경", "기타 외부 조경"] }
+  ],
   credits: [                                   // client: 게시물 캡션의 Client 표기. url: 캡션에 적힌 계정만. post: 근거 게시물
     { client: "(주)아르텍",     project: "송정동 대형 카페",          post: "https://www.instagram.com/p/DWEDUs2k0P_/" },
     { client: "식군스인테리어", project: "경남 양산 주거공간 외 2곳", post: "https://www.instagram.com/p/DSuJ24hkyQN/" },
@@ -83,7 +88,7 @@ const CONFIG = {
     { client: "designfocus", url: "https://www.instagram.com/designfocus_official/", project: "동래구 카페",      post: "https://www.instagram.com/p/DJlnCpVxS7d/" }
   ],
   reviews: [],
-  spaceTypes: ["주거", "카페·매장", "사무실·학원", "전시·팝업", "야외·정원"],
+  spaceTypes: ["주거공간", "상업공간", "전시·팝업", "사무공간", "이끼정원", "행잉 인스톨레이션", "실외 조경"],
   bizInfo: { owner: "", regNo: "" },
 
   en: {
@@ -94,7 +99,7 @@ const CONFIG = {
       headline: ["We bring the", "forest inside"],
       kr: "We build indoor landscapes, moss gardens and hanging installations in Busan.",
       caption: "Hanging piece, 2024",
-      cue: "Scroll down and the piece hangs, layer by layer"
+      cue: "The piece slowly reveals itself from top to bottom"
     },
     intro: "A former space designer plans each project, and we build it ourselves. We look after it afterward too. The big tree in the middle of a Songjeong-dong cafe and a small moss garden under a cabinet in an Ulsan home were both made this way.",
     facts: [["Area", "Busan, South Gyeongsang, Ulsan"], ["Before building", "We work it out in 3D first"], ["Award", "Bronze, 2017 Korea Space Design Competition"]],
@@ -118,14 +123,25 @@ const CONFIG = {
       { title: "EXCO, Daegu",          meta: "2025, On site",    alt: "Ferns being planted into planters at the exhibition hall" },
       { title: "Ulsan home",           meta: "2025, Home",       alt: "Plants set under a wall-mounted storage cabinet" }
     ],
-    howSub: "Most projects go like this.",
-    process: [
-      { name: "Talk",    desc: "Call us or send an Instagram DM." },
-      { name: "3D plan", desc: "Before building, we work it out in 3D. That way there is less to fix on site." },
-      { name: "Build",   desc: "We set the plants, moss and stones on site ourselves." },
-      { name: "Care",    desc: "If you want, we keep looking after it, including maintenance and repairs." }
+    howSub: "We review the site information and references first, then move from design consultation to installation.",
+    inquiryProcess: [
+      { name: "Site location and size", desc: "Tell us where the site is and the detailed size of the space." },
+      { name: "CAD drawings and SketchUp files", desc: "Drawings or SketchUp files help us give you a more detailed consultation." },
+      { name: "Current site photos", desc: "Send photos from several angles so we can understand the existing conditions." },
+      { name: "Reference materials", desc: "Share photos, videos, sketches or other references you want to use for the space." },
+      { name: "Available budget", desc: "We adjust the design direction and construction scope to fit the budget." }
     ],
-    services: ["Plants for homes", "Indoor landscaping for cafes and shops", "Moss gardens", "Hanging installations", "Artificial plant styling", "Offices and academies", "Exhibitions and pop-ups", "Garden maintenance"],
+    buildProcess: [
+      { name: "Project request", desc: "We confirm the scope and requirements based on your inquiry." },
+      { name: "Design consultation and site meeting", desc: "When needed, we visit the site and discuss a design direction that fits the space." },
+      { name: "Proposal and quotation", desc: "We present the design proposal, work scope and estimated cost." },
+      { name: "Contract and schedule", desc: "After the contract, we finalize the construction schedule around materials and site conditions." },
+      { name: "Installation", desc: "We carry out the work on site according to the agreed design and scope." }
+    ],
+    services: [
+      { name: "Indoor plant design", items: ["Residential spaces", "Commercial spaces", "Exhibitions and pop-ups", "Offices", "Moss gardens", "Hanging installations (indoor and outdoor)"] },
+      { name: "Outdoor landscaping", items: ["Accommodation and stays", "Cafe exterior landscaping", "Other outdoor landscaping"] }
+    ],
     credits: [
       { project: "Large cafe, Songjeong-dong" },
       { project: "Yangsan home and 2 more" },
@@ -133,7 +149,7 @@ const CONFIG = {
       { project: "EXCO booth, Daegu" },
       { project: "Dongnae-gu cafe" }
     ],
-    spaceTypes: ["Home", "Cafe or shop", "Office or academy", "Exhibition or pop-up", "Outdoor or garden"]
+    spaceTypes: ["Residential", "Commercial", "Exhibition or pop-up", "Office", "Moss garden", "Hanging installation", "Outdoor landscaping"]
   }
 };
 
@@ -231,9 +247,7 @@ svg.ar{width:.8em;height:.8em;flex:none;margin-left:.22em;vertical-align:-.04em;
 .hcall{display:inline-flex;align-items:center;gap:7px;height:36px;padding:0 14px;border-radius:999px;box-shadow:inset 0 0 0 1px var(--bone-3);font-size:13px;font-weight:500;white-space:nowrap}
 .wire{position:absolute;top:0;width:1px;z-index:2;background:linear-gradient(rgba(236,233,225,0),rgba(236,233,225,.5) 30%,rgba(236,233,225,.5));transform-origin:50% 0}
 .piece{position:absolute;z-index:3}
-.piece .ghost{position:absolute;inset:0;width:100%;height:100%;opacity:0;filter:grayscale(1) brightness(2.6) contrast(.8);pointer-events:none}
-.piece .layer{position:absolute;height:auto;transform-origin:50% 0;will-change:transform;filter:drop-shadow(0 22px 30px rgba(0,0,0,.45))}
-.piece .layer.strands{--rv:130%;-webkit-mask-image:linear-gradient(#000 calc(var(--rv) - 30%),transparent var(--rv));mask-image:linear-gradient(#000 calc(var(--rv) - 30%),transparent var(--rv))}
+.piece .full-piece{position:absolute;inset:0;width:100%;height:100%;object-fit:contain;opacity:1;filter:drop-shadow(0 22px 30px rgba(0,0,0,.45));pointer-events:none;will-change:clip-path,opacity,transform}
 .pcap{position:absolute;z-index:4;font-size:11.5px;line-height:1.45;color:var(--bone-2)}
 .pcap::before{content:"";display:block;width:18px;height:1px;margin:0 0 6px;background:var(--bone-3)}
 .pcap a{display:inline-block;padding:4px 0 8px}
@@ -251,7 +265,6 @@ html[lang="en"] .hcopy h1{font-size:clamp(40px,10.6vw,104px)}
 .cue i{display:block;width:1px;height:30px;margin:0 auto 12px;background:var(--bone-2);transform-origin:50% 0;animation:drip 2.2s cubic-bezier(.6,0,.3,1) infinite}
 @keyframes drip{0%{transform:scaleY(0);opacity:1}60%{transform:scaleY(1);opacity:1}100%{transform:scaleY(1);opacity:0}}
 .anim .cue{opacity:1}
-.anim .piece .ghost{opacity:.05}
 
 /* ---------- intro ---------- */
 .intro{padding:88px var(--g) 80px}
@@ -302,19 +315,23 @@ html[lang="en"] .night blockquote p{letter-spacing:-.01em}
 .how{padding:80px var(--g) 72px;border-top:1px solid var(--line)}
 .how h2{margin:0 0 8px;font-size:34px}
 .how .sub{margin:0 0 40px;font-size:14px;color:var(--ink-2)}
-.steps{position:relative;margin:0;padding:0 0 0 28px;list-style:none}
-.steps::before{content:"";position:absolute;left:5px;top:-30px;bottom:14px;width:1px;background:linear-gradient(rgba(21,24,19,0),rgba(21,24,19,.35) 30px)}
-.steps li{position:relative;padding:0 0 30px}
+.process-groups{display:grid;gap:52px}
+.process-block > h3{margin:0 0 26px;font-family:var(--kr);font-weight:var(--kr-sw);font-size:22px;letter-spacing:var(--kr-st)}
+.steps{counter-reset:step;position:relative;margin:0;padding:0 0 0 34px;list-style:none}
+.steps::before{content:"";position:absolute;left:10px;top:13px;bottom:14px;width:1px;background:rgba(21,24,19,.28)}
+.steps li{counter-increment:step;position:relative;padding:0 0 28px}
 .steps li:last-child{padding-bottom:0}
-.steps li::before{content:"";position:absolute;left:-28px;top:9px;width:11px;height:11px;border-radius:50%;background:var(--paper);box-shadow:inset 0 0 0 1.5px var(--ink)}
-.steps h3{margin:0 0 4px;font-family:var(--kr);font-weight:var(--kr-sw);font-size:21px;letter-spacing:var(--kr-st)}
-.steps p{margin:0;font-size:14px;color:var(--ink-2);max-width:24em}
+.steps li::before{content:counter(step);position:absolute;left:-34px;top:1px;display:grid;place-items:center;width:21px;height:21px;border-radius:50%;background:var(--paper);box-shadow:inset 0 0 0 1px var(--ink);font-family:var(--ui);font-size:10px;line-height:1}
+.steps h4{margin:0 0 5px;font-family:var(--kr);font-weight:var(--kr-sw);font-size:19px;letter-spacing:var(--kr-st)}
+.steps p{margin:0;font-size:14px;line-height:1.65;color:var(--ink-2);max-width:34em}
 
 /* ---------- scope ---------- */
 .scope{padding:72px var(--g) 96px;border-top:1px solid var(--line)}
 .scope h2{margin:0 0 22px;font-size:34px}
-.svc{margin:0;padding:0;list-style:none;border-top:1px solid var(--line)}
-.svc li{padding:13px 0;border-bottom:1px solid var(--line);font-family:var(--kr);font-weight:var(--kr-sw);font-size:17px;letter-spacing:var(--kr-st)}
+.svc{display:grid;gap:34px}
+.svc-group h3{margin:0 0 12px;font-family:var(--kr);font-weight:var(--kr-sw);font-size:22px;letter-spacing:var(--kr-st)}
+.svc-group ul{margin:0;padding:0;list-style:none;border-top:1px solid var(--line)}
+.svc-group li{padding:13px 0;border-bottom:1px solid var(--line);font-family:var(--kr);font-weight:var(--kr-sw);font-size:17px;letter-spacing:var(--kr-st)}
 .clients{margin-top:56px}
 .clients ul{margin:0;padding:0;list-style:none}
 .clients li{display:flex;justify-content:space-between;align-items:baseline;gap:14px;padding:12px 0;border-bottom:1px solid var(--line)}
@@ -423,17 +440,20 @@ html[lang="en"] .tel{font-size:clamp(34px,9.6vw,100px)}
   .wk{flex:0 0 clamp(300px,27vw,420px)}
   .track{gap:24px}
   .how{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));column-gap:24px;padding:140px var(--g) 130px}
-  .how header{grid-column:1 / 5}
+  .how header{grid-column:1 / 4}
   .how h2{font-size:clamp(40px,3.6vw,56px)}
-  .steps{grid-column:5 / 13;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));column-gap:24px;padding:34px 0 0}
-  .steps::before{left:0;right:0;top:5px;bottom:auto;width:auto;height:1px;background:linear-gradient(90deg,rgba(21,24,19,.35),rgba(21,24,19,.35) 85%,rgba(21,24,19,0))}
-  .steps li{padding:0}
-  .steps li::before{left:0;top:-34px}
+  .process-groups{grid-column:4 / 13;grid-template-columns:repeat(2,minmax(0,1fr));gap:56px}
+  .process-block > h3{font-size:24px;margin-bottom:30px}
+  .steps{padding-left:38px}
+  .steps li{padding-bottom:30px}
+  .steps li::before{left:-38px}
+  .steps h4{font-size:20px}
   .scope{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));column-gap:24px;padding:130px var(--g) 150px}
   .scope .col1{grid-column:1 / 7}
   .scope .col2{grid-column:8 / 13}
   .scope h2{font-size:clamp(40px,3.6vw,56px)}
-  .svc li{font-size:21px}
+  .svc-group h3{font-size:24px}
+  .svc-group li{font-size:20px}
   .clients{margin-top:0}
   .contact{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));column-gap:24px;padding:140px var(--g) 0}
   .contact .c1{grid-column:1 / 8}
@@ -464,7 +484,7 @@ html[lang="en"] .tel{font-size:clamp(34px,9.6vw,100px)}
       </div>
     </div>
     <span class="wire" id="wire"></span>
-    <div class="piece" id="piece" role="img"><img class="ghost" id="ghost" alt="" aria-hidden="true"></div>
+    <div class="piece" id="piece" role="img"><img class="full-piece" id="ghost" alt="" aria-hidden="true"></div>
     <span class="pcap" id="pcap"></span>
     <div class="hcopy">
       <p class="stamp" id="stamp"></p>
@@ -496,15 +516,24 @@ html[lang="en"] .tel{font-size:clamp(34px,9.6vw,100px)}
     <div class="track" id="track"></div>
   </section>
 
-  <!-- 5. 진행 방식 -->
+  <!-- 5. 문의 및 시공 과정 -->
   <section class="how" id="how" aria-labelledby="how-h">
     <header><h2 class="disp" id="how-h" data-t="howH"></h2><p class="sub" id="how-sub"></p></header>
-    <ol class="steps" id="steps"></ol>
+    <div class="process-groups">
+      <article class="process-block">
+        <h3 data-t="inquiryH"></h3>
+        <ol class="steps" id="inquiry-steps"></ol>
+      </article>
+      <article class="process-block">
+        <h3 data-t="buildH"></h3>
+        <ol class="steps" id="build-steps"></ol>
+      </article>
+    </div>
   </section>
 
   <!-- 하는 일 + 4. 함께한 곳 (후기는 원문이 있을 때만) -->
   <section class="scope" data-t-aria="aScope">
-    <div class="col1"><h2 class="disp" data-t="svcH"></h2><ul class="svc" id="svc"></ul></div>
+    <div class="col1"><h2 class="disp" data-t="svcH"></h2><div class="svc" id="svc"></div></div>
     <div class="col2 clients" id="clients"><h2 class="disp" data-t="clientsH"></h2><ul id="cl"></ul></div>
   </section>
 
@@ -564,7 +593,7 @@ const UI = {
   ko: {
     aHero: '소개', aNav: '바로가기', aIntro: '소개 글', aNight: '대표 작업, 송정동 대형 카페', aScope: '하는 일과 함께한 곳',
     navWorks: '시공 사례', navHow: '진행 과정', navContact: '상담 문의', call: '전화 상담', seeWorks: '시공 사례 보기',
-    langAria: 'English로 보기', howH: '진행 과정', svcH: '하는 일', clientsH: '함께한 곳',
+    langAria: 'English로 보기', howH: '문의 및 시공 과정', inquiryH: '문의 과정', buildH: '시공 과정', svcH: '하는 일', clientsH: '함께한 곳',
     contactH: '상담 문의', contactSub: '어떤 공간인지 알려 주세요. 작은 공간도 괜찮습니다.',
     callNow: '전화 걸기', dm: '인스타그램 DM', kakao: '카카오톡 문의',
     formH: '상담 신청', formP: '남겨 주시면 확인하고 연락드립니다.',
@@ -581,7 +610,7 @@ const UI = {
   en: {
     aHero: 'Introduction', aNav: 'Sections', aIntro: 'About', aNight: 'Featured project, large cafe in Songjeong-dong', aScope: 'Services and clients',
     navWorks: 'Projects', navHow: 'Process', navContact: 'Contact', call: 'Call', seeWorks: 'See projects',
-    langAria: '한국어로 보기', howH: 'Process', svcH: 'What we do', clientsH: 'Worked with',
+    langAria: '한국어로 보기', howH: 'Consultation & installation', inquiryH: 'Before consultation', buildH: 'Installation process', svcH: 'What we do', clientsH: 'Worked with',
     contactH: 'Contact', contactSub: 'Tell us about the space. Small spaces are fine too.',
     callNow: 'Call now', dm: 'Instagram DM', kakao: 'KakaoTalk',
     formH: 'Ask for a consultation', formP: 'Leave your details and we’ll get back to you.',
@@ -632,11 +661,6 @@ document.addEventListener('DOMContentLoaded', function () {
   $('#stamp').innerHTML = '<span></span>';
   $('#h1').innerHTML = CONFIG.hero.headline.map(() => '<span class="ln" aria-hidden="true"><span></span></span>').join('');
   $('#ghost').src = P.all;
-  const layers = P.layers.map((L, i) => {
-    const im = document.createElement('img'); im.className = 'layer ' + L.key; im.alt = ''; im.decoding = 'async'; im.src = L.src;
-    im.style.left = L.x + '%'; im.style.top = L.y + '%'; im.style.width = L.w + '%'; im.style.zIndex = 2 + i;
-    piece.appendChild(im); return im;
-  });
   const ch = CONFIG.chapter, ni = $('#night-img');
   if (ch.src2x) { ni.srcset = ch.src + ' 1080w, ' + ch.src2x + ' 2160w'; ni.sizes = '100vw'; }
   ni.src = ch.src; ni.width = ch.w; ni.height = ch.h;
@@ -718,10 +742,13 @@ document.addEventListener('DOMContentLoaded', function () {
         '<span class="m">' + esc(p.meta) + '</span>' + (p.by ? '<span class="by">' + esc(T.by + p.by) + '</span>' : '');
     });
 
-    /* process, services, clients */
+    /* inquiry process, build process, services, clients */
     $('#how-sub').textContent = C.howSub || '';
-    $('#steps').innerHTML = C.process.map((s) => '<li><h3>' + esc(s.name) + '</h3><p>' + esc(s.desc) + '</p></li>').join('');
-    $('#svc').innerHTML = C.services.map((s) => '<li>' + esc(s) + '</li>').join('');
+    $('#inquiry-steps').innerHTML = C.inquiryProcess.map((s) => '<li><h4>' + esc(s.name) + '</h4><p>' + esc(s.desc) + '</p></li>').join('');
+    $('#build-steps').innerHTML = C.buildProcess.map((s) => '<li><h4>' + esc(s.name) + '</h4><p>' + esc(s.desc) + '</p></li>').join('');
+    $('#svc').innerHTML = C.services.map((g) =>
+      '<section class="svc-group"><h3>' + esc(g.name) + '</h3><ul>' + g.items.map((s) => '<li>' + esc(s) + '</li>').join('') + '</ul></section>'
+    ).join('');
     if (C.credits.length) {
       $('#cl').innerHTML = C.credits.map((c) =>
         '<li>' + (c.url ? ext(c.url, '<span>' + esc(c.client) + '</span>', 'n', c.client + ' Instagram' + T.newTab) : '<b class="n">' + esc(c.client) + '</b>') +
@@ -817,45 +844,47 @@ document.addEventListener('DOMContentLoaded', function () {
   window.addEventListener('resize', layout);
   if (document.fonts && document.fonts.ready) document.fonts.ready.then(() => { layout(); if (window.ScrollTrigger) ScrollTrigger.refresh(); });
 
-  /* assembly (scroll, pinned); reduced motion or no GSAP → the finished scene */
+  /* hero assembles automatically on page load; the artwork is one image, revealed continuously from top to bottom */
   function start() {
-    if (reduce || !window.gsap || !window.ScrollTrigger) return;
-    gsap.registerPlugin(ScrollTrigger);
-    ScrollTrigger.config({ ignoreMobileResize: true });
-    hero.classList.add('anim');
-    const [cone, middle, ring, strands] = layers, lines = [$('#stamp > span')].concat($$('#h1 .ln > span'));
-    const drop = (k) => () => -(G.py + G.ph) * k;
-    gsap.set(lines, { yPercent: 108 }); gsap.set(['#hkr', '#hcta', pcap], { opacity: 0, y: 12 });
-    const tl = gsap.timeline({
-      defaults: { ease: 'none' },
-      scrollTrigger: { trigger: hero, start: 'top top', end: () => '+=' + Math.round(window.innerHeight * 1.8), pin: true, scrub: 0.8,
-        anticipatePin: 1, invalidateOnRefresh: true, onRefresh: (st) => { heroEnd = st.end; onScroll(); } }
-    });
-    tl.to('#cue', { opacity: 0, duration: 0.05 }, 0.01)
-      .fromTo(wire, { scaleY: 0 }, { scaleY: 1, duration: 0.1, ease: 'power1.inOut' }, 0)
-      .fromTo(cone,   { y: drop(1.1), rotate: -6, opacity: 0 }, { y: 0, rotate: 0, opacity: 1, duration: 0.18, ease: 'power2.out' }, 0.06)
-      .to(lines[0], { yPercent: 0, duration: 0.1, ease: 'power3.out' }, 0.18)
-      .fromTo(middle, { y: drop(1.2), rotate: 5,  opacity: 0 }, { y: 0, rotate: 0, opacity: 1, duration: 0.18, ease: 'power2.out' }, 0.24)
-      .to(lines[1], { yPercent: 0, duration: 0.1, ease: 'power3.out' }, 0.36)
-      .fromTo(ring,   { y: drop(1.3), rotate: -3, opacity: 0 }, { y: 0, rotate: 0, opacity: 1, duration: 0.18, ease: 'power2.out' }, 0.42)
-      .to(lines[2], { yPercent: 0, duration: 0.1, ease: 'power3.out' }, 0.54)
-      .fromTo(strands, { '--rv': '0%', y: -10 }, { '--rv': '130%', y: 0, duration: 0.15, ease: 'power1.out' }, 0.6)
-      .to('#ghost', { opacity: 0, duration: 0.08 }, 0.66)
-      .to(['#hkr', '#hcta'], { opacity: 1, y: 0, duration: 0.1, stagger: 0.03, ease: 'power2.out' }, 0.74)
-      .to(pcap, { opacity: 1, y: 0, duration: 0.08 }, 0.78)
-      .to({}, { duration: 0.08 });
-    gsap.fromTo('#night-img', { scale: 1.12 }, { scale: 1, ease: 'none', scrollTrigger: { trigger: '#night', start: 'top bottom', end: 'bottom top', scrub: true } });
-    /* desktop: vertical scroll drives the works track sideways */
-    ScrollTrigger.matchMedia({
-      '(min-width: 900px)': function () {
-        track.style.overflowX = 'hidden';
-        const dist = () => Math.max(0, track.scrollWidth - track.clientWidth);
-        const tw = gsap.to(track.children, { x: () => -dist(), ease: 'none',
-          scrollTrigger: { trigger: '#works', start: 'top top', end: () => '+=' + dist(), pin: true, scrub: 0.6, invalidateOnRefresh: true,
-            onUpdate: (st) => { const k = Math.min(N - 1, Math.round(st.progress * (N - 1))); count.textContent = pad(k + 1) + ' / ' + pad(N); } } });
-        return () => { tw.scrollTrigger && tw.scrollTrigger.kill(); tw.kill(); gsap.set(track.children, { x: 0 }); track.style.overflowX = ''; };
+    const hasGsap = !!window.gsap;
+    const hasScrollTrigger = !!window.ScrollTrigger;
+    if (hasGsap) {
+      hero.classList.add('anim');
+      const lines = [$('#stamp > span')].concat($('#h1 .ln > span'));
+      if (!reduce) {
+        gsap.set(lines, { yPercent: 108 });
+        gsap.set(['#hkr', '#hcta', pcap], { opacity: 0, y: 12 });
+        gsap.set(wire, { scaleY: 0 });
+        gsap.set('#ghost', { clipPath: 'inset(0 0 100% 0)', opacity: 1, y: -10 });
+        const tl = gsap.timeline({ defaults: { ease: 'power2.out' } });
+        tl.to(wire, { scaleY: 1, duration: 0.75, ease: 'power1.inOut' }, 0.05)
+          .to('#ghost', { clipPath: 'inset(0 0 0% 0)', y: 0, duration: 2.5, ease: 'power2.inOut' }, 0.15)
+          .to(lines[0], { yPercent: 0, duration: 0.45, ease: 'power3.out' }, 0.35)
+          .to(lines.slice(1), { yPercent: 0, duration: 0.5, stagger: 0.16, ease: 'power3.out' }, 1.1)
+          .to(['#hkr', '#hcta'], { opacity: 1, y: 0, duration: 0.55, stagger: 0.1 }, 1.85)
+          .to(pcap, { opacity: 1, y: 0, duration: 0.45 }, 2.05)
+          .to('#cue', { opacity: 0, duration: 0.5 }, 3.3);
+      } else {
+        gsap.set([lines, '#hkr', '#hcta', pcap, wire, '#ghost'], { clearProps: 'all' });
       }
-    });
+    }
+
+    if (!reduce && hasGsap && hasScrollTrigger) {
+      gsap.registerPlugin(ScrollTrigger);
+      ScrollTrigger.config({ ignoreMobileResize: true });
+      gsap.fromTo('#night-img', { scale: 1.12 }, { scale: 1, ease: 'none', scrollTrigger: { trigger: '#night', start: 'top bottom', end: 'bottom top', scrub: true } });
+      /* desktop: vertical scroll drives the works track sideways */
+      ScrollTrigger.matchMedia({
+        '(min-width: 900px)': function () {
+          track.style.overflowX = 'hidden';
+          const dist = () => Math.max(0, track.scrollWidth - track.clientWidth);
+          const tw = gsap.to(track.children, { x: () => -dist(), ease: 'none',
+            scrollTrigger: { trigger: '#works', start: 'top top', end: () => '+=' + dist(), pin: true, scrub: 0.6, invalidateOnRefresh: true,
+              onUpdate: (st) => { const k = Math.min(N - 1, Math.round(st.progress * (N - 1))); count.textContent = pad(k + 1) + ' / ' + pad(N); } } });
+          return () => { tw.scrollTrigger && tw.scrollTrigger.kill(); tw.kill(); gsap.set(track.children, { x: 0 }); track.style.overflowX = ''; };
+        }
+      });
+    }
   }
   if (window.gsap && window.ScrollTrigger) start(); else window.addEventListener('load', start);
 });
