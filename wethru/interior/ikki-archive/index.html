@@ -18,7 +18,8 @@ const CONFIG = {
   area: "부산, 경남, 울산",
 
   hero: {
-    lines: ["Plant design,", "landscape design", "& gardening"],   // 업체가 사진마다 찍는 문구
+    stamp: "PLANT DESIGN | LANDSCAPE DESIGN | GARDENING",          // 업체가 사진마다 찍는 문구
+    headline: ["공간에 숲을", "들입니다"],                            // 캡션 "조용히 숲을 들였습니다"에서
     kr: "부산에서 실내조경과 이끼정원, 행잉 작품을 만듭니다.",
     caption: "행잉 작품",
     cue: "내리면 작품이 한 층씩 걸립니다",
@@ -44,7 +45,7 @@ const CONFIG = {
     rows: [["장소", "송정동 대형 카페"], ["시기", "2026년 3월"], ["의뢰", "(주)아르텍"], ["설계와 시공", "ikki archive"]]
   },
 
-  worksTitle: "Selected works",
+  worksTitle: "시공 사례",
   worksKr: "크기와 상관없이 같은 마음으로 만듭니다.",
   works: [
     { src: "img/01.jpg", w: 361, h: 640, title: "동래구 카페",          meta: "2025, 카페", alt: "계단을 따라 흘러내리는 이끼 언덕과 그 아래 자갈 바닥" },
@@ -84,12 +85,9 @@ document.documentElement.classList.add('js');
 <meta name="theme-color" content="#0B0E0A">
 <title>ikki archive | 부산 실내조경, 이끼정원, 행잉 작품</title>
 <meta property="og:title" content="ikki archive">
-<meta property="og:description" content="Plant design, landscape design & gardening. 부산 실내조경, 이끼정원. WeThru 제안 시안">
+<meta property="og:description" content="부산 실내조경, 이끼정원, 행잉 작품. WeThru 제안 시안">
 <meta property="og:image" content="https://ceoys.github.io/wethru/interior/ikki-archive/assets/og.jpg">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%230B0E0A'/%3E%3Ctext x='16' y='23' font-family='Georgia,serif' font-size='19' text-anchor='middle' fill='%23ECE9E1'%3Ei%3C/text%3E%3C/svg%3E">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&display=swap">
 <link rel="stylesheet" href="https://hangeul.pstatic.net/hangeul_static/css/maru-buri.css">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
 <link rel="preload" as="image" href="assets/hang_ring.webp">
@@ -97,7 +95,6 @@ document.documentElement.classList.add('js');
 :root{
   --night:#0B0E0A; --night-2:#141A12; --bone:#ECE9E1; --bone-2:rgba(236,233,225,.62); --bone-3:rgba(236,233,225,.16);
   --paper:#FAFAF8; --ink:#151813; --ink-2:#5B6057; --line:rgba(21,24,19,.14); --moss:#4D5E3B;
-  --en:"Instrument Serif","Times New Roman",serif;
   --kr:"MaruBuri","Noto Serif KR",serif; --kr-l:"MaruBuriLight","MaruBuri","Noto Serif KR",serif;
   --ui:"Pretendard Variable",Pretendard,-apple-system,BlinkMacSystemFont,"Apple SD Gothic Neo",sans-serif;
   --g:20px;
@@ -111,7 +108,7 @@ a{color:inherit;text-decoration:none}
 button{font:inherit;color:inherit;background:none;border:0;padding:0;cursor:pointer}
 :focus-visible{outline:1.5px solid currentColor;outline-offset:4px}
 [hidden]{display:none!important}
-.en{font-family:var(--en);font-weight:400;letter-spacing:-.015em;line-height:.94}
+.disp{font-family:var(--kr);font-weight:400;letter-spacing:-.045em;line-height:1.2}
 .kr{font-family:var(--kr);font-weight:400;letter-spacing:-.025em}
 svg.i{width:16px;height:16px;flex:none}
 .btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;height:48px;padding:0 22px;border-radius:999px;font-size:14.5px;font-weight:500;white-space:nowrap;transition:background-color .25s,color .25s,box-shadow .25s}
@@ -136,7 +133,7 @@ svg.i{width:16px;height:16px;flex:none}
 .htop{position:absolute;left:0;right:0;top:0;z-index:10}
 .note{margin:0;padding:7px var(--g) 0;font-size:11px;letter-spacing:0;color:var(--bone-2);text-align:center}
 .hrow{display:flex;align-items:center;justify-content:space-between;gap:16px;height:54px;padding:0 var(--g)}
-.mark{font-family:var(--en);font-size:23px;letter-spacing:-.01em;line-height:1}
+.mark{font-family:var(--kr);font-size:20px;letter-spacing:-.03em;line-height:1}
 .hnav{display:none}
 .hcall{display:inline-flex;align-items:center;gap:7px;height:36px;padding:0 14px;border-radius:999px;box-shadow:inset 0 0 0 1px var(--bone-3);font-size:13px;font-weight:500}
 .wire{position:absolute;top:0;width:1px;z-index:2;background:linear-gradient(rgba(236,233,225,0),rgba(236,233,225,.5) 30%,rgba(236,233,225,.5));transform-origin:50% 0}
@@ -147,8 +144,10 @@ svg.i{width:16px;height:16px;flex:none}
 .pcap{position:absolute;z-index:4;font-size:11.5px;color:var(--bone-2);white-space:nowrap}
 .pcap::before{content:"";display:inline-block;width:18px;height:1px;margin:0 8px 3px 0;background:var(--bone-3)}
 .hcopy{position:absolute;left:0;right:0;bottom:0;z-index:5;padding:0 var(--g) calc(22px + env(safe-area-inset-bottom))}
-.hcopy h1{margin:0 0 16px;font-size:clamp(46px,13.4vw,168px)}
-.hcopy h1 .ln{display:block;overflow:hidden;padding-bottom:.06em;margin-bottom:-.06em}
+.stamp{margin:0 0 16px;overflow:hidden;font-size:10.5px;font-weight:500;letter-spacing:.16em;color:var(--bone-2);white-space:nowrap}
+.stamp > span{display:block}
+.hcopy h1{margin:0 0 14px;font-size:clamp(42px,11.8vw,112px)}
+.hcopy h1 .ln{display:block;overflow:hidden;padding-bottom:.1em;margin-bottom:-.1em}
 .hcopy h1 .ln > span{display:block}
 .hkr{margin:0 0 18px;font-size:14px;color:var(--bone-2)}
 .hcta{display:flex;align-items:center;gap:18px}
@@ -179,7 +178,7 @@ svg.i{width:16px;height:16px;flex:none}
 /* ---------- works ---------- */
 .works{padding:88px 0 72px}
 .whead{display:flex;align-items:flex-end;justify-content:space-between;gap:16px;padding:0 var(--g);margin:0 0 26px}
-.whead h2{margin:0;font-size:52px}
+.whead h2{margin:0;font-size:36px}
 .whead p{margin:10px 0 0;font-size:14px;color:var(--ink-2)}
 .count{font-size:12.5px;color:var(--ink-2);font-variant-numeric:tabular-nums;white-space:nowrap;padding-bottom:4px}
 .track{display:flex;gap:12px;overflow-x:auto;scroll-snap-type:x mandatory;padding:0 var(--g);scrollbar-width:none;-webkit-overflow-scrolling:touch}
@@ -196,7 +195,7 @@ svg.i{width:16px;height:16px;flex:none}
 
 /* ---------- how ---------- */
 .how{padding:80px var(--g) 72px;border-top:1px solid var(--line)}
-.how h2{margin:0 0 6px;font-size:46px}
+.how h2{margin:0 0 8px;font-size:34px}
 .how .sub{margin:0 0 40px;font-size:14px;color:var(--ink-2)}
 .steps{position:relative;margin:0;padding:0 0 0 28px;list-style:none}
 .steps::before{content:"";position:absolute;left:5px;top:-30px;bottom:14px;width:1px;background:linear-gradient(rgba(21,24,19,0),rgba(21,24,19,.35) 30px)}
@@ -208,7 +207,7 @@ svg.i{width:16px;height:16px;flex:none}
 
 /* ---------- scope ---------- */
 .scope{padding:72px var(--g) 96px;border-top:1px solid var(--line)}
-.scope h2{margin:0 0 6px;font-size:46px}
+.scope h2{margin:0 0 22px;font-size:34px}
 .scope .sub{margin:0 0 26px;font-size:14px;color:var(--ink-2)}
 .svc{margin:0;padding:0;list-style:none;border-top:1px solid var(--line)}
 .svc li{padding:13px 0;border-bottom:1px solid var(--line);font-family:var(--kr);font-size:18px;letter-spacing:-.025em}
@@ -216,15 +215,14 @@ svg.i{width:16px;height:16px;flex:none}
 .clients ul{margin:0;padding:0;list-style:none}
 .clients li{display:flex;justify-content:space-between;align-items:baseline;gap:14px;padding:12px 0;border-bottom:1px solid var(--line)}
 .clients li:first-child{border-top:1px solid var(--line)}
-.clients b{font-weight:400;font-family:var(--en);font-size:22px;letter-spacing:-.01em}
-.clients b.k{font-family:var(--kr);font-size:17px;letter-spacing:-.025em}
+.clients b{font-weight:400;font-family:var(--kr);font-size:18px;letter-spacing:-.025em}
 .clients span{font-size:12.5px;color:var(--ink-2);text-align:right}
 
 /* ---------- contact + footer ---------- */
 .contact{background:var(--night);color:var(--bone);padding:84px var(--g) 0;position:relative;overflow:hidden}
-.contact h2{margin:0 0 10px;font-size:52px}
+.contact h2{margin:0 0 10px;font-size:36px}
 .contact .sub{margin:0 0 36px;font-size:14.5px;color:var(--bone-2)}
-.tel{display:inline-block;font-family:var(--en);font-size:clamp(52px,15vw,150px);line-height:.95;letter-spacing:-.02em;white-space:nowrap}
+.tel{display:inline-block;font-family:var(--ui);font-weight:200;font-size:clamp(40px,11.4vw,112px);line-height:1;letter-spacing:-.04em;white-space:nowrap;font-variant-numeric:tabular-nums}
 .tel:hover{color:#fff}
 .cbtns{display:flex;flex-wrap:wrap;gap:10px;margin:28px 0 0}
 .form{margin:64px 0 0;padding:0}
@@ -248,7 +246,10 @@ svg.i{width:16px;height:16px;flex:none}
 .form .btn{width:100%}
 .msg{min-height:1.5em;margin:10px 0 0;font-size:13px;color:#E8B4A6}
 .foot{background:var(--night);color:var(--bone-2);padding:72px var(--g) calc(96px + env(safe-area-inset-bottom));font-size:12.5px;line-height:1.85}
-.word{margin:0 0 30px;font-family:var(--en);color:var(--bone);font-size:25.5vw;line-height:.82;letter-spacing:-.04em;white-space:nowrap}
+.word{margin:0 0 22px;font-family:var(--kr);color:var(--bone);font-size:30px;line-height:1;letter-spacing:-.03em}
+.biz{display:grid;grid-template-columns:auto 1fr;gap:4px 16px;margin:0}
+.biz dt{color:rgba(236,233,225,.42)}
+.biz dd{margin:0;color:var(--bone-2)}
 .foot p{margin:0}
 .foot a{color:var(--bone);text-decoration:underline;text-decoration-thickness:1px;text-underline-offset:3px}
 .foot .fine{margin-top:18px;padding-top:16px;border-top:1px solid var(--bone-3)}
@@ -290,7 +291,8 @@ svg.i{width:16px;height:16px;flex:none}
   .hnav a:hover{color:var(--bone)}
   .hcall{height:40px;padding:0 18px;font-size:13.5px}
   .hcopy{max-width:64%;padding-bottom:40px}
-  .hcopy h1{margin:0 0 22px;font-size:clamp(64px,8vw,124px)}
+  .stamp{font-size:11.5px;margin-bottom:20px}
+  .hcopy h1{margin:0 0 20px;font-size:clamp(60px,6.4vw,104px)}
   .hkr{font-size:15px;margin-bottom:20px}
   .intro{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));column-gap:24px;padding:160px var(--g) 150px}
   .intro p.lead{grid-column:3 / 11;font-size:clamp(32px,2.9vw,44px);max-width:none}
@@ -301,12 +303,12 @@ svg.i{width:16px;height:16px;flex:none}
   .night blockquote{left:var(--g);top:64px;font-size:clamp(36px,3.3vw,52px);max-width:14em}
   .night dl{grid-template-columns:repeat(4,minmax(0,1fr));column-gap:24px;padding:28px var(--g) 40px}
   .works{padding:150px 0 120px}
-  .whead h2{font-size:clamp(72px,7vw,120px)}
+  .whead h2{font-size:clamp(44px,4vw,64px)}
   .wk{flex:0 0 clamp(300px,27vw,420px)}
   .track{gap:24px}
   .how{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));column-gap:24px;padding:140px var(--g) 130px}
   .how header{grid-column:1 / 5}
-  .how h2{font-size:clamp(56px,5vw,84px)}
+  .how h2{font-size:clamp(40px,3.6vw,56px)}
   .steps{grid-column:5 / 13;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));column-gap:24px;padding:34px 0 0}
   .steps::before{left:0;right:0;top:5px;bottom:auto;width:auto;height:1px;background:linear-gradient(90deg,rgba(21,24,19,.35),rgba(21,24,19,.35) 85%,rgba(21,24,19,0))}
   .steps li{padding:0}
@@ -314,15 +316,15 @@ svg.i{width:16px;height:16px;flex:none}
   .scope{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));column-gap:24px;padding:130px var(--g) 150px}
   .scope .col1{grid-column:1 / 7}
   .scope .col2{grid-column:8 / 13}
-  .scope h2{font-size:clamp(56px,5vw,84px)}
+  .scope h2{font-size:clamp(40px,3.6vw,56px)}
   .svc li{font-size:22px}
   .clients{margin-top:0}
   .contact{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));column-gap:24px;padding:140px var(--g) 0}
   .contact .c1{grid-column:1 / 8}
   .contact .form{grid-column:9 / 13;margin-top:8px}
-  .contact h2{font-size:clamp(72px,7vw,120px)}
-  .foot{display:grid;grid-template-columns:1fr auto;column-gap:48px;padding-bottom:48px}
-  .foot .word{grid-column:1 / -1}
+  .contact h2{font-size:clamp(44px,4vw,64px)}
+  .foot{padding-bottom:56px}
+  .word{font-size:40px}
   .bar{left:auto;right:24px;top:20px;bottom:auto;transform:translateY(-170%)}
   .bar.on{transform:none}
   .bar nav{display:flex;gap:22px;font-size:13px;color:var(--bone-2)}
@@ -340,7 +342,7 @@ svg.i{width:16px;height:16px;flex:none}
       <p class="note" id="note"></p>
       <div class="hrow">
         <a class="mark" id="mark" href="#hero"></a>
-        <nav class="hnav" aria-label="바로가기"><a href="#works">작업</a><a href="#how">진행 방식</a><a href="#contact">문의</a></nav>
+        <nav class="hnav" aria-label="바로가기"><a href="#works">시공 사례</a><a href="#how">진행 과정</a><a href="#contact">상담 문의</a></nav>
         <a class="hcall" id="hcall" href="#"><span data-i="phone"></span><span>전화 상담</span></a>
       </div>
     </div>
@@ -348,7 +350,8 @@ svg.i{width:16px;height:16px;flex:none}
     <div class="piece" id="piece" role="img" aria-label="ikki archive 행잉 작품"><img class="ghost" id="ghost" alt="" aria-hidden="true"></div>
     <span class="pcap" id="pcap"></span>
     <div class="hcopy">
-      <h1 class="en" id="h1"></h1>
+      <p class="stamp" id="stamp"></p>
+      <h1 class="disp" id="h1"></h1>
       <div class="hside">
         <p class="hkr" id="hkr"></p>
         <div class="hcta" id="hcta"></div>
@@ -370,7 +373,7 @@ svg.i{width:16px;height:16px;flex:none}
   <!-- 3. 작업 -->
   <section class="works" id="works" aria-labelledby="works-h">
     <div class="whead">
-      <div><h2 class="en" id="works-h"></h2><p id="works-kr"></p></div>
+      <div><h2 class="disp" id="works-h"></h2><p id="works-kr"></p></div>
       <span class="count" id="count" aria-hidden="true"></span>
     </div>
     <div class="track" id="track"></div>
@@ -378,26 +381,26 @@ svg.i{width:16px;height:16px;flex:none}
 
   <!-- 5. 진행 방식 -->
   <section class="how" id="how" aria-labelledby="how-h">
-    <header><h2 class="en" id="how-h">How we work</h2><p class="sub">진행 방식</p></header>
+    <header><h2 class="disp" id="how-h">진행 과정</h2><p class="sub">상담부터 시공 뒤 관리까지 직접 맡습니다.</p></header>
     <ol class="steps" id="steps"></ol>
   </section>
 
   <!-- 하는 일 + 4. 함께한 곳 (후기는 원문이 있을 때만) -->
   <section class="scope" aria-label="하는 일과 함께한 곳">
-    <div class="col1"><h2 class="en">What we do</h2><p class="sub">하는 일</p><ul class="svc" id="svc"></ul></div>
-    <div class="col2 clients" id="clients"><h2 class="en">Clients</h2><p class="sub">함께한 곳</p><ul id="cl"></ul></div>
+    <div class="col1"><h2 class="disp">하는 일</h2><ul class="svc" id="svc"></ul></div>
+    <div class="col2 clients" id="clients"><h2 class="disp">함께한 곳</h2><ul id="cl"></ul></div>
   </section>
 
   <!-- 6. 문의 -->
   <section class="contact" id="contact" aria-labelledby="contact-h">
     <div class="c1">
-      <h2 class="en" id="contact-h">Contact</h2>
+      <h2 class="disp" id="contact-h">상담 문의</h2>
       <p class="sub">어떤 공간인지 알려주세요. 작은 공간도 괜찮습니다.</p>
       <a class="tel" id="tel" href="#"></a>
       <div class="cbtns" id="cbtns"></div>
     </div>
     <form class="form" id="form" novalidate>
-      <h3>문의 남기기</h3>
+      <h3>상담 신청</h3>
       <p>남겨 주시면 확인 후 연락드립니다.</p>
       <div class="field"><label for="f-name">이름</label><input type="text" id="f-name" autocomplete="name"></div>
       <div class="field"><label for="f-phone">연락처</label><input type="tel" id="f-phone" autocomplete="tel" inputmode="tel" placeholder="010-0000-0000"></div>
@@ -405,7 +408,7 @@ svg.i{width:16px;height:16px;flex:none}
       <div class="field"><label for="f-size">공간 크기</label><input type="text" id="f-size" placeholder="예: 카페 40평, 거실 한쪽 벽"></div>
       <div class="field"><label for="f-body">내용</label><textarea id="f-body" placeholder="원하는 분위기, 일정, 예산을 편하게 적어 주세요."></textarea></div>
       <label class="consent"><input type="checkbox" id="f-consent"><span>문의에 답하기 위해 이름과 연락처를 수집하는 데 동의합니다.</span></label>
-      <button type="submit" class="btn btn-bone">문의 남기기</button>
+      <button type="submit" class="btn btn-bone">상담 신청하기</button>
       <p class="msg" id="msg" role="alert"></p>
     </form>
   </section>
@@ -416,7 +419,7 @@ svg.i{width:16px;height:16px;flex:none}
 
 <div class="bar" id="bar">
   <a class="mark" href="#hero" id="bar-mark"></a>
-  <nav aria-label="바로가기"><a href="#works">작업</a><a href="#how">진행 방식</a><a href="#contact">문의</a></nav>
+  <nav aria-label="바로가기"><a href="#works">시공 사례</a><a href="#how">진행 과정</a><a href="#contact">상담 문의</a></nav>
   <a class="btn btn-bone" id="bar-call" href="#"><span data-i="phone"></span><span>전화 상담</span></a>
 </div>
 
@@ -456,10 +459,11 @@ document.addEventListener('DOMContentLoaded', function () {
   const note = $('#note'); note.textContent = C.notice; note.hidden = !C.notice;
   $('#mark').textContent = C.bizName; $('#bar-mark').textContent = C.bizName;
   $('#hcall').href = tel; $('#bar-call').href = tel;
-  const h1 = $('#h1'); h1.setAttribute('aria-label', C.hero.lines.join(' '));
-  h1.innerHTML = C.hero.lines.map((l) => '<span class="ln" aria-hidden="true"><span>' + esc(l) + '</span></span>').join('');
+  $('#stamp').innerHTML = '<span>' + esc(C.hero.stamp) + '</span>';
+  const h1 = $('#h1'); h1.setAttribute('aria-label', C.hero.headline.join(' '));
+  h1.innerHTML = C.hero.headline.map((l) => '<span class="ln" aria-hidden="true"><span>' + esc(l) + '</span></span>').join('');
   $('#hkr').textContent = C.hero.kr;
-  $('#hcta').innerHTML = '<a class="btn btn-bone" href="' + tel + '">' + I.phone + '<span>전화 상담</span></a><a class="link" href="#works">작업 보기</a>';
+  $('#hcta').innerHTML = '<a class="btn btn-bone" href="' + tel + '">' + I.phone + '<span>전화 상담</span></a><a class="link" href="#works">시공 사례 보기</a>';
   $('#pcap').textContent = C.hero.caption;
   $('#cue span').textContent = C.hero.cue;
   const P = C.hero.piece, piece = $('#piece'), wire = $('#wire'), pcap = $('#pcap'), hero = $('#hero');
@@ -540,16 +544,19 @@ document.addEventListener('DOMContentLoaded', function () {
     else if (!/\d{2,}/.test($('#f-phone').value)) err = '연락처를 입력해 주세요.';
     else if (!$('#f-consent').checked) err = '개인정보 수집에 동의해 주세요.';
     msg.textContent = err; if (err) return;
-    toast('시안 화면이라 실제로 전송되지는 않습니다. 정식 오픈 후에는 이 문의가 사장님 휴대폰 문자로 바로 갑니다.');
+    toast('시안 화면이라 실제로 접수되지는 않습니다. 정식 오픈 후에는 상담 신청이 사장님 휴대폰 문자로 바로 갑니다.');
     form.reset();
   });
 
   /* footer */
-  const fl = ['<p class="word" aria-hidden="true">' + esc(C.bizName) + '</p>', '<div><p>실내조경, 이끼정원, 행잉 작품</p>', '<p>전화 <a href="' + tel + '">' + esc(C.phone) + '</a></p>'];
-  if (ig) fl.push('<p>인스타그램 <a href="' + ig + '" target="_blank" rel="noopener">@' + esc(C.instagram) + '</a></p>');
-  if (C.area) fl.push('<p>작업 지역 ' + esc(C.area) + '</p>');
-  if (C.bizInfo.owner || C.bizInfo.regNo) fl.push('<p>' + esc([C.bizInfo.owner && '대표 ' + C.bizInfo.owner, C.bizInfo.regNo && '사업자등록번호 ' + C.bizInfo.regNo].filter(Boolean).join(', ')) + '</p>');
-  fl.push('</div>');
+  const rows = [['상호', C.bizName]];
+  if (C.bizInfo.owner) rows.push(['대표', C.bizInfo.owner]);
+  if (C.bizInfo.regNo) rows.push(['사업자등록번호', C.bizInfo.regNo]);
+  rows.push(['전화', '<a href="' + tel + '">' + esc(C.phone) + '</a>']);
+  if (ig) rows.push(['인스타그램', '<a href="' + ig + '" target="_blank" rel="noopener">@' + esc(C.instagram) + '</a>']);
+  if (C.area) rows.push(['작업 지역', esc(C.area)]);
+  const fl = ['<p class="word" aria-hidden="true">' + esc(C.bizName) + '</p>',
+    '<dl class="biz">' + rows.map((r, i) => '<dt>' + esc(r[0]) + '</dt><dd>' + (i === 0 ? esc(r[1]) : r[1]) + '</dd>').join('') + '</dl>'];
   if (C.notice) fl.push('<p class="fine">이 페이지는 ' + esc(C.bizName) + '에 보여드리기 위해 WeThru가 만든 시안입니다. 공식 사이트가 아닙니다.</p>');
   $('#foot').innerHTML = fl.join('');
 
@@ -587,7 +594,7 @@ document.addEventListener('DOMContentLoaded', function () {
     gsap.registerPlugin(ScrollTrigger);
     ScrollTrigger.config({ ignoreMobileResize: true });
     hero.classList.add('anim');
-    const [cone, middle, ring, strands] = layers, lines = $$('#h1 .ln > span');
+    const [cone, middle, ring, strands] = layers, lines = [$('#stamp > span')].concat($$('#h1 .ln > span'));
     const drop = (k) => () => -(G.py + G.ph) * k;
     gsap.set(lines, { yPercent: 108 }); gsap.set(['#hkr', '#hcta', pcap], { opacity: 0, y: 12 });
     const tl = gsap.timeline({
