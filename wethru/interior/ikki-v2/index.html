@@ -242,7 +242,7 @@ svg.ar{width:.8em;height:.8em;flex:none;margin-left:.22em;vertical-align:-.04em;
 .note{margin:0;padding:7px var(--g) 0;font-size:11px;letter-spacing:0;color:var(--bone-2);text-align:center}
 .hrow{display:flex;align-items:center;gap:10px;height:54px;padding:0 var(--g)}
 .hrow .mark{margin-right:auto}
-.mark{font-family:var(--kr);font-weight:var(--kr-sw);font-size:20px;letter-spacing:-.03em;line-height:1}
+.mark{font-family:var(--kr);font-weight:var(--kr-sw);font-size:20px;letter-spacing:-.03em;line-height:1}.mark.logo-mark{display:flex;align-items:center}.mark.logo-mark img{display:block;width:auto;height:38px;max-width:118px;object-fit:contain}
 .hnav{display:none}
 .hcall{display:inline-flex;align-items:center;gap:7px;height:36px;padding:0 14px;border-radius:999px;box-shadow:inset 0 0 0 1px var(--bone-3);font-size:13px;font-weight:500;white-space:nowrap}
 .wire{position:absolute;top:0;width:1px;z-index:2;background:linear-gradient(rgba(236,233,225,0),rgba(236,233,225,.5) 30%,rgba(236,233,225,.5));transform-origin:50% 0}
@@ -385,7 +385,7 @@ html[lang="en"] .tel{font-size:clamp(34px,9.6vw,100px)}
   -webkit-backdrop-filter:blur(14px);backdrop-filter:blur(14px);box-shadow:0 14px 34px rgba(0,0,0,.22);
   transform:translate(-50%,170%);transition:transform .5s cubic-bezier(.2,.8,.2,1)}
 .bar.on{transform:translate(-50%,0)}
-.bar .mark{font-size:19px;margin-right:4px}
+.bar .mark{font-size:19px;margin-right:4px}.bar .mark.logo-mark img{height:31px;max-width:98px}
 .bar nav{display:none}
 .bar .btn{height:40px;padding:0 16px;font-size:13.5px}
 
@@ -477,7 +477,7 @@ html[lang="en"] .tel{font-size:clamp(34px,9.6vw,100px)}
     <div class="htop">
       <p class="note" id="note"></p>
       <div class="hrow">
-        <a class="mark" id="mark" href="#hero"></a>
+        <a class="mark logo-mark" id="mark" href="#hero" aria-label="ikki archive home"></a>
         <nav class="hnav" aria-label="주요 메뉴"><a href="projects.html">PROJECTS</a><a href="about.html">ABOUT</a><a href="process.html">PROCESS</a><a href="#contact">CONTACT</a></nav>
         <button type="button" class="lang" data-lang><span data-l="ko">KO</span><span data-l="en">EN</span></button>
         <a class="hcall" id="hcall" href="#"><span data-i="phone"></span><span data-t="call"></span></a>
@@ -564,7 +564,7 @@ html[lang="en"] .tel{font-size:clamp(34px,9.6vw,100px)}
 <footer class="foot" id="foot"></footer>
 
 <div class="bar" id="bar">
-  <a class="mark" href="#hero" id="bar-mark"></a>
+  <a class="mark logo-mark" href="#hero" id="bar-mark" aria-label="ikki archive home"></a>
   <nav aria-label="주요 메뉴"><a href="projects.html">PROJECTS</a><a href="about.html">ABOUT</a><a href="process.html">PROCESS</a><a href="#contact">CONTACT</a></nav>
   <button type="button" class="lang" data-lang><span data-l="ko">KO</span><span data-l="en">EN</span></button>
   <a class="btn btn-bone" id="bar-call" href="#"><span data-i="phone"></span><span data-t="call"></span></a>
@@ -656,7 +656,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
   /* ---- structure (built once; text is filled in by paint) ---- */
   const P = CONFIG.hero.piece, piece = $('#piece'), wire = $('#wire'), pcap = $('#pcap'), hero = $('#hero');
-  $('#mark').textContent = CONFIG.bizName; $('#bar-mark').textContent = CONFIG.bizName;
+  $('#mark').innerHTML = '<img src="ikki-logo.svg" alt="ikki">'; $('#bar-mark').innerHTML = '<img src="ikki-logo.svg" alt="ikki">';
   $('#hcall').href = tel; $('#bar-call').href = tel;
   $('#stamp').innerHTML = '<span></span>';
   $('#h1').innerHTML = CONFIG.hero.headline.map(() => '<span class="ln" aria-hidden="true"><span></span></span>').join('');
