@@ -38,7 +38,7 @@ const CONFIG = {
   facts: [["작업 지역", "부산, 경남, 울산"], ["시공 전", "3D 시안으로 먼저 맞춰 봅니다"], ["수상", "2017 한국공간디자인 공모전 동상"]],
 
   chapter: {
-    src: "assets/cafe_tree.webp", w: 1080, h: 1225,
+    src: "assets/cafe_tree.webp", src2x: "", w: 1080, h: 1225,          // src2x: 2160px 버전이 생기면 "assets/cafe_tree@2x.webp"
     alt: "송정동 대형 카페 한가운데, 천장 가까이 자란 큰 나무와 그 아래 이끼, 고사리, 흰 꽃 식재",
     quote: "공간은 보이는 것이 아니라 느껴지는 것으로 기억됩니다.",       // 업체 캡션 원문
     rows: [["장소", "송정동 대형 카페"], ["시기", "2026년 3월"], ["의뢰", "(주)아르텍"], ["설계와 시공", "ikki archive"]]
@@ -494,6 +494,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
   /* night chapter */
   const ch = C.chapter, ni = $('#night-img');
+  if (ch.src2x) { ni.srcset = ch.src + ' 1080w, ' + ch.src2x + ' 2160w'; ni.sizes = '100vw'; }
   ni.src = ch.src; ni.alt = ch.alt; ni.width = ch.w; ni.height = ch.h;
   $('#quote').textContent = ch.quote;
   $('#night-dl').innerHTML = ch.rows.map((r) => '<div><dt>' + esc(r[0]) + '</dt><dd>' + esc(r[1]) + '</dd></div>').join('');

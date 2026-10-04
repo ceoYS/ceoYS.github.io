@@ -1,0 +1,7 @@
+# ikki photo tooling: big intermediates and local binaries stay out of the repo
+tools/ikki/out/
+tools/ikki/bin/
+tools/ikki/input/*_2x.png
+tools/ikki/input/*_x4.png
+tools/ikki/compare/
+__pycache__/
