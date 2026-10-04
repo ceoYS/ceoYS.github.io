@@ -5,24 +5,29 @@
 <script>
 /* =====================================================================
    CONFIG — 업체별로 이 블록만 교체합니다.
-   · 사진은 업체 인스타·플레이스 원본만. 생성 이미지 금지.
+   · 사진은 업체 인스타·플레이스 원본만. 생성 이미지 금지. 사진마다 post(원본 게시물) 필수.
    · 후기는 원문 그대로, 없으면 []. 값이 없으면 "" / [] → 해당 요소 숨김.
+   · en: 영어 화면용 문구. 같은 키만 덮어씁니다. en이 없으면 언어 버튼이 숨겨집니다.
    · 출처: @ikki_archive 프로필·게시물 캡션 (2026-10-04 확인)
    ===================================================================== */
 const CONFIG = {
   notice: "WeThru가 만든 제안 시안입니다. 공식 사이트가 아닙니다.",   // 공개 URL엔 필수, 정식 오픈 때 ""
+  title: "ikki archive | 부산 실내조경, 이끼정원, 행잉 작품",
   bizName: "ikki archive",
   phone: "010-9481-6769",
+  phoneIntl: "+82 10-9481-6769",
   instagram: "ikki_archive",
   kakaoUrl: "",
   area: "부산, 경남, 울산",
+  font: "hahmlet",                                  // maru | myeong | hahmlet | sans | wanted  (주소 뒤 ?font= 로 미리보기)
 
   hero: {
     stamp: "PLANT DESIGN | LANDSCAPE DESIGN | GARDENING",          // 업체가 사진마다 찍는 문구
     headline: ["공간에 숲을", "들입니다"],                            // 캡션 "조용히 숲을 들였습니다"에서
     kr: "부산에서 실내조경과 이끼정원, 행잉 작품을 만듭니다.",
-    caption: "행잉 작품",
-    cue: "내리면 작품이 한 층씩 걸립니다",
+    caption: "행잉 작품, 2024",
+    post: "https://www.instagram.com/p/DDzKkebPn4x/",
+    cue: "아래로 내리면 작품이 한 층씩 걸립니다",
     piece: {
       ratio: 730 / 938, tip: { x: 45.92, y: 5.4 },
       layers: [
@@ -35,50 +40,122 @@ const CONFIG = {
     }
   },
 
-  intro: "공간 디자이너 출신이 설계하고, 직접 시공하고, 시공 뒤에도 돌봅니다. 카페 한가운데의 큰 나무부터 수납장 아래의 작은 이끼정원까지.",
+  intro: "공간 디자이너 출신이 직접 설계하고 시공합니다. 시공 뒤 관리도 맡습니다. 송정동 카페 한가운데 큰 나무도, 울산 어느 집 수납장 밑 작은 이끼정원도 그렇게 만들었습니다.",
   facts: [["작업 지역", "부산, 경남, 울산"], ["시공 전", "3D 시안으로 먼저 맞춰 봅니다"], ["수상", "2017 한국공간디자인 공모전 동상"]],
 
   chapter: {
-    src: "assets/cafe_tree.webp", src2x: "assets/cafe_tree@2x.webp", w: 1080, h: 1224,          // src2x: 2160px 버전이 생기면 "assets/cafe_tree@2x.webp"
+    src: "assets/cafe_tree.webp", src2x: "assets/cafe_tree@2x.webp", w: 1080, h: 1224,
     alt: "송정동 대형 카페 한가운데, 천장 가까이 자란 큰 나무와 그 아래 이끼, 고사리, 흰 꽃 식재",
     quote: "공간은 보이는 것이 아니라 느껴지는 것으로 기억됩니다.",       // 업체 캡션 원문
+    quoteSrc: "2026년 3월 게시물에서",
+    post: "https://www.instagram.com/p/DWEDUs2k0P_/",
     rows: [["장소", "송정동 대형 카페"], ["시기", "2026년 3월"], ["의뢰", "(주)아르텍"], ["설계와 시공", "ikki archive"]]
   },
 
   worksTitle: "시공 사례",
-  worksKr: "크기와 상관없이 같은 마음으로 만듭니다.",
+  worksKr: "부산과 양산, 울산, 대구에서 시공했습니다.",
   works: [
-    { src: "img/01.jpg", w: 361, h: 640, title: "동래구 카페",          meta: "2025, 카페", alt: "계단을 따라 흘러내리는 이끼 언덕과 그 아래 자갈 바닥" },
-    { src: "img/03.jpg", w: 640, h: 381, title: "경남 양산 주거공간",   meta: "2025, 주거", alt: "유리 구조물 안에 세운 나무와 하부의 이끼, 돌" },
-    { src: "img/02.jpg", w: 640, h: 594, title: "울산 주거공간",        meta: "2025, 주거", alt: "수납 가구 하부를 따라 이어지는 이끼와 돌, 흰 꽃" },
-    { src: "img/05.jpg", w: 480, h: 640, title: "대구 엑스코 제2전시장", meta: "2025, 전시", alt: "곡선형 흰 플랜터에 식물을 심은 전시 부스" },
-    { src: "img/04.jpg", w: 512, h: 594, title: "주거공간",             meta: "2026, 주거", alt: "유리 너머로 보이는 가는 나무 한 그루와 이끼 바닥" },
-    { src: "img/08.jpg", w: 512, h: 640, title: "동래구 카페",          meta: "2025, 카페", alt: "카페 실내 한쪽, 단 위 이끼 언덕을 바라보는 사람" },
-    { src: "img/06.jpg", w: 640, h: 381, title: "주거공간",             meta: "2026, 주거", alt: "플랜터에 심은 고사리와 이끼, 돌" },
-    { src: "img/07.jpg", w: 480, h: 640, title: "울산 주거공간",        meta: "2025, 주거", alt: "실내 한쪽에 이끼와 잎이 넓은 식물을 심은 모습" },
-    { src: "img/10.jpg", w: 360, h: 640, title: "대구 엑스코",          meta: "2025, 시공 현장", alt: "전시장에서 플랜터에 고사리를 심고 있는 시공 장면" },
-    { src: "img/09.jpg", w: 480, h: 640, title: "울산 주거공간",        meta: "2025, 주거", alt: "벽면 수납장 아래에 심은 식물" }
+    { src: "img/01.jpg", w: 361, h: 640, title: "동래구 카페",          meta: "2025, 카페", post: "https://www.instagram.com/reel/DJjVA0aprEH/", alt: "계단을 따라 흘러내리는 이끼 언덕과 그 아래 자갈 바닥" },
+    { src: "img/03.jpg", w: 640, h: 381, title: "경남 양산 주거공간",   meta: "2025, 주거", post: "https://www.instagram.com/p/DSuJ24hkyQN/", alt: "유리 구조물 안에 세운 나무와 하부의 이끼, 돌" },
+    { src: "img/02.jpg", w: 640, h: 594, title: "울산 주거공간",        meta: "2025, 주거", post: "https://www.instagram.com/p/DSJ30r2E5DX/", alt: "수납 가구 하부를 따라 이어지는 이끼와 돌, 흰 꽃" },
+    { src: "img/05.jpg", w: 480, h: 640, title: "대구 엑스코 제2전시장", meta: "2025, 전시", post: "https://www.instagram.com/p/DLZf88cRAoL/", alt: "곡선형 흰 플랜터에 식물을 심은 전시 부스" },
+    { src: "img/04.jpg", w: 512, h: 594, title: "주거공간",             meta: "2026, 주거", post: "https://www.instagram.com/p/DTjFRuNE0Pt/", by: "studio xyz", alt: "유리 너머로 보이는 가는 나무 한 그루와 이끼 바닥" },
+    { src: "img/08.jpg", w: 512, h: 640, title: "동래구 카페",          meta: "2025, 카페", post: "https://www.instagram.com/p/DJlnCpVxS7d/", alt: "카페 실내 한쪽, 단 위 이끼 언덕을 바라보는 사람" },
+    { src: "img/06.jpg", w: 640, h: 381, title: "주거공간",             meta: "2026, 주거", post: "https://www.instagram.com/p/DUzY00FE3f5/", by: "studio xyz", alt: "플랜터에 심은 고사리와 이끼, 돌" },
+    { src: "img/07.jpg", w: 480, h: 640, title: "울산 주거공간",        meta: "2025, 주거", post: "https://www.instagram.com/p/DM98_LlzlrD/", alt: "실내 한쪽에 이끼와 잎이 넓은 식물을 심은 모습" },
+    { src: "img/10.jpg", w: 360, h: 640, title: "대구 엑스코",          meta: "2025, 시공 현장", post: "https://www.instagram.com/reel/DLUl9JHxfhd/", alt: "전시장에서 플랜터에 고사리를 심고 있는 시공 장면" },
+    { src: "img/09.jpg", w: 480, h: 640, title: "울산 주거공간",        meta: "2025, 주거", post: "https://www.instagram.com/p/DMUmUskRQpq/", alt: "벽면 수납장 아래에 심은 식물" }
   ],
 
+  howSub: "보통 이 순서로 진행합니다.",
   process: [
-    { name: "상담",    desc: "전화나 인스타그램 DM으로 공간 이야기를 듣습니다." },
-    { name: "3D 시안", desc: "시공 전에 3D로 먼저 맞춰 보고, 현장에서 생길 문제를 줄입니다." },
-    { name: "시공",    desc: "직접 설계하고 직접 시공합니다." },
-    { name: "관리",    desc: "원하시면 시공 뒤 유지관리와 보수까지 이어서 맡습니다." }
+    { name: "상담",    desc: "전화나 인스타그램 DM으로 연락 주세요." },
+    { name: "3D 시안", desc: "시공 전에 3D로 먼저 맞춰 봅니다. 그래야 현장에서 고칠 일이 줄어듭니다." },
+    { name: "시공",    desc: "식물과 이끼, 돌을 현장에서 직접 심고 놓습니다." },
+    { name: "관리",    desc: "원하시면 시공 뒤 유지관리와 보수도 맡습니다." }
   ],
   services: ["주거공간 플랜테리어", "카페와 매장 실내조경", "이끼정원", "행잉 작품", "조화 인테리어", "사무실과 학원", "전시와 팝업", "정원 유지관리"],
-  credits: [                                   // 게시물 캡션의 Client 표기 그대로
-    { client: "(주)아르텍", project: "송정동 대형 카페" },
-    { client: "식군스인테리어", project: "주거공간" },
-    { client: "finearc", project: "울산 주거공간" },
-    { client: "tomsdesign", project: "대구 엑스코 부스" },
-    { client: "designfocus", project: "동래구 카페" }
+  credits: [                                   // client: 게시물 캡션의 Client 표기. url: 캡션에 적힌 계정만. post: 근거 게시물
+    { client: "(주)아르텍",     project: "송정동 대형 카페",          post: "https://www.instagram.com/p/DWEDUs2k0P_/" },
+    { client: "식군스인테리어", project: "경남 양산 주거공간 외 2곳", post: "https://www.instagram.com/p/DSuJ24hkyQN/" },
+    { client: "finearc",     url: "https://www.instagram.com/finearc_official/",     project: "울산 주거공간",    post: "https://www.instagram.com/p/DSJ30r2E5DX/" },
+    { client: "tomsdesign",  url: "https://www.instagram.com/tomsdesign_official/",  project: "대구 엑스코 부스", post: "https://www.instagram.com/p/DLZf88cRAoL/" },
+    { client: "designfocus", url: "https://www.instagram.com/designfocus_official/", project: "동래구 카페",      post: "https://www.instagram.com/p/DJlnCpVxS7d/" }
   ],
   reviews: [],
   spaceTypes: ["주거", "카페·매장", "사무실·학원", "전시·팝업", "야외·정원"],
-  bizInfo: { owner: "", regNo: "" }
+  bizInfo: { owner: "", regNo: "" },
+
+  en: {
+    notice: "Proposal draft by WeThru, not the official site.",
+    title: "ikki archive | Indoor landscaping, moss gardens and hanging installations in Busan",
+    area: "Busan, South Gyeongsang, Ulsan",
+    hero: {
+      headline: ["We bring the", "forest inside"],
+      kr: "We build indoor landscapes, moss gardens and hanging installations in Busan.",
+      caption: "Hanging piece, 2024",
+      cue: "Scroll down and the piece hangs, layer by layer"
+    },
+    intro: "A former space designer plans each project, and we build it ourselves. We look after it afterward too. The big tree in the middle of a Songjeong-dong cafe and a small moss garden under a cabinet in an Ulsan home were both made this way.",
+    facts: [["Area", "Busan, South Gyeongsang, Ulsan"], ["Before building", "We work it out in 3D first"], ["Award", "Bronze, 2017 Korea Space Design Competition"]],
+    chapter: {
+      alt: "A large tree reaching toward the ceiling in the middle of a big cafe in Songjeong-dong, with moss, ferns and white flowers planted below",
+      quote: "A space is remembered by how it feels, not by how it looks.",
+      quoteSrc: "Instagram post, March 2026",
+      rows: [["Place", "Large cafe, Songjeong-dong"], ["Date", "March 2026"], ["Client", "(주)아르텍"], ["Design and build", "ikki archive"]]
+    },
+    worksTitle: "Projects",
+    worksKr: "Built in Busan, Yangsan, Ulsan and Daegu.",
+    works: [
+      { title: "Dongnae-gu cafe",      meta: "2025, Cafe",       alt: "A moss mound running down beside a staircase, with a gravel floor below" },
+      { title: "Yangsan home",         meta: "2025, Home",       alt: "A tree standing inside a glass structure, with moss and stones at its base" },
+      { title: "Ulsan home",           meta: "2025, Home",       alt: "Moss, stones and white flowers along the base of a storage unit" },
+      { title: "EXCO Hall 2, Daegu",   meta: "2025, Exhibition", alt: "An exhibition booth with plants in curved white planters" },
+      { title: "Home",                 meta: "2026, Home",       alt: "A single slender tree and a moss floor seen through glass" },
+      { title: "Dongnae-gu cafe",      meta: "2025, Cafe",       alt: "A person looking at a moss mound on a raised platform in the cafe" },
+      { title: "Home",                 meta: "2026, Home",       alt: "Ferns, moss and stones in a planter" },
+      { title: "Ulsan home",           meta: "2025, Home",       alt: "Moss and broad-leaved plants in one corner of a room" },
+      { title: "EXCO, Daegu",          meta: "2025, On site",    alt: "Ferns being planted into planters at the exhibition hall" },
+      { title: "Ulsan home",           meta: "2025, Home",       alt: "Plants set under a wall-mounted storage cabinet" }
+    ],
+    howSub: "Most projects go like this.",
+    process: [
+      { name: "Talk",    desc: "Call us or send an Instagram DM." },
+      { name: "3D plan", desc: "Before building, we work it out in 3D. That way there is less to fix on site." },
+      { name: "Build",   desc: "We set the plants, moss and stones on site ourselves." },
+      { name: "Care",    desc: "If you want, we keep looking after it, including maintenance and repairs." }
+    ],
+    services: ["Plants for homes", "Indoor landscaping for cafes and shops", "Moss gardens", "Hanging installations", "Artificial plant styling", "Offices and academies", "Exhibitions and pop-ups", "Garden maintenance"],
+    credits: [
+      { project: "Large cafe, Songjeong-dong" },
+      { project: "Yangsan home and 2 more" },
+      { project: "Ulsan home" },
+      { project: "EXCO booth, Daegu" },
+      { project: "Dongnae-gu cafe" }
+    ],
+    spaceTypes: ["Home", "Cafe or shop", "Office or academy", "Exhibition or pop-up", "Outdoor or garden"]
+  }
 };
-document.documentElement.classList.add('js');
+
+/* 글꼴 세트와 언어: 주소 ?font=  ?lang=en 이 CONFIG보다 우선 */
+const FONTS = {
+  maru:    "https://hangeul.pstatic.net/hangeul_static/css/maru-buri.css",
+  myeong:  "https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@200;300;400&display=swap",
+  hahmlet: "https://fonts.googleapis.com/css2?family=Hahmlet:wght@200;300;400&display=swap",
+  sans:    "",
+  wanted:  "https://cdn.jsdelivr.net/gh/wanteddev/wanted-sans@v1.0.3/packages/wanted-sans/fonts/webfonts/variable/split/WantedSansVariable.min.css"
+};
+(function () {
+  const q = new URLSearchParams(location.search), root = document.documentElement;
+  let f = q.get('font'); if (!(f in FONTS)) f = CONFIG.font in FONTS ? CONFIG.font : 'hahmlet';
+  root.dataset.font = f;
+  if (FONTS[f]) { const l = document.createElement('link'); l.rel = 'stylesheet'; l.href = FONTS[f]; document.head.appendChild(l); }
+  let lang = q.get('lang');
+  if (lang !== 'ko' && lang !== 'en') { try { lang = localStorage.getItem('ikki-lang'); } catch (e) { lang = null; } }
+  if (lang !== 'en' || !CONFIG.en) lang = 'ko';
+  root.lang = lang; root.classList.add('js');
+  if (lang === 'en' && CONFIG.en.title) document.title = CONFIG.en.title;
+})();
 </script>
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <meta name="robots" content="noindex, nofollow">
@@ -88,36 +165,51 @@ document.documentElement.classList.add('js');
 <meta property="og:description" content="부산 실내조경, 이끼정원, 행잉 작품. WeThru 제안 시안">
 <meta property="og:image" content="https://ceoys.github.io/wethru/interior/ikki-archive/assets/og.jpg">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%230B0E0A'/%3E%3Ctext x='16' y='23' font-family='Georgia,serif' font-size='19' text-anchor='middle' fill='%23ECE9E1'%3Ei%3C/text%3E%3C/svg%3E">
-<link rel="stylesheet" href="https://hangeul.pstatic.net/hangeul_static/css/maru-buri.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
+<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Hahmlet:wght@200;300;400&display=swap"></noscript>
 <link rel="preload" as="image" href="assets/hang_ring.webp">
 <style>
 :root{
   --night:#0B0E0A; --night-2:#141A12; --bone:#ECE9E1; --bone-2:rgba(236,233,225,.62); --bone-3:rgba(236,233,225,.16);
   --paper:#FAFAF8; --ink:#151813; --ink-2:#5B6057; --line:rgba(21,24,19,.14); --moss:#4D5E3B;
-  --kr:"MaruBuri","Noto Serif KR",serif; --kr-l:"MaruBuriLight","MaruBuri","Noto Serif KR",serif;
   --ui:"Pretendard Variable",Pretendard,-apple-system,BlinkMacSystemFont,"Apple SD Gothic Neo",sans-serif;
+  /* display type: one set per data-font. --kr = headings, --kr-l = long statements, --kr-s = small serif labels */
+  --kr:"Hahmlet",serif; --kr-w:300; --kr-t:-.04em;
+  --kr-l:"Hahmlet",serif; --kr-lw:200; --kr-lt:-.03em;
+  --kr-sw:400; --kr-st:-.02em;
   --g:20px;
 }
+html[data-font="maru"]{--kr:"MaruBuri",serif;--kr-w:400;--kr-t:-.045em;--kr-l:"MaruBuriLight","MaruBuri",serif;--kr-lw:400;--kr-lt:-.03em;--kr-sw:400;--kr-st:-.025em}
+html[data-font="myeong"]{--kr:"Noto Serif KR",serif;--kr-w:300;--kr-t:-.035em;--kr-l:"Noto Serif KR",serif;--kr-lw:200;--kr-lt:-.03em;--kr-sw:400;--kr-st:-.02em}
+html[data-font="sans"]{--kr:var(--ui);--kr-w:300;--kr-t:-.05em;--kr-l:var(--ui);--kr-lw:300;--kr-lt:-.035em;--kr-sw:500;--kr-st:-.02em}
+html[data-font="wanted"]{--kr:"Wanted Sans Variable",var(--ui);--kr-w:400;--kr-t:-.045em;--kr-l:"Wanted Sans Variable",var(--ui);--kr-lw:300;--kr-lt:-.03em;--kr-sw:500;--kr-st:-.02em}
 *,*::before,*::after{box-sizing:border-box}
 html{-webkit-text-size-adjust:100%}
 body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--ui);font-size:15px;line-height:1.7;letter-spacing:-.005em;
   word-break:keep-all;overflow-wrap:anywhere;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
+html[lang="en"] body{letter-spacing:0;word-break:normal;overflow-wrap:break-word}
 img{display:block;max-width:100%}
 a{color:inherit;text-decoration:none}
 button{font:inherit;color:inherit;background:none;border:0;padding:0;cursor:pointer}
 :focus-visible{outline:1.5px solid currentColor;outline-offset:4px}
 [hidden]{display:none!important}
-.disp{font-family:var(--kr);font-weight:400;letter-spacing:-.045em;line-height:1.2}
-.kr{font-family:var(--kr);font-weight:400;letter-spacing:-.025em}
+.disp{font-family:var(--kr);font-weight:var(--kr-w);letter-spacing:var(--kr-t);line-height:1.2}
+html[lang="en"] .disp{letter-spacing:calc(var(--kr-t) * .6)}
 svg.i{width:16px;height:16px;flex:none}
+svg.ar{width:.8em;height:.8em;flex:none;margin-left:.22em;vertical-align:-.04em;opacity:.7}
 .btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;height:48px;padding:0 22px;border-radius:999px;font-size:14.5px;font-weight:500;white-space:nowrap;transition:background-color .25s,color .25s,box-shadow .25s}
 .btn-bone{background:var(--bone);color:var(--night)}
 .btn-bone:hover{background:#fff}
 .btn-line{box-shadow:inset 0 0 0 1px var(--bone-3);color:var(--bone)}
 .btn-line:hover{box-shadow:inset 0 0 0 1px var(--bone)}
-.btn-ink{background:var(--ink);color:var(--paper)}
 .link{display:inline-flex;align-items:center;height:48px;font-size:14.5px;font-weight:500;text-decoration:underline;text-decoration-thickness:1px;text-underline-offset:5px}
+.lang{display:inline-flex;align-items:center;gap:2px;height:36px;padding:0 4px;font-size:12px;font-weight:500;letter-spacing:.04em}
+.lang span{padding:4px 5px;border-radius:999px;color:var(--bone-2);transition:color .2s}
+.lang span.on{color:var(--bone)}
+.lang span + span::before{content:"/";margin:0 6px 0 -1px;color:var(--bone-3)}
+.lang:hover span{color:var(--bone)}
 
 /* ---------- hero ---------- */
 .hero{position:relative;height:100vh;height:100svh;background:var(--night);color:var(--bone);overflow:hidden;isolation:isolate}
@@ -132,24 +224,28 @@ svg.i{width:16px;height:16px;flex:none}
   background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")}
 .htop{position:absolute;left:0;right:0;top:0;z-index:10}
 .note{margin:0;padding:7px var(--g) 0;font-size:11px;letter-spacing:0;color:var(--bone-2);text-align:center}
-.hrow{display:flex;align-items:center;justify-content:space-between;gap:16px;height:54px;padding:0 var(--g)}
-.mark{font-family:var(--kr);font-size:20px;letter-spacing:-.03em;line-height:1}
+.hrow{display:flex;align-items:center;gap:10px;height:54px;padding:0 var(--g)}
+.hrow .mark{margin-right:auto}
+.mark{font-family:var(--kr);font-weight:var(--kr-sw);font-size:20px;letter-spacing:-.03em;line-height:1}
 .hnav{display:none}
-.hcall{display:inline-flex;align-items:center;gap:7px;height:36px;padding:0 14px;border-radius:999px;box-shadow:inset 0 0 0 1px var(--bone-3);font-size:13px;font-weight:500}
+.hcall{display:inline-flex;align-items:center;gap:7px;height:36px;padding:0 14px;border-radius:999px;box-shadow:inset 0 0 0 1px var(--bone-3);font-size:13px;font-weight:500;white-space:nowrap}
 .wire{position:absolute;top:0;width:1px;z-index:2;background:linear-gradient(rgba(236,233,225,0),rgba(236,233,225,.5) 30%,rgba(236,233,225,.5));transform-origin:50% 0}
 .piece{position:absolute;z-index:3}
 .piece .ghost{position:absolute;inset:0;width:100%;height:100%;opacity:0;filter:grayscale(1) brightness(2.6) contrast(.8);pointer-events:none}
 .piece .layer{position:absolute;height:auto;transform-origin:50% 0;will-change:transform;filter:drop-shadow(0 22px 30px rgba(0,0,0,.45))}
 .piece .layer.strands{--rv:130%;-webkit-mask-image:linear-gradient(#000 calc(var(--rv) - 30%),transparent var(--rv));mask-image:linear-gradient(#000 calc(var(--rv) - 30%),transparent var(--rv))}
-.pcap{position:absolute;z-index:4;font-size:11.5px;color:var(--bone-2);white-space:nowrap}
-.pcap::before{content:"";display:inline-block;width:18px;height:1px;margin:0 8px 3px 0;background:var(--bone-3)}
+.pcap{position:absolute;z-index:4;font-size:11.5px;line-height:1.45;color:var(--bone-2)}
+.pcap::before{content:"";display:block;width:18px;height:1px;margin:0 0 6px;background:var(--bone-3)}
+.pcap a{display:inline-block;padding:4px 0 8px}
+.pcap a:hover{color:var(--bone)}
 .hcopy{position:absolute;left:0;right:0;bottom:0;z-index:5;padding:0 var(--g) calc(22px + env(safe-area-inset-bottom))}
 .stamp{margin:0 0 16px;overflow:hidden;font-size:10.5px;font-weight:500;letter-spacing:.16em;color:var(--bone-2);white-space:nowrap}
 .stamp > span{display:block}
 .hcopy h1{margin:0 0 14px;font-size:clamp(42px,11.8vw,112px)}
-.hcopy h1 .ln{display:block;overflow:hidden;padding-bottom:.1em;margin-bottom:-.1em}
+html[lang="en"] .hcopy h1{font-size:clamp(40px,10.6vw,104px)}
+.hcopy h1 .ln{display:block;overflow:hidden;padding-bottom:.12em;margin-bottom:-.12em}
 .hcopy h1 .ln > span{display:block}
-.hkr{margin:0 0 18px;font-size:14px;color:var(--bone-2)}
+.hkr{margin:0 0 18px;font-size:14px;color:var(--bone-2);text-wrap:balance}
 .hcta{display:flex;align-items:center;gap:18px}
 .cue{position:absolute;left:0;right:0;bottom:calc(30px + env(safe-area-inset-bottom));z-index:6;margin:0;text-align:center;font-size:12px;color:var(--bone-2);opacity:0;pointer-events:none}
 .cue i{display:block;width:1px;height:30px;margin:0 auto 12px;background:var(--bone-2);transform-origin:50% 0;animation:drip 2.2s cubic-bezier(.6,0,.3,1) infinite}
@@ -159,9 +255,10 @@ svg.i{width:16px;height:16px;flex:none}
 
 /* ---------- intro ---------- */
 .intro{padding:88px var(--g) 80px}
-.intro p.lead{margin:0;font-family:var(--kr-l);font-size:25px;line-height:1.62;letter-spacing:-.03em;max-width:19em}
+.intro p.lead{margin:0;text-wrap:pretty;font-family:var(--kr-l);font-weight:var(--kr-lw);font-size:24px;line-height:1.66;letter-spacing:var(--kr-lt);max-width:19em}
+html[lang="en"] .intro p.lead{letter-spacing:-.01em;line-height:1.5}
 .facts{display:grid;gap:0;margin:48px 0 0;padding:0;border-top:1px solid var(--line)}
-.facts div{display:grid;grid-template-columns:88px 1fr;gap:12px;padding:14px 0;border-bottom:1px solid var(--line)}
+.facts div{display:grid;grid-template-columns:96px 1fr;gap:12px;padding:14px 0;border-bottom:1px solid var(--line)}
 .facts dt{font-size:12.5px;color:var(--ink-2)}
 .facts dd{margin:0;font-size:14px}
 
@@ -169,8 +266,13 @@ svg.i{width:16px;height:16px;flex:none}
 .night{position:relative;background:var(--night);color:var(--bone)}
 .night figure{position:relative;margin:0;overflow:hidden}
 .night figure img{width:100%;height:auto;transform-origin:50% 60%}
-.night figure::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(11,14,10,.82) 0%,rgba(11,14,10,0) 42%)}
-.night blockquote{position:absolute;left:var(--g);right:var(--g);top:26px;z-index:2;margin:0;font-family:var(--kr-l);font-size:24px;line-height:1.5;letter-spacing:-.03em;max-width:15em}
+.night figure::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(11,14,10,.86) 0%,rgba(11,14,10,.6) 30%,rgba(11,14,10,0) 58%);pointer-events:none}
+.night blockquote{position:absolute;left:var(--g);right:var(--g);top:26px;z-index:2;margin:0;text-shadow:0 1px 14px rgba(0,0,0,.55)}
+.night blockquote p{margin:0;max-width:15em;font-family:var(--kr-l);font-weight:var(--kr-lw);font-size:24px;line-height:1.5;letter-spacing:var(--kr-lt);text-wrap:balance}
+html[lang="en"] .night blockquote p{letter-spacing:-.01em}
+.night cite{display:block;margin-top:12px;font-style:normal;font-size:12px;color:var(--bone-2)}
+.night cite a{display:inline-flex;align-items:center;padding:6px 0;text-decoration:underline;text-decoration-thickness:1px;text-underline-offset:4px;text-decoration-color:var(--bone-3)}
+.night cite a:hover{color:var(--bone)}
 .night dl{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px 18px;margin:0;padding:22px var(--g) 30px}
 .night dt{font-size:11.5px;color:var(--bone-2)}
 .night dd{margin:2px 0 0;font-size:14px}
@@ -179,7 +281,7 @@ svg.i{width:16px;height:16px;flex:none}
 .works{padding:88px 0 72px}
 .whead{display:flex;align-items:flex-end;justify-content:space-between;gap:16px;padding:0 var(--g);margin:0 0 26px}
 .whead h2{margin:0;font-size:36px}
-.whead p{margin:10px 0 0;font-size:14px;color:var(--ink-2)}
+.whead p{margin:10px 0 0;font-size:14px;color:var(--ink-2);text-wrap:balance}
 .count{font-size:12.5px;color:var(--ink-2);font-variant-numeric:tabular-nums;white-space:nowrap;padding-bottom:4px}
 .track{display:flex;gap:12px;overflow-x:auto;scroll-snap-type:x mandatory;padding:0 var(--g);scrollbar-width:none;-webkit-overflow-scrolling:touch}
 .track::-webkit-scrollbar{display:none}
@@ -188,9 +290,12 @@ svg.i{width:16px;height:16px;flex:none}
 .wk img{width:100%;height:100%;object-fit:cover;opacity:0;transition:opacity .7s, transform .9s cubic-bezier(.2,.7,.2,1)}
 .wk img.ok{opacity:1}
 .wk button:hover img{transform:scale(1.03)}
-.wk figcaption{display:flex;justify-content:space-between;align-items:baseline;gap:12px;padding-top:12px}
-.wk b{font-family:var(--kr);font-weight:400;font-size:17px;letter-spacing:-.025em}
-.wk span{font-size:12.5px;color:var(--ink-2);white-space:nowrap}
+.wk figcaption{display:grid;grid-template-columns:minmax(0,1fr) auto;align-items:baseline;column-gap:12px;padding-top:10px}
+.wk .t{display:inline-flex;align-items:baseline;min-width:0;padding:2px 0;font-family:var(--kr);font-weight:var(--kr-sw);font-size:17px;letter-spacing:var(--kr-st)}
+.wk .t span{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.wk .t:hover span{text-decoration:underline;text-decoration-thickness:1px;text-underline-offset:4px}
+.wk .m{font-size:12.5px;color:var(--ink-2);white-space:nowrap}
+.wk .by{grid-column:1 / -1;font-size:11.5px;color:var(--ink-2)}
 .track::after{content:"";flex:0 0 1px}
 
 /* ---------- how ---------- */
@@ -202,31 +307,34 @@ svg.i{width:16px;height:16px;flex:none}
 .steps li{position:relative;padding:0 0 30px}
 .steps li:last-child{padding-bottom:0}
 .steps li::before{content:"";position:absolute;left:-28px;top:9px;width:11px;height:11px;border-radius:50%;background:var(--paper);box-shadow:inset 0 0 0 1.5px var(--ink)}
-.steps h3{margin:0 0 4px;font-family:var(--kr);font-weight:400;font-size:22px;letter-spacing:-.03em}
+.steps h3{margin:0 0 4px;font-family:var(--kr);font-weight:var(--kr-sw);font-size:21px;letter-spacing:var(--kr-st)}
 .steps p{margin:0;font-size:14px;color:var(--ink-2);max-width:24em}
 
 /* ---------- scope ---------- */
 .scope{padding:72px var(--g) 96px;border-top:1px solid var(--line)}
 .scope h2{margin:0 0 22px;font-size:34px}
-.scope .sub{margin:0 0 26px;font-size:14px;color:var(--ink-2)}
 .svc{margin:0;padding:0;list-style:none;border-top:1px solid var(--line)}
-.svc li{padding:13px 0;border-bottom:1px solid var(--line);font-family:var(--kr);font-size:18px;letter-spacing:-.025em}
+.svc li{padding:13px 0;border-bottom:1px solid var(--line);font-family:var(--kr);font-weight:var(--kr-sw);font-size:17px;letter-spacing:var(--kr-st)}
 .clients{margin-top:56px}
 .clients ul{margin:0;padding:0;list-style:none}
 .clients li{display:flex;justify-content:space-between;align-items:baseline;gap:14px;padding:12px 0;border-bottom:1px solid var(--line)}
 .clients li:first-child{border-top:1px solid var(--line)}
-.clients b{font-weight:400;font-family:var(--kr);font-size:18px;letter-spacing:-.025em}
-.clients span{font-size:12.5px;color:var(--ink-2);text-align:right}
+.clients .n{display:inline-flex;align-items:baseline;font-family:var(--kr);font-weight:var(--kr-sw);font-size:17px;letter-spacing:var(--kr-st)}
+.clients a.n:hover span{text-decoration:underline;text-decoration-thickness:1px;text-underline-offset:4px}
+.clients .p{font-size:12.5px;color:var(--ink-2);text-align:right}
+.clients a.p{text-decoration:underline;text-decoration-thickness:1px;text-underline-offset:3px;text-decoration-color:var(--line)}
+.clients a.p:hover{color:var(--ink);text-decoration-color:currentColor}
 
 /* ---------- contact + footer ---------- */
 .contact{background:var(--night);color:var(--bone);padding:84px var(--g) 0;position:relative;overflow:hidden}
 .contact h2{margin:0 0 10px;font-size:36px}
 .contact .sub{margin:0 0 36px;font-size:14.5px;color:var(--bone-2)}
 .tel{display:inline-block;font-family:var(--ui);font-weight:200;font-size:clamp(40px,11.4vw,112px);line-height:1;letter-spacing:-.04em;white-space:nowrap;font-variant-numeric:tabular-nums}
+html[lang="en"] .tel{font-size:clamp(34px,9.6vw,100px)}
 .tel:hover{color:#fff}
 .cbtns{display:flex;flex-wrap:wrap;gap:10px;margin:28px 0 0}
 .form{margin:64px 0 0;padding:0}
-.form h3{margin:0 0 6px;font-family:var(--kr);font-weight:400;font-size:22px;letter-spacing:-.03em}
+.form h3{margin:0 0 6px;font-family:var(--kr);font-weight:var(--kr-sw);font-size:21px;letter-spacing:var(--kr-st)}
 .form > p{margin:0 0 22px;font-size:13px;color:var(--bone-2)}
 .field{margin:0;padding:0;border:0;min-width:0}
 .field + .field{margin-top:4px}
@@ -246,7 +354,7 @@ svg.i{width:16px;height:16px;flex:none}
 .form .btn{width:100%}
 .msg{min-height:1.5em;margin:10px 0 0;font-size:13px;color:#E8B4A6}
 .foot{background:var(--night);color:var(--bone-2);padding:72px var(--g) calc(96px + env(safe-area-inset-bottom));font-size:12.5px;line-height:1.85}
-.word{margin:0 0 22px;font-family:var(--kr);color:var(--bone);font-size:30px;line-height:1;letter-spacing:-.03em}
+.word{margin:0 0 22px;font-family:var(--kr);font-weight:var(--kr-w);color:var(--bone);font-size:30px;line-height:1;letter-spacing:-.03em}
 .biz{display:grid;grid-template-columns:auto 1fr;gap:4px 16px;margin:0}
 .biz dt{color:rgba(236,233,225,.42)}
 .biz dd{margin:0;color:var(--bone-2)}
@@ -255,12 +363,12 @@ svg.i{width:16px;height:16px;flex:none}
 .foot .fine{margin-top:18px;padding-top:16px;border-top:1px solid var(--bone-3)}
 
 /* ---------- persistent bar (after the hero) ---------- */
-.bar{position:fixed;left:50%;bottom:calc(14px + env(safe-area-inset-bottom));z-index:40;display:flex;align-items:center;gap:14px;width:max-content;
+.bar{position:fixed;left:50%;bottom:calc(14px + env(safe-area-inset-bottom));z-index:40;display:flex;align-items:center;gap:10px;width:max-content;
   padding:6px 6px 6px 18px;border-radius:999px;background:rgba(11,14,10,.86);color:var(--bone);
   -webkit-backdrop-filter:blur(14px);backdrop-filter:blur(14px);box-shadow:0 14px 34px rgba(0,0,0,.22);
   transform:translate(-50%,170%);transition:transform .5s cubic-bezier(.2,.8,.2,1)}
 .bar.on{transform:translate(-50%,0)}
-.bar .mark{font-size:19px}
+.bar .mark{font-size:19px;margin-right:4px}
 .bar nav{display:none}
 .bar .btn{height:40px;padding:0 16px;font-size:13.5px}
 
@@ -273,8 +381,11 @@ svg.i{width:16px;height:16px;flex:none}
 .lb-in{display:grid;grid-template-rows:minmax(0,1fr) auto;height:100%;padding:56px 14px calc(16px + env(safe-area-inset-bottom))}
 .lb-st{display:grid;place-items:center;min-height:0}
 .lb-st img{max-width:100%;max-height:100%;object-fit:contain}
-.lb-ft{display:flex;align-items:center;justify-content:space-between;gap:12px;padding-top:14px}
-.lb-cap{margin:0}.lb-cap b{display:block;font-family:var(--kr);font-weight:400;font-size:17px}.lb-cap span{font-size:12.5px;color:var(--bone-2)}
+.lb-ft{display:flex;align-items:flex-end;justify-content:space-between;gap:12px;padding-top:14px}
+.lb-cap{margin:0;min-width:0}
+.lb-cap b{display:block;font-family:var(--kr);font-weight:var(--kr-sw);font-size:17px;letter-spacing:var(--kr-st)}
+.lb-cap span{display:block;font-size:12.5px;color:var(--bone-2)}
+.lb-cap a{display:inline-flex;align-items:center;margin-top:6px;padding:4px 0;font-size:13px;color:var(--bone);text-decoration:underline;text-decoration-thickness:1px;text-underline-offset:4px;text-decoration-color:var(--bone-3)}
 .lb-nav{display:flex;gap:8px}
 .ib{display:inline-grid;place-items:center;width:44px;height:44px;border-radius:999px;box-shadow:inset 0 0 0 1px var(--bone-3);color:var(--bone)}
 .lb-x{position:absolute;top:8px;right:10px}
@@ -285,22 +396,27 @@ svg.i{width:16px;height:16px;flex:none}
 @media (min-width:900px){
   :root{--g:48px}
   .note{padding-top:10px;font-size:11.5px}
-  .hrow{height:72px}
+  .hrow{height:72px;gap:14px}
   .mark{font-size:28px}
-  .hnav{display:flex;gap:34px;font-size:13.5px;color:var(--bone-2)}
+  .hnav{display:flex;gap:34px;margin-right:18px;font-size:13.5px;color:var(--bone-2)}
   .hnav a:hover{color:var(--bone)}
   .hcall{height:40px;padding:0 18px;font-size:13.5px}
+  .lang{font-size:12.5px}
   .hcopy{max-width:64%;padding-bottom:40px}
   .stamp{font-size:11.5px;margin-bottom:20px}
   .hcopy h1{margin:0 0 20px;font-size:clamp(60px,6.4vw,104px)}
+  html[lang="en"] .hcopy h1{font-size:clamp(56px,5.8vw,96px)}
   .hkr{font-size:15px;margin-bottom:20px}
   .intro{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));column-gap:24px;padding:160px var(--g) 150px}
-  .intro p.lead{grid-column:3 / 11;font-size:clamp(32px,2.9vw,44px);max-width:none}
+  .intro p.lead{grid-column:3 / 11;font-size:clamp(30px,2.7vw,42px);max-width:none}
   .facts{grid-column:3 / 11;grid-template-columns:repeat(3,minmax(0,1fr));column-gap:24px;border-top:0;margin-top:72px}
   .facts div{grid-template-columns:1fr;gap:6px;border-top:1px solid var(--line);border-bottom:0;padding-top:16px}
   .night figure{height:min(92vh,900px)}
   .night figure img{height:100%;object-fit:cover;object-position:50% 40%}
-  .night blockquote{left:var(--g);top:64px;font-size:clamp(36px,3.3vw,52px);max-width:14em}
+  .night blockquote{left:var(--g);top:64px}
+  .night blockquote p{max-width:14em}
+  .night blockquote p{font-size:clamp(34px,3.1vw,50px)}
+  .night cite{font-size:13px;margin-top:18px}
   .night dl{grid-template-columns:repeat(4,minmax(0,1fr));column-gap:24px;padding:28px var(--g) 40px}
   .works{padding:150px 0 120px}
   .whead h2{font-size:clamp(44px,4vw,64px)}
@@ -317,7 +433,7 @@ svg.i{width:16px;height:16px;flex:none}
   .scope .col1{grid-column:1 / 7}
   .scope .col2{grid-column:8 / 13}
   .scope h2{font-size:clamp(40px,3.6vw,56px)}
-  .svc li{font-size:22px}
+  .svc li{font-size:21px}
   .clients{margin-top:0}
   .contact{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));column-gap:24px;padding:140px var(--g) 0}
   .contact .c1{grid-column:1 / 8}
@@ -327,7 +443,7 @@ svg.i{width:16px;height:16px;flex:none}
   .word{font-size:40px}
   .bar{left:auto;right:24px;top:20px;bottom:auto;transform:translateY(-170%)}
   .bar.on{transform:none}
-  .bar nav{display:flex;gap:22px;font-size:13px;color:var(--bone-2)}
+  .bar nav{display:flex;gap:22px;margin-right:6px;font-size:13px;color:var(--bone-2)}
   .bar nav a:hover{color:var(--bone)}
   .toast{bottom:28px}
 }
@@ -336,18 +452,19 @@ svg.i{width:16px;height:16px;flex:none}
 <body>
 <main>
   <!-- 1+2. 히어로: 숲빛 무대에서 작품이 한 층씩 걸림 -->
-  <section class="hero" id="hero" aria-label="소개">
+  <section class="hero" id="hero" data-t-aria="aHero">
     <span class="light"></span><span class="beam"></span><span class="grain"></span>
     <div class="htop">
       <p class="note" id="note"></p>
       <div class="hrow">
         <a class="mark" id="mark" href="#hero"></a>
-        <nav class="hnav" aria-label="바로가기"><a href="#works">시공 사례</a><a href="#how">진행 과정</a><a href="#contact">상담 문의</a></nav>
-        <a class="hcall" id="hcall" href="#"><span data-i="phone"></span><span>전화 상담</span></a>
+        <nav class="hnav" data-t-aria="aNav"><a href="#works" data-t="navWorks"></a><a href="#how" data-t="navHow"></a><a href="#contact" data-t="navContact"></a></nav>
+        <button type="button" class="lang" data-lang><span data-l="ko">KO</span><span data-l="en">EN</span></button>
+        <a class="hcall" id="hcall" href="#"><span data-i="phone"></span><span data-t="call"></span></a>
       </div>
     </div>
     <span class="wire" id="wire"></span>
-    <div class="piece" id="piece" role="img" aria-label="ikki archive 행잉 작품"><img class="ghost" id="ghost" alt="" aria-hidden="true"></div>
+    <div class="piece" id="piece" role="img"><img class="ghost" id="ghost" alt="" aria-hidden="true"></div>
     <span class="pcap" id="pcap"></span>
     <div class="hcopy">
       <p class="stamp" id="stamp"></p>
@@ -360,13 +477,13 @@ svg.i{width:16px;height:16px;flex:none}
     <p class="cue" id="cue"><i></i><span></span></p>
   </section>
 
-  <section class="intro" aria-label="소개 글">
+  <section class="intro" data-t-aria="aIntro">
     <p class="lead" id="intro"></p>
     <dl class="facts" id="facts"></dl>
   </section>
 
-  <section class="night" id="night" aria-label="대표 작업, 송정동 대형 카페">
-    <figure><img id="night-img" loading="lazy" decoding="async"><blockquote id="quote"></blockquote></figure>
+  <section class="night" id="night" data-t-aria="aNight">
+    <figure><img id="night-img" loading="lazy" decoding="async"><blockquote id="quote"><p></p><cite></cite></blockquote></figure>
     <dl id="night-dl"></dl>
   </section>
 
@@ -381,34 +498,34 @@ svg.i{width:16px;height:16px;flex:none}
 
   <!-- 5. 진행 방식 -->
   <section class="how" id="how" aria-labelledby="how-h">
-    <header><h2 class="disp" id="how-h">진행 과정</h2><p class="sub">상담부터 시공 뒤 관리까지 직접 맡습니다.</p></header>
+    <header><h2 class="disp" id="how-h" data-t="howH"></h2><p class="sub" id="how-sub"></p></header>
     <ol class="steps" id="steps"></ol>
   </section>
 
   <!-- 하는 일 + 4. 함께한 곳 (후기는 원문이 있을 때만) -->
-  <section class="scope" aria-label="하는 일과 함께한 곳">
-    <div class="col1"><h2 class="disp">하는 일</h2><ul class="svc" id="svc"></ul></div>
-    <div class="col2 clients" id="clients"><h2 class="disp">함께한 곳</h2><ul id="cl"></ul></div>
+  <section class="scope" data-t-aria="aScope">
+    <div class="col1"><h2 class="disp" data-t="svcH"></h2><ul class="svc" id="svc"></ul></div>
+    <div class="col2 clients" id="clients"><h2 class="disp" data-t="clientsH"></h2><ul id="cl"></ul></div>
   </section>
 
   <!-- 6. 문의 -->
   <section class="contact" id="contact" aria-labelledby="contact-h">
     <div class="c1">
-      <h2 class="disp" id="contact-h">상담 문의</h2>
-      <p class="sub">어떤 공간인지 알려주세요. 작은 공간도 괜찮습니다.</p>
+      <h2 class="disp" id="contact-h" data-t="contactH"></h2>
+      <p class="sub" data-t="contactSub"></p>
       <a class="tel" id="tel" href="#"></a>
       <div class="cbtns" id="cbtns"></div>
     </div>
     <form class="form" id="form" novalidate>
-      <h3>상담 신청</h3>
-      <p>남겨 주시면 확인 후 연락드립니다.</p>
-      <div class="field"><label for="f-name">이름</label><input type="text" id="f-name" autocomplete="name"></div>
-      <div class="field"><label for="f-phone">연락처</label><input type="tel" id="f-phone" autocomplete="tel" inputmode="tel" placeholder="010-0000-0000"></div>
-      <fieldset class="field"><legend>공간 종류</legend><div class="chips" id="chips"></div></fieldset>
-      <div class="field"><label for="f-size">공간 크기</label><input type="text" id="f-size" placeholder="예: 카페 40평, 거실 한쪽 벽"></div>
-      <div class="field"><label for="f-body">내용</label><textarea id="f-body" placeholder="원하는 분위기, 일정, 예산을 편하게 적어 주세요."></textarea></div>
-      <label class="consent"><input type="checkbox" id="f-consent"><span>문의에 답하기 위해 이름과 연락처를 수집하는 데 동의합니다.</span></label>
-      <button type="submit" class="btn btn-bone">상담 신청하기</button>
+      <h3 data-t="formH"></h3>
+      <p data-t="formP"></p>
+      <div class="field"><label for="f-name" data-t="fName"></label><input type="text" id="f-name" autocomplete="name"></div>
+      <div class="field"><label for="f-phone" data-t="fPhone"></label><input type="tel" id="f-phone" autocomplete="tel" inputmode="tel" placeholder="010-0000-0000"></div>
+      <fieldset class="field"><legend data-t="fSpace"></legend><div class="chips" id="chips"></div></fieldset>
+      <div class="field"><label for="f-size" data-t="fSize"></label><input type="text" id="f-size" data-t-ph="fSizePh"></div>
+      <div class="field"><label for="f-body" data-t="fBody"></label><textarea id="f-body" data-t-ph="fBodyPh"></textarea></div>
+      <label class="consent"><input type="checkbox" id="f-consent"><span data-t="consent"></span></label>
+      <button type="submit" class="btn btn-bone" data-t="submit"></button>
       <p class="msg" id="msg" role="alert"></p>
     </form>
   </section>
@@ -419,59 +536,118 @@ svg.i{width:16px;height:16px;flex:none}
 
 <div class="bar" id="bar">
   <a class="mark" href="#hero" id="bar-mark"></a>
-  <nav aria-label="바로가기"><a href="#works">시공 사례</a><a href="#how">진행 과정</a><a href="#contact">상담 문의</a></nav>
-  <a class="btn btn-bone" id="bar-call" href="#"><span data-i="phone"></span><span>전화 상담</span></a>
+  <nav data-t-aria="aNav"><a href="#works" data-t="navWorks"></a><a href="#how" data-t="navHow"></a><a href="#contact" data-t="navContact"></a></nav>
+  <button type="button" class="lang" data-lang><span data-l="ko">KO</span><span data-l="en">EN</span></button>
+  <a class="btn btn-bone" id="bar-call" href="#"><span data-i="phone"></span><span data-t="call"></span></a>
 </div>
 
-<dialog class="lb" id="lb" aria-label="사진 크게 보기">
+<dialog class="lb" id="lb">
   <div class="lb-in">
     <div class="lb-st"><img id="lb-img" alt=""></div>
     <div class="lb-ft">
       <p class="lb-cap" id="lb-cap"></p>
       <div class="lb-nav">
-        <button type="button" class="ib" id="lb-prev" aria-label="이전 사진"><span data-i="prev"></span></button>
-        <button type="button" class="ib" id="lb-next" aria-label="다음 사진"><span data-i="next"></span></button>
+        <button type="button" class="ib" id="lb-prev"><span data-i="prev"></span></button>
+        <button type="button" class="ib" id="lb-next"><span data-i="next"></span></button>
       </div>
     </div>
   </div>
-  <button type="button" class="ib lb-x" id="lb-x" aria-label="닫기"><span data-i="x"></span></button>
+  <button type="button" class="ib lb-x" id="lb-x"><span data-i="x"></span></button>
 </dialog>
 <div class="toast" id="toast" role="status" aria-live="polite"></div>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" defer></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" defer></script>
 <script>
+/* 화면 고정 문구 (업체와 상관없는 틀) */
+const UI = {
+  ko: {
+    aHero: '소개', aNav: '바로가기', aIntro: '소개 글', aNight: '대표 작업, 송정동 대형 카페', aScope: '하는 일과 함께한 곳',
+    navWorks: '시공 사례', navHow: '진행 과정', navContact: '상담 문의', call: '전화 상담', seeWorks: '시공 사례 보기',
+    langAria: 'English로 보기', howH: '진행 과정', svcH: '하는 일', clientsH: '함께한 곳',
+    contactH: '상담 문의', contactSub: '어떤 공간인지 알려 주세요. 작은 공간도 괜찮습니다.',
+    callNow: '전화 걸기', dm: '인스타그램 DM', kakao: '카카오톡 문의',
+    formH: '상담 신청', formP: '남겨 주시면 확인하고 연락드립니다.',
+    fName: '이름', fPhone: '연락처', fSpace: '공간 종류', fSize: '공간 크기', fSizePh: '예: 카페 40평, 거실 한쪽 벽',
+    fBody: '내용', fBodyPh: '원하는 분위기, 일정, 예산을 편하게 적어 주세요.',
+    consent: '상담 연락을 위해 이름과 연락처를 받는 데 동의합니다.', submit: '상담 신청하기',
+    errName: '이름을 입력해 주세요.', errPhone: '연락처를 입력해 주세요.', errConsent: '개인정보 수집에 동의해 주세요.',
+    toast: '시안 화면이라 실제로 접수되지는 않습니다. 정식 오픈 뒤에는 상담 신청이 사장님 휴대폰 문자로 바로 갑니다.',
+    zoom: ' 사진 크게 보기', post: '인스타그램 게시물', openPost: '인스타그램에서 보기', by: '사진 ', newTab: ' (새 창)',
+    lb: '사진 크게 보기', prev: '이전 사진', next: '다음 사진', close: '닫기', pieceAria: ' 행잉 작품',
+    rName: '상호', rOwner: '대표', rReg: '사업자등록번호', rPhone: '전화', rInsta: '인스타그램', rArea: '작업 지역',
+    fine: (n) => '이 페이지는 ' + n + '에 보여드리려고 WeThru가 만든 시안입니다. 공식 사이트가 아닙니다.'
+  },
+  en: {
+    aHero: 'Introduction', aNav: 'Sections', aIntro: 'About', aNight: 'Featured project, large cafe in Songjeong-dong', aScope: 'Services and clients',
+    navWorks: 'Projects', navHow: 'Process', navContact: 'Contact', call: 'Call', seeWorks: 'See projects',
+    langAria: '한국어로 보기', howH: 'Process', svcH: 'What we do', clientsH: 'Worked with',
+    contactH: 'Contact', contactSub: 'Tell us about the space. Small spaces are fine too.',
+    callNow: 'Call now', dm: 'Instagram DM', kakao: 'KakaoTalk',
+    formH: 'Ask for a consultation', formP: 'Leave your details and we’ll get back to you.',
+    fName: 'Name', fPhone: 'Phone', fSpace: 'Type of space', fSize: 'Size', fSizePh: 'e.g. a 130 m² cafe, one living room wall',
+    fBody: 'Details', fBodyPh: 'The look you want, timing, budget. Whatever you have so far.',
+    consent: 'I agree to share my name and phone number so you can get back to me.', submit: 'Send request',
+    errName: 'Please enter your name.', errPhone: 'Please enter a phone number.', errConsent: 'Please agree to the data collection.',
+    toast: 'This is a draft, so nothing is sent. Once the site is live, requests go straight to the owner’s phone as a text.',
+    zoom: ', view larger', post: 'Instagram post', openPost: 'View on Instagram', by: 'Photo: ', newTab: ' (opens in a new tab)',
+    lb: 'Photo viewer', prev: 'Previous photo', next: 'Next photo', close: 'Close', pieceAria: ' hanging installation',
+    rName: 'Business', rOwner: 'Owner', rReg: 'Business reg. no.', rPhone: 'Phone', rInsta: 'Instagram', rArea: 'Area',
+    fine: (n) => 'WeThru made this page as a draft to show ' + n + '. It is not the official site.'
+  }
+};
+
 document.addEventListener('DOMContentLoaded', function () {
-  const C = CONFIG, $ = (s, r) => (r || document).querySelector(s), $$ = (s, r) => Array.from((r || document).querySelectorAll(s));
+  const $ = (s, r) => (r || document).querySelector(s), $$ = (s, r) => Array.from((r || document).querySelectorAll(s));
   const esc = (s) => String(s == null ? '' : s).replace(/[&<>"']/g, (m) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[m]));
-  const S = (d) => '<svg class="i" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">' + d + '</svg>';
+  const S = (d, c) => '<svg class="' + (c || 'i') + '" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">' + d + '</svg>';
   const I = {
     phone: S('<path d="M5 4h3.2l1.6 4-2 1.3a10.5 10.5 0 0 0 6.9 6.9l1.3-2 4 1.6V19a1.6 1.6 0 0 1-1.7 1.6A15.6 15.6 0 0 1 3.4 5.7 1.6 1.6 0 0 1 5 4z"/>'),
     ig: S('<rect x="3.5" y="3.5" width="17" height="17" rx="5"/><circle cx="12" cy="12" r="3.8"/><circle cx="17" cy="7" r=".5" fill="currentColor"/>'),
     prev: S('<path d="M14.5 5.5 8 12l6.5 6.5"/>'), next: S('<path d="M9.5 5.5 16 12l-6.5 6.5"/>'), x: S('<path d="M6 6l12 12M18 6 6 18"/>')
   };
-  const tel = 'tel:' + C.phone.replace(/[^\d+]/g, '');
-  const dm = C.instagram ? 'https://ig.me/m/' + C.instagram : '';
-  const ig = C.instagram ? 'https://www.instagram.com/' + C.instagram + '/' : '';
+  const AR = S('<path d="M7 17 17 7M8.5 7H17v8.5"/>', 'ar');
+  const ext = (href, inner, cls, aria) => '<a' + (cls ? ' class="' + cls + '"' : '') + ' href="' + esc(href) + '" target="_blank" rel="noopener"' + (aria ? ' aria-label="' + esc(aria) + '"' : '') + '>' + inner + AR + '</a>';
+  const tel = 'tel:' + CONFIG.phone.replace(/[^\d+]/g, '');
+  const dm = CONFIG.instagram ? 'https://ig.me/m/' + CONFIG.instagram : '';
+  const ig = CONFIG.instagram ? 'https://www.instagram.com/' + CONFIG.instagram + '/' : '';
   const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const root = document.documentElement;
 
-  /* hero */
-  const note = $('#note'); note.textContent = C.notice; note.hidden = !C.notice;
-  $('#mark').textContent = C.bizName; $('#bar-mark').textContent = C.bizName;
+  /* CONFIG + CONFIG.en → the strings for one language (arrays merge item by item) */
+  function merge(base, over) {
+    if (over == null) return base;
+    if (Array.isArray(base) && Array.isArray(over)) return base.map((b, i) => merge(b, over[i]));
+    if (base && typeof base === 'object' && !Array.isArray(base) && typeof over === 'object') {
+      const o = Object.assign({}, base); Object.keys(over).forEach((k) => { o[k] = merge(base[k], over[k]); }); return o;
+    }
+    return over;
+  }
+  let lang = root.lang === 'en' ? 'en' : 'ko', C = CONFIG, T = UI.ko;
+
+  /* ---- structure (built once; text is filled in by paint) ---- */
+  const P = CONFIG.hero.piece, piece = $('#piece'), wire = $('#wire'), pcap = $('#pcap'), hero = $('#hero');
+  $('#mark').textContent = CONFIG.bizName; $('#bar-mark').textContent = CONFIG.bizName;
   $('#hcall').href = tel; $('#bar-call').href = tel;
-  $('#stamp').innerHTML = '<span>' + esc(C.hero.stamp) + '</span>';
-  const h1 = $('#h1'); h1.setAttribute('aria-label', C.hero.headline.join(' '));
-  h1.innerHTML = C.hero.headline.map((l) => '<span class="ln" aria-hidden="true"><span>' + esc(l) + '</span></span>').join('');
-  $('#hkr').textContent = C.hero.kr;
-  $('#hcta').innerHTML = '<a class="btn btn-bone" href="' + tel + '">' + I.phone + '<span>전화 상담</span></a><a class="link" href="#works">시공 사례 보기</a>';
-  $('#pcap').textContent = C.hero.caption;
-  $('#cue span').textContent = C.hero.cue;
-  const P = C.hero.piece, piece = $('#piece'), wire = $('#wire'), pcap = $('#pcap'), hero = $('#hero');
+  $('#stamp').innerHTML = '<span></span>';
+  $('#h1').innerHTML = CONFIG.hero.headline.map(() => '<span class="ln" aria-hidden="true"><span></span></span>').join('');
   $('#ghost').src = P.all;
   const layers = P.layers.map((L, i) => {
     const im = document.createElement('img'); im.className = 'layer ' + L.key; im.alt = ''; im.decoding = 'async'; im.src = L.src;
     im.style.left = L.x + '%'; im.style.top = L.y + '%'; im.style.width = L.w + '%'; im.style.zIndex = 2 + i;
     piece.appendChild(im); return im;
+  });
+  const ch = CONFIG.chapter, ni = $('#night-img');
+  if (ch.src2x) { ni.srcset = ch.src + ' 1080w, ' + ch.src2x + ' 2160w'; ni.sizes = '100vw'; }
+  ni.src = ch.src; ni.width = ch.w; ni.height = ch.h;
+  const track = $('#track'), count = $('#count'), N = CONFIG.works.length;
+  CONFIG.works.forEach((p, i) => {
+    const f = document.createElement('figure'); f.className = 'wk';
+    f.innerHTML = '<button type="button"><img width="' + p.w + '" height="' + p.h + '" loading="lazy" decoding="async"></button><figcaption></figcaption>';
+    const img = f.querySelector('img'); img.addEventListener('load', () => img.classList.add('ok')); img.src = p.src;
+    if (img.complete && img.naturalWidth) img.classList.add('ok');
+    f.querySelector('button').addEventListener('click', () => openLB(i));
+    track.appendChild(f);
   });
   const G = {};
   function layout() {
@@ -489,32 +665,98 @@ document.addEventListener('DOMContentLoaded', function () {
     Object.assign(wire.style, { left: tx + 'px', height: ty + 'px' });
     $('.beam').style.left = tx + 'px';
     $('.light').style.setProperty('--lx', (tx / W * 100) + '%');
-    pcap.style.left = (G.px + G.pw * 0.86) + 'px'; pcap.style.top = (G.py + G.ph * 0.4) + 'px';
+    /* caption to the right of the piece, kept inside the screen */
+    const cx = G.px + G.pw * 0.86;
+    pcap.style.left = cx + 'px'; pcap.style.top = (G.py + G.ph * 0.4) + 'px'; pcap.style.maxWidth = Math.max(80, W - cx - 14) + 'px';
   }
 
-  /* intro */
-  $('#intro').textContent = C.intro;
-  $('#facts').innerHTML = C.facts.map((f) => '<div><dt>' + esc(f[0]) + '</dt><dd>' + esc(f[1]) + '</dd></div>').join('');
+  /* ---- text for the current language ---- */
+  function paint() {
+    C = lang === 'en' ? merge(CONFIG, CONFIG.en) : CONFIG; T = UI[lang];
+    root.lang = lang; document.title = C.title || document.title;
+    $$('[data-t]').forEach((n) => { n.textContent = T[n.dataset.t]; });
+    $$('[data-t-ph]').forEach((n) => { n.placeholder = T[n.dataset.tPh]; });
+    $$('[data-t-aria]').forEach((n) => { n.setAttribute('aria-label', T[n.dataset.tAria]); });
+    $$('[data-lang]').forEach((b) => {
+      b.setAttribute('aria-label', T.langAria);
+      $$('[data-l]', b).forEach((s) => s.classList.toggle('on', s.dataset.l === lang));
+    });
+    $('#lb').setAttribute('aria-label', T.lb); $('#lb-prev').setAttribute('aria-label', T.prev);
+    $('#lb-next').setAttribute('aria-label', T.next); $('#lb-x').setAttribute('aria-label', T.close);
 
-  /* night chapter */
-  const ch = C.chapter, ni = $('#night-img');
-  if (ch.src2x) { ni.srcset = ch.src + ' 1080w, ' + ch.src2x + ' 2160w'; ni.sizes = '100vw'; }
-  ni.src = ch.src; ni.alt = ch.alt; ni.width = ch.w; ni.height = ch.h;
-  $('#quote').textContent = ch.quote;
-  $('#night-dl').innerHTML = ch.rows.map((r) => '<div><dt>' + esc(r[0]) + '</dt><dd>' + esc(r[1]) + '</dd></div>').join('');
+    /* hero */
+    const note = $('#note'); note.textContent = C.notice; note.hidden = !C.notice;
+    $('#stamp > span').textContent = C.hero.stamp;
+    const h1 = $('#h1'), lines = $$('#h1 .ln > span'), hl = C.hero.headline.slice();
+    while (hl.length > lines.length) hl[lines.length - 1] += ' ' + hl.pop();
+    h1.setAttribute('aria-label', hl.join(' '));
+    lines.forEach((s, i) => { s.textContent = hl[i] || ''; });
+    $('#hkr').textContent = C.hero.kr;
+    $('#hcta').innerHTML = '<a class="btn btn-bone" href="' + tel + '">' + I.phone + '<span>' + esc(T.call) + '</span></a><a class="link" href="#works">' + esc(T.seeWorks) + '</a>';
+    piece.setAttribute('aria-label', C.bizName + T.pieceAria);
+    pcap.innerHTML = C.hero.post ? ext(C.hero.post, esc(C.hero.caption), '', C.hero.caption + ', ' + T.post + T.newTab) : esc(C.hero.caption);
+    $('#cue span').textContent = C.hero.cue;
 
-  /* works */
-  $('#works-h').textContent = C.worksTitle; $('#works-kr').textContent = C.worksKr;
-  const track = $('#track'), count = $('#count'), N = C.works.length;
-  C.works.forEach((p, i) => {
-    const f = document.createElement('figure'); f.className = 'wk';
-    f.innerHTML = '<button type="button" aria-label="' + esc(p.title) + ' 사진 크게 보기"><img alt="' + esc(p.alt) + '" width="' + p.w + '" height="' + p.h + '" loading="lazy" decoding="async"></button>' +
-      '<figcaption><b>' + esc(p.title) + '</b><span>' + esc(p.meta) + '</span></figcaption>';
-    const img = f.querySelector('img'); img.addEventListener('load', () => img.classList.add('ok')); img.src = p.src;
-    if (img.complete && img.naturalWidth) img.classList.add('ok');
-    f.querySelector('button').addEventListener('click', () => openLB(i));
-    track.appendChild(f);
-  });
+    /* intro + chapter */
+    $('#intro').textContent = C.intro;
+    $('#facts').innerHTML = C.facts.map((f) => '<div><dt>' + esc(f[0]) + '</dt><dd>' + esc(f[1]) + '</dd></div>').join('');
+    ni.alt = C.chapter.alt;
+    $('#quote p').textContent = C.chapter.quote;
+    const cite = $('#quote cite');
+    cite.innerHTML = C.chapter.post ? ext(C.chapter.post, esc(C.bizName + ', ' + C.chapter.quoteSrc), '', C.chapter.quoteSrc + ', ' + T.post + T.newTab) : esc(C.chapter.quoteSrc || '');
+    $('#night-dl').innerHTML = C.chapter.rows.map((r) => '<div><dt>' + esc(r[0]) + '</dt><dd>' + esc(r[1]) + '</dd></div>').join('');
+
+    /* works: fill the figures that already exist (desktop scroll animates them) */
+    $('#works-h').textContent = C.worksTitle; $('#works-kr').textContent = C.worksKr;
+    $$('.wk', track).forEach((f, i) => {
+      const p = C.works[i];
+      f.querySelector('button').setAttribute('aria-label', p.title + T.zoom);
+      f.querySelector('img').alt = p.alt;
+      const title = '<span>' + esc(p.title) + '</span>';
+      f.querySelector('figcaption').innerHTML =
+        (p.post ? ext(p.post, title, 't', p.title + ', ' + T.post + T.newTab) : '<b class="t">' + title + '</b>') +
+        '<span class="m">' + esc(p.meta) + '</span>' + (p.by ? '<span class="by">' + esc(T.by + p.by) + '</span>' : '');
+    });
+
+    /* process, services, clients */
+    $('#how-sub').textContent = C.howSub || '';
+    $('#steps').innerHTML = C.process.map((s) => '<li><h3>' + esc(s.name) + '</h3><p>' + esc(s.desc) + '</p></li>').join('');
+    $('#svc').innerHTML = C.services.map((s) => '<li>' + esc(s) + '</li>').join('');
+    if (C.credits.length) {
+      $('#cl').innerHTML = C.credits.map((c) =>
+        '<li>' + (c.url ? ext(c.url, '<span>' + esc(c.client) + '</span>', 'n', c.client + ' Instagram' + T.newTab) : '<b class="n">' + esc(c.client) + '</b>') +
+        (c.post ? '<a class="p" href="' + esc(c.post) + '" target="_blank" rel="noopener" aria-label="' + esc(c.project + ', ' + T.post + T.newTab) + '">' + esc(c.project) + '</a>' : '<span class="p">' + esc(c.project) + '</span>') + '</li>').join('');
+    } else $('#clients').hidden = true;
+
+    /* contact */
+    const t = $('#tel'); t.href = tel; t.textContent = (lang === 'en' && C.phoneIntl ? C.phoneIntl : C.phone).replace(/-/g, ' ');
+    const cb = ['<a class="btn btn-bone" href="' + tel + '">' + I.phone + '<span>' + esc(T.callNow) + '</span></a>'];
+    if (dm) cb.push('<a class="btn btn-line" href="' + dm + '" target="_blank" rel="noopener">' + I.ig + '<span>' + esc(T.dm) + '</span></a>');
+    if (C.kakaoUrl) cb.push('<a class="btn btn-line" href="' + esc(C.kakaoUrl) + '" target="_blank" rel="noopener"><span>' + esc(T.kakao) + '</span></a>');
+    $('#cbtns').innerHTML = cb.join('');
+    const picked = ($('#chips input:checked') || {}).value;
+    $('#chips').innerHTML = C.spaceTypes.map((s, i) => '<label><input type="radio" name="space" value="' + i + '"' + (String(i) === picked ? ' checked' : '') + '><span>' + esc(s) + '</span></label>').join('');
+    $('#msg').textContent = '';
+
+    /* footer */
+    const rows = [[T.rName, esc(C.bizName)]];
+    if (C.bizInfo.owner) rows.push([T.rOwner, esc(C.bizInfo.owner)]);
+    if (C.bizInfo.regNo) rows.push([T.rReg, esc(C.bizInfo.regNo)]);
+    rows.push([T.rPhone, '<a href="' + tel + '">' + esc(lang === 'en' && C.phoneIntl ? C.phoneIntl : C.phone) + '</a>']);
+    if (ig) rows.push([T.rInsta, '<a href="' + ig + '" target="_blank" rel="noopener">@' + esc(C.instagram) + '</a>']);
+    if (C.area) rows.push([T.rArea, esc(C.area)]);
+    const fl = ['<p class="word" aria-hidden="true">' + esc(C.bizName) + '</p>',
+      '<dl class="biz">' + rows.map((r) => '<dt>' + esc(r[0]) + '</dt><dd>' + r[1] + '</dd>').join('') + '</dl>'];
+    if (C.notice) fl.push('<p class="fine">' + esc(T.fine(C.bizName)) + '</p>');
+    $('#foot').innerHTML = fl.join('');
+
+    $$('[data-i]').forEach((n) => { n.outerHTML = I[n.dataset.i] || ''; });
+    if ($('#lb').open) show();
+  }
+  if (!CONFIG.en) $$('[data-lang]').forEach((b) => { b.hidden = true; });
+  paint();
+
+  /* ---- works counter ---- */
   const pad = (n) => String(n).padStart(2, '0');
   function updCount() {
     const items = $$('.wk', track), x = track.scrollLeft + 1;
@@ -524,47 +766,27 @@ document.addEventListener('DOMContentLoaded', function () {
   }
   track.addEventListener('scroll', updCount, { passive: true }); updCount();
 
-  /* process, services, clients */
-  $('#steps').innerHTML = C.process.map((s) => '<li><h3>' + esc(s.name) + '</h3><p>' + esc(s.desc) + '</p></li>').join('');
-  $('#svc').innerHTML = C.services.map((s) => '<li>' + esc(s) + '</li>').join('');
-  if (C.credits.length) $('#cl').innerHTML = C.credits.map((c) => '<li><b class="' + (/[가-힣]/.test(c.client) ? 'k' : '') + '">' + esc(c.client) + '</b><span>' + esc(c.project) + '</span></li>').join('');
-  else $('#clients').hidden = true;
-
-  /* contact */
-  const t = $('#tel'); t.href = tel; t.textContent = C.phone.replace(/-/g, ' ');
-  const cb = ['<a class="btn btn-bone" href="' + tel + '">' + I.phone + '<span>전화 걸기</span></a>'];
-  if (dm) cb.push('<a class="btn btn-line" href="' + dm + '" target="_blank" rel="noopener">' + I.ig + '<span>인스타그램 DM</span></a>');
-  if (C.kakaoUrl) cb.push('<a class="btn btn-line" href="' + esc(C.kakaoUrl) + '" target="_blank" rel="noopener"><span>카카오톡 문의</span></a>');
-  $('#cbtns').innerHTML = cb.join('');
-  $('#chips').innerHTML = C.spaceTypes.map((s) => '<label><input type="radio" name="space" value="' + esc(s) + '"><span>' + esc(s) + '</span></label>').join('');
+  /* ---- form ---- */
   const form = $('#form'), msg = $('#msg');
   form.addEventListener('submit', (e) => {
     e.preventDefault(); let err = '';
-    if (!$('#f-name').value.trim()) err = '이름을 입력해 주세요.';
-    else if (!/\d{2,}/.test($('#f-phone').value)) err = '연락처를 입력해 주세요.';
-    else if (!$('#f-consent').checked) err = '개인정보 수집에 동의해 주세요.';
+    if (!$('#f-name').value.trim()) err = T.errName;
+    else if (!/\d{2,}/.test($('#f-phone').value)) err = T.errPhone;
+    else if (!$('#f-consent').checked) err = T.errConsent;
     msg.textContent = err; if (err) return;
-    toast('시안 화면이라 실제로 접수되지는 않습니다. 정식 오픈 후에는 상담 신청이 사장님 휴대폰 문자로 바로 갑니다.');
+    toast(T.toast);
     form.reset();
   });
 
-  /* footer */
-  const rows = [['상호', C.bizName]];
-  if (C.bizInfo.owner) rows.push(['대표', C.bizInfo.owner]);
-  if (C.bizInfo.regNo) rows.push(['사업자등록번호', C.bizInfo.regNo]);
-  rows.push(['전화', '<a href="' + tel + '">' + esc(C.phone) + '</a>']);
-  if (ig) rows.push(['인스타그램', '<a href="' + ig + '" target="_blank" rel="noopener">@' + esc(C.instagram) + '</a>']);
-  if (C.area) rows.push(['작업 지역', esc(C.area)]);
-  const fl = ['<p class="word" aria-hidden="true">' + esc(C.bizName) + '</p>',
-    '<dl class="biz">' + rows.map((r, i) => '<dt>' + esc(r[0]) + '</dt><dd>' + (i === 0 ? esc(r[1]) : r[1]) + '</dd>').join('') + '</dl>'];
-  if (C.notice) fl.push('<p class="fine">이 페이지는 ' + esc(C.bizName) + '에 보여드리기 위해 WeThru가 만든 시안입니다. 공식 사이트가 아닙니다.</p>');
-  $('#foot').innerHTML = fl.join('');
-
-  /* toast + lightbox */
+  /* ---- toast + lightbox ---- */
   const toastEl = $('#toast'); let tt;
   function toast(s) { toastEl.textContent = s; toastEl.classList.add('on'); clearTimeout(tt); tt = setTimeout(() => toastEl.classList.remove('on'), 5200); }
   const lb = $('#lb'), lbImg = $('#lb-img'), lbCap = $('#lb-cap'); let cur = 0;
-  function show() { const p = C.works[cur]; lbImg.src = p.src; lbImg.alt = p.alt; lbCap.innerHTML = '<b>' + esc(p.title) + '</b><span>' + esc(p.meta) + '</span>'; }
+  function show() {
+    const p = C.works[cur]; lbImg.src = p.src; lbImg.alt = p.alt;
+    lbCap.innerHTML = '<b>' + esc(p.title) + '</b><span>' + esc(p.meta + (p.by ? ', ' + T.by + p.by : '')) + '</span>' +
+      (p.post ? ext(p.post, esc(T.openPost), '', T.openPost + T.newTab) : '');
+  }
   function openLB(i) { cur = i; show(); if (lb.showModal) lb.showModal(); else lb.setAttribute('open', ''); }
   const step = (d) => { cur = (cur + d + N) % N; show(); };
   $('#lb-prev').addEventListener('click', () => step(-1)); $('#lb-next').addEventListener('click', () => step(1));
@@ -575,7 +797,13 @@ document.addEventListener('DOMContentLoaded', function () {
   lb.addEventListener('touchstart', (e) => { sx = e.touches[0].clientX; }, { passive: true });
   lb.addEventListener('touchend', (e) => { if (sx == null) return; const dx = e.changedTouches[0].clientX - sx; if (Math.abs(dx) > 40) step(dx < 0 ? 1 : -1); sx = null; });
 
-  $$('[data-i]').forEach((n) => { n.outerHTML = I[n.dataset.i] || ''; });
+  /* ---- language switch ---- */
+  $$('[data-lang]').forEach((b) => b.addEventListener('click', () => {
+    lang = lang === 'en' ? 'ko' : 'en';
+    try { localStorage.setItem('ikki-lang', lang); } catch (e) { /* private mode: keep it for this visit only */ }
+    paint(); layout(); updCount();
+    if (window.ScrollTrigger) ScrollTrigger.refresh();
+  }));
 
   /* bar shows after the hero, hides over the contact block */
   const bar = $('#bar'), contact = $('#contact'); let heroEnd = 0;
@@ -587,6 +815,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
   layout(); heroEnd = hero.offsetTop + hero.offsetHeight - window.innerHeight; onScroll();
   window.addEventListener('resize', layout);
+  if (document.fonts && document.fonts.ready) document.fonts.ready.then(() => { layout(); if (window.ScrollTrigger) ScrollTrigger.refresh(); });
 
   /* assembly (scroll, pinned); reduced motion or no GSAP → the finished scene */
   function start() {
