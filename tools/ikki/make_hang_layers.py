@@ -168,7 +168,7 @@ def main():
     al = np.clip((alpha - 0.08) / 0.92, 0, 1) ** 1.25
     fg = np.clip((src - (1 - alpha[..., None]) * bg) / np.maximum(alpha, 0.06)[..., None], 0, 255)
     fg = np.where(alpha[..., None] > 0.97, src, fg)
-    fg = np.clip(fg * 1.04 + 4, 0, 255)
+    # Preserve source colours; only un-mix the curtain at translucent edges.
 
     # curtain seen through gaps inside the sculpture
     mn = src.min(axis=2)
