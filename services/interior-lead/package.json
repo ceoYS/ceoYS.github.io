@@ -1,0 +1,12 @@
+{
+  "name": "wethru-interior-lead",
+  "private": true,
+  "description": "Serverless endpoint that emails WeThru Interior qualification-form leads via Resend",
+  "type": "module",
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "test": "node --test test/lead.test.mjs"
+  }
+}
