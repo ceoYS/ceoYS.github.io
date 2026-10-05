@@ -326,10 +326,12 @@ p{text-wrap:pretty}
 .ev--gap::after{left:auto;right:-4px;top:-4px;bottom:auto;background:var(--plaster);border:1px solid var(--oak)}
 .ev--gap .ev__t,.ev--gap .ev__w{color:var(--oak)}
 .day__body{margin-top:clamp(56px,9vh,104px);align-items:end}
-.day__title{grid-column:1/8;font-size:clamp(34px,4.3vw,70px);line-height:1.2;letter-spacing:-.045em}
+.day__main{grid-column:1/9}
+.day__lead{margin-bottom:22px;font-size:clamp(16px,1.3vw,19px);line-height:1.7;color:var(--ink-2)}
+.day__title{font-size:clamp(34px,4.3vw,70px);line-height:1.2;letter-spacing:-.045em}
 .day__copy{grid-column:9/13}
 .day__copy p{color:var(--ink-2)}
-.day__q{margin-top:20px;padding-top:20px;border-top:1px solid var(--rule);font-family:var(--serif);font-size:clamp(18px,1.5vw,22px);line-height:1.55;letter-spacing:-.02em;color:var(--ink) !important}
+.day__q{padding-top:20px;border-top:1px solid var(--rule);font-family:var(--serif);font-size:clamp(18px,1.5vw,22px);line-height:1.55;letter-spacing:-.02em;color:var(--ink) !important}
 .js .day .ruler__axis{transform:scaleX(0);transition:transform 1.6s var(--ease)}
 .js .day .ev{opacity:0;transform:translateY(8px);transition:opacity .8s var(--ease) var(--d,0s),transform .8s var(--ease) var(--d,0s)}
 .day.is-in .ruler__axis{transform:none}
@@ -339,6 +341,7 @@ p{text-wrap:pretty}
 .labor{padding:clamp(112px,17vh,190px) 0 clamp(96px,14vh,160px)}
 .labor__head{grid-column:1/9}
 .labor__sub{margin-top:24px;max-width:32em;color:var(--ink-2);font-size:clamp(15px,1.15vw,17px)}
+.labor__sub b{color:var(--ink);font-weight:600}
 .labor__owner{grid-column:1/5;margin-top:clamp(56px,9vh,96px)}
 .labor__us{grid-column:6/13;margin-top:clamp(56px,9vh,96px)}
 .col-head{display:flex;justify-content:space-between;align-items:baseline;gap:12px;padding-bottom:14px;border-bottom:1px solid var(--ink);font-size:13.5px;font-weight:600}
@@ -603,6 +606,7 @@ button.btn{border:0;font-family:inherit;cursor:pointer}
   .ev--gap{position:relative;right:auto;top:auto;height:auto;display:grid;padding:2px 0 0;border-right:0;text-align:left}
   .ev--gap::after{left:-24px;right:auto;top:.4em}
   .day__title{font-size:clamp(30px,8.6vw,40px)}
+  .day__lead{margin-bottom:16px}
   .day__copy{margin-top:28px}
   .labor__owner,.labor__us{margin-top:48px}
   .us-list{grid-template-columns:minmax(0,1fr);grid-template-rows:none;grid-auto-flow:row}
@@ -718,12 +722,73 @@ button.btn{border:0;font-family:inherit;cursor:pointer}
       <p class="ev ev--gap" style="--d:1.5s"><span class="ev__t">언제?</span><span class="ev__w">홈페이지</span></p>
     </div>
     <div class="grid day__body">
-      <h2 class="day__title display" id="day-title">현장일도 바쁜데,<br>언제 홈페이지까지<br class="d-br"> 만드실 건가요?</h2>
+      <div class="day__main">
+        <p class="day__lead">현장 보고, 견적 내고, 고객 전화 받다 보면<br class="d-br"> 홈페이지는 항상 다음 일이 됩니다.</p>
+        <h2 class="day__title display" id="day-title">현장일도 바쁜데,<br>언제 홈페이지까지<br class="d-br"> 만드실 건가요?</h2>
+      </div>
       <div class="day__copy">
-        <p>현장 보고, 견적 내고, 고객 전화 받다 보면 홈페이지는 항상 다음 일이 됩니다.</p>
         <p class="day__q">홈페이지가 필요 없어서 안 만든 게 아니라, 만들 시간이 없었던 건 아닐까요?</p>
       </div>
     </div>
+  </div>
+</section>
+
+<!-- ======== LABOR : 그래서, 저희가 합니다 ======== -->
+<section class="labor" id="labor" aria-labelledby="labor-title">
+  <div class="frame grid">
+    <header class="labor__head">
+      <p class="label">역할 나누기</p>
+      <h2 class="section-title display" id="labor-title">그래서, 저희가 합니다.</h2>
+      <p class="labor__sub"><b>사진과 기본 정보만 주세요.</b> ‘홈페이지 제작을 맡긴다’기보다, 계속 미뤄두던 온라인 정리를 통째로 맡기시는 겁니다.</p>
+    </header>
+
+    <div class="labor__owner">
+      <p class="col-head">대표님이 하실 일 <span aria-hidden="true">3</span></p>
+      <ol class="owner-list">
+        <li><small>01</small><b>기존 사진 전달</b></li>
+        <li><small>02</small><b>업체 기본 정보 전달</b></li>
+        <li><small>03</small><b>짧게 이야기하기</b></li>
+      </ol>
+      <p class="owner-end">끝.</p>
+    </div>
+
+    <div class="labor__us">
+      <p class="col-head">WeThru가 하는 일 <span aria-hidden="true">11</span></p>
+      <ol class="us-list">
+        <li><small>01</small>사진 분류</li>
+        <li><small>02</small>프로젝트 선별</li>
+        <li><small>03</small>대표 인터뷰</li>
+        <li><small>04</small>업체 강점 발견</li>
+        <li><small>05</small>사이트 구조 설계</li>
+        <li><small>06</small>카피 작성</li>
+        <li><small>07</small>디자인</li>
+        <li><small>08</small>개발</li>
+        <li><small>09</small>모바일 최적화</li>
+        <li><small>10</small>상담 설문 구축</li>
+        <li><small>11</small>배포</li>
+      </ol>
+      <p class="labor__note">회사 소개 글을 쓰거나, 메뉴를 정하거나, 프로젝트 설명을 정리하는 숙제는 드리지 않습니다.</p>
+    </div>
+
+    <p class="statement display"><span class="muted">사진을 정리해서 보내실<br class="m-br"> 필요도 없습니다.</span><br>정리하는 것부터<br class="m-br"> 저희 일입니다.</p>
+    <div class="labor__promises">
+      <p><b>홈페이지 때문에 퇴근이 늦어질 필요는 없습니다.</b>대표님은 현장에 계시고, 정리와 제작은 저희 쪽에서 진행합니다.</p>
+      <p><b>보시고, 고칠 곳만 말씀해주세요.</b>1차 결과물을 보시고 말씀만 해주시면 수정은 저희가 합니다.</p>
+    </div>
+
+    <div class="flow-wrap">
+      <p class="flow-legend"><span><i class="dot dot--owner" aria-hidden="true"></i>대표님이 함께하는 단계</span><span><i class="dot" aria-hidden="true"></i>WeThru가 하는 단계</span></p>
+      <ol class="flow">
+        <li><i class="dot" aria-hidden="true"></i><span class="flow__n">1</span><span class="flow__t">자료 확인</span></li>
+        <li><i class="dot dot--owner" aria-hidden="true"></i><span class="flow__n">2</span><span class="flow__t">인터뷰</span><span class="flow__o">대표님 — 짧은 대화</span></li>
+        <li><i class="dot" aria-hidden="true"></i><span class="flow__n">3</span><span class="flow__t">구조·카피 설계</span></li>
+        <li><i class="dot" aria-hidden="true"></i><span class="flow__n">4</span><span class="flow__t">1차 제작</span></li>
+        <li><i class="dot dot--owner" aria-hidden="true"></i><span class="flow__n">5</span><span class="flow__t">대표 피드백</span><span class="flow__o">대표님 — 보시고 고칠 곳만 말씀해주세요</span></li>
+        <li><i class="dot" aria-hidden="true"></i><span class="flow__n">6</span><span class="flow__t">수정</span></li>
+        <li><i class="dot" aria-hidden="true"></i><span class="flow__n">7</span><span class="flow__t">최종 배포</span></li>
+      </ol>
+    </div>
+    <p class="section-cta"><a class="link" href="#apply">우리 업체 기준으로 보기 <span class="arr" aria-hidden="true">→</span></a></p>
   </div>
 </section>
 
@@ -731,8 +796,8 @@ button.btn{border:0;font-family:inherit;cursor:pointer}
 <section class="problem" aria-labelledby="problem-title">
   <div class="frame grid problem__grid">
     <header class="problem__head">
-      <p class="label">사진은 있는데</p>
-      <h2 class="problem__title display" id="problem-title">사진은 있는데,<br> <em>정리할 시간이 없습니다.</em></h2>
+      <p class="label">미뤄두는 동안</p>
+      <h2 class="problem__title display" id="problem-title">사진은 있는데<br class="m-br"> 정리할 시간이 없으면,<br> <em>좋은 작업부터 묻힙니다.</em></h2>
     </header>
 
     <figure class="feed" aria-hidden="true">
@@ -791,67 +856,8 @@ button.btn{border:0;font-family:inherit;cursor:pointer}
     </h2>
     <div class="turn__promises">
       <p><b>시공은 대표님이 하세요.</b>정리는 저희가 하겠습니다. 사진과 기본 정보만 주시면 됩니다.</p>
-      <p><b>매일 관리하는 사이트가 아닙니다.</b>작업과 강점을 한 번 제대로 정리해두는 포트폴리오입니다.</p>
+      <p><b>대표님께 새로운 관리 업무를 하나 더 만들지 않겠습니다.</b>매일 글을 올리는 사이트가 아니라, 작업과 강점을 한 번 제대로 정리해두는 포트폴리오입니다.</p>
     </div>
-  </div>
-</section>
-
-<!-- ======== LABOR : 그래서, 저희가 합니다 ======== -->
-<section class="labor" id="labor" aria-labelledby="labor-title">
-  <div class="frame grid">
-    <header class="labor__head">
-      <p class="label">역할 나누기</p>
-      <h2 class="section-title display" id="labor-title">그래서, 저희가 합니다.</h2>
-      <p class="labor__sub">‘홈페이지 제작을 맡긴다’기보다, 계속 미뤄두던 온라인 정리를 통째로 맡기시는 겁니다.</p>
-    </header>
-
-    <div class="labor__owner">
-      <p class="col-head">대표님이 하실 일 <span aria-hidden="true">3</span></p>
-      <ol class="owner-list">
-        <li><small>01</small><b>기존 사진 전달</b></li>
-        <li><small>02</small><b>업체 기본 정보 전달</b></li>
-        <li><small>03</small><b>짧게 이야기하기</b></li>
-      </ol>
-      <p class="owner-end">끝.</p>
-    </div>
-
-    <div class="labor__us">
-      <p class="col-head">WeThru가 하는 일 <span aria-hidden="true">11</span></p>
-      <ol class="us-list">
-        <li><small>01</small>사진 분류</li>
-        <li><small>02</small>프로젝트 선별</li>
-        <li><small>03</small>대표 인터뷰</li>
-        <li><small>04</small>업체 강점 발견</li>
-        <li><small>05</small>사이트 구조 설계</li>
-        <li><small>06</small>카피 작성</li>
-        <li><small>07</small>디자인</li>
-        <li><small>08</small>개발</li>
-        <li><small>09</small>모바일 최적화</li>
-        <li><small>10</small>상담 설문 구축</li>
-        <li><small>11</small>배포</li>
-      </ol>
-      <p class="labor__note">회사 소개 글을 쓰거나, 메뉴를 정하거나, 프로젝트 설명을 정리하는 숙제는 드리지 않습니다.</p>
-    </div>
-
-    <p class="statement display"><span class="muted">사진을 정리해서 보내실<br class="m-br"> 필요도 없습니다.</span><br>정리하는 것부터<br class="m-br"> 저희 일입니다.</p>
-    <div class="labor__promises">
-      <p><b>홈페이지 때문에 퇴근이 늦어질 필요는 없습니다.</b>대표님은 현장에 계시고, 정리와 제작은 저희 쪽에서 진행합니다.</p>
-      <p><b>새로운 관리 업무를 하나 더 만들지 않겠습니다.</b>오픈 이후의 수정과 관리 범위는 제작 전에 먼저 정합니다.</p>
-    </div>
-
-    <div class="flow-wrap">
-      <p class="flow-legend"><span><i class="dot dot--owner" aria-hidden="true"></i>대표님이 함께하는 단계</span><span><i class="dot" aria-hidden="true"></i>WeThru가 하는 단계</span></p>
-      <ol class="flow">
-        <li><i class="dot" aria-hidden="true"></i><span class="flow__n">1</span><span class="flow__t">자료 확인</span></li>
-        <li><i class="dot dot--owner" aria-hidden="true"></i><span class="flow__n">2</span><span class="flow__t">인터뷰</span><span class="flow__o">대표님 — 짧은 대화</span></li>
-        <li><i class="dot" aria-hidden="true"></i><span class="flow__n">3</span><span class="flow__t">구조·카피 설계</span></li>
-        <li><i class="dot" aria-hidden="true"></i><span class="flow__n">4</span><span class="flow__t">1차 제작</span></li>
-        <li><i class="dot dot--owner" aria-hidden="true"></i><span class="flow__n">5</span><span class="flow__t">대표 피드백</span><span class="flow__o">대표님 — 보시고 고칠 곳만 말씀해주세요</span></li>
-        <li><i class="dot" aria-hidden="true"></i><span class="flow__n">6</span><span class="flow__t">수정</span></li>
-        <li><i class="dot" aria-hidden="true"></i><span class="flow__n">7</span><span class="flow__t">최종 배포</span></li>
-      </ol>
-    </div>
-    <p class="section-cta"><a class="link" href="#apply">우리 업체 기준으로 보기 <span class="arr" aria-hidden="true">→</span></a></p>
   </div>
 </section>
 
@@ -1107,7 +1113,7 @@ button.btn{border:0;font-family:inherit;cursor:pointer}
     <header class="pricing__head">
       <p class="label">비용</p>
       <h2 class="section-title display" id="pricing-title">가격부터 숨긴 채<br>상담을 권하지 않습니다.</h2>
-      <p class="pricing__sub">기본 제작은 100만원입니다. 추가 기능이 필요하면, 상담 전에 범위부터 먼저 안내합니다.</p>
+      <p class="pricing__sub">기본 제작은 1,000,000 KRW입니다. 추가 기능이 필요하면, 상담 전에 범위부터 먼저 안내합니다.</p>
     </header>
 
     <div class="pricing__sheets">

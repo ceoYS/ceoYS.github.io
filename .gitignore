@@ -5,6 +5,3 @@ tools/ikki/input/*_2x.png
 tools/ikki/input/*_x4.png
 tools/ikki/compare/
 __pycache__/
-
-# Vercel link for the lead endpoint (project ids, not for the repo)
-services/interior-lead/.vercel/
