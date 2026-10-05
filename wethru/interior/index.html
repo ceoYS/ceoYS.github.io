@@ -3,136 +3,1033 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-<title>WeThru Interior — 현장은 사장님이, 온라인은 저희가 정리합니다</title>
-<meta name="description" content="시공은 잘하지만 온라인까지 챙길 시간은 없는 인테리어 대표님을 위한 자사 영업 포트폴리오 제작. 기존 사진과 기본 정보만 주시면 구조, 카피, 디자인, 구현까지 WeThru가 정리합니다.">
-<meta property="og:title" content="현장은 사장님이 보세요. 온라인은 저희가 정리하겠습니다.">
-<meta property="og:description" content="이미 잘하고 있는 일을, 고객이 제대로 볼 수 있게 만듭니다.">
+<title>WeThru 인테리어 포트폴리오 — 현장은 사장님이, 온라인은 저희가</title>
+<meta name="description" content="시공은 잘하지만 온라인까지 챙길 시간은 없는 인테리어·리모델링 대표님을 위해, 이미 가진 시공사진과 이야기를 정리해 자사 영업 포트폴리오로 만듭니다.">
+<link rel="canonical" href="https://ceoys.github.io/wethru/interior/">
 <meta property="og:type" content="website">
+<meta property="og:locale" content="ko_KR">
+<meta property="og:site_name" content="WeThru">
 <meta property="og:url" content="https://ceoys.github.io/wethru/interior/">
-<meta property="og:image" content="https://ceoys.github.io/wethru/interior/ikki-archive/assets/cafe_tree.webp">
-<meta name="theme-color" content="#f1eee8">
+<meta property="og:title" content="현장은 사장님이 보세요. 온라인은 저희가 정리하겠습니다.">
+<meta property="og:description" content="이미 잘하고 있는 일을, 고객이 제대로 볼 수 있게. 인테리어 대표님을 위한 자사 영업 포트폴리오.">
+<meta property="og:image" content="https://ceoys.github.io/wethru/interior/assets/og.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#ecebe6">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@300;400&display=swap">
+<link rel="preload" as="image" href="./assets/hero-cafe-1800.webp" imagesrcset="./assets/hero-cafe-1000.webp 1000w, ./assets/hero-cafe-1800.webp 1800w" imagesizes="(min-width: 860px) 58vw, 100vw" fetchpriority="high">
+<script>document.documentElement.classList.add('js')</script>
 <style>
-:root{--paper:#f1eee8;--ink:#181816;--muted:#6e6b64;--line:#cbc6bb;--stone:#ded8cd;--dark:#1d211d;--max:1240px}
-*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--paper);color:var(--ink);font-family:Arial,"Noto Sans KR",sans-serif;line-height:1.65;word-break:keep-all}
-a{color:inherit}.wrap{width:min(calc(100% - 48px),var(--max));margin:auto}.nav{height:78px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid var(--line)}
-.brand{font-weight:800;letter-spacing:-.04em;font-size:21px;text-decoration:none}.nav small{color:var(--muted);letter-spacing:.06em}.btn{display:inline-flex;align-items:center;justify-content:center;min-height:52px;padding:0 22px;border:1px solid var(--ink);text-decoration:none;font-size:14px;transition:.25s;background:transparent}.btn:hover{background:var(--ink);color:var(--paper)}.btn.dark{background:var(--ink);color:#fff}.btn.dark:hover{opacity:.82}
-.hero{min-height:calc(100svh - 78px);display:grid;grid-template-columns:1.12fr .88fr;gap:60px;align-items:center;padding:70px 0 80px}.eyebrow{font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:var(--muted);margin-bottom:24px}.hero h1{font-family:Georgia,"Noto Serif KR",serif;font-size:clamp(50px,7.1vw,104px);font-weight:400;line-height:.98;letter-spacing:-.065em;margin:0 0 34px}.hero h1 em{font-style:normal;color:#777268}.hero p{max-width:650px;font-size:18px;color:#55524d;margin:0 0 34px}.actions{display:flex;gap:10px;flex-wrap:wrap}.hero-media{position:relative;height:min(72vh,760px);overflow:hidden;background:#ddd}.hero-media img{width:100%;height:100%;object-fit:cover;filter:saturate(.82)}.hero-media .tag{position:absolute;left:16px;bottom:16px;background:rgba(241,238,232,.93);padding:10px 13px;font-size:12px}
-.section{padding:120px 0;border-top:1px solid var(--line)}.kicker{font-size:12px;letter-spacing:.14em;color:var(--muted);text-transform:uppercase}.section h2{font-family:Georgia,"Noto Serif KR",serif;font-weight:400;letter-spacing:-.045em;line-height:1.08;font-size:clamp(38px,5.2vw,72px);margin:18px 0 46px;max-width:950px}.lead{font-size:20px;max-width:780px;color:#4f4c47}
-.scenes{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--line);border:1px solid var(--line);margin-top:60px}.scene{background:var(--paper);padding:34px 28px;min-height:190px}.scene b{font-family:Georgia,"Noto Serif KR",serif;font-size:30px;font-weight:400}.scene p{color:var(--muted);font-size:14px;margin:18px 0 0}
-.turn{background:var(--dark);color:#eeeae2}.turn .wrap{padding-top:110px;padding-bottom:110px}.turn h2{font-family:Georgia,"Noto Serif KR",serif;font-size:clamp(44px,6vw,84px);font-weight:400;letter-spacing:-.05em;line-height:1.06;margin:0;max-width:1000px}.turn p{color:#bdbbb4;max-width:720px;font-size:18px;margin:32px 0 0}
-.steps{display:grid;grid-template-columns:repeat(4,1fr);margin-top:64px;border-top:1px solid var(--line)}.step{padding:26px 28px 30px 0;border-right:1px solid var(--line)}.step:not(:first-child){padding-left:28px}.num{font-size:11px;color:var(--muted);letter-spacing:.12em}.step h3{font-family:Georgia,"Noto Serif KR",serif;font-weight:400;font-size:27px;margin:36px 0 14px}.step p{font-size:14px;color:var(--muted);margin:0}
-.case-grid{display:grid;grid-template-columns:.82fr 1.18fr;gap:60px;align-items:start}.case-img{position:sticky;top:24px}.case-img img{width:100%;display:block;max-height:720px;object-fit:cover}.case-copy h3{font-family:Georgia,"Noto Serif KR",serif;font-size:42px;font-weight:400;margin:0 0 28px}.ba{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:36px 0}.ba>div{border-top:1px solid var(--line);padding-top:20px}.ba strong{font-size:12px;letter-spacing:.12em}.ba ul{padding:0;list-style:none;color:var(--muted);font-size:14px}.quote{font-family:Georgia,"Noto Serif KR",serif;font-size:30px;line-height:1.35;margin:42px 0}.case-link{display:inline-block;margin-top:10px}
-.projects{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:48px}.projects img{width:100%;aspect-ratio:4/5;object-fit:cover;display:block}.projects figure{margin:0}.projects figcaption{font-size:12px;color:var(--muted);margin-top:9px}
-.compare{display:grid;grid-template-columns:repeat(3,1fr);gap:0;border:1px solid var(--line);margin-top:52px}.compare article{padding:34px;border-right:1px solid var(--line)}.compare article:last-child{border:0}.compare .big{font-family:Georgia,"Noto Serif KR",serif;font-size:34px;margin:10px 0}.compare p{color:var(--muted);font-size:14px}
-.process{display:grid;grid-template-columns:repeat(7,1fr);gap:0;border-top:1px solid var(--line);margin-top:55px}.process div{padding:22px 12px 0 0}.process span{font-size:11px;color:var(--muted)}.process b{display:block;font-size:14px;margin-top:10px}
-.faq{max-width:900px}.faq details{border-top:1px solid var(--line);padding:25px 0}.faq details:last-child{border-bottom:1px solid var(--line)}.faq summary{cursor:pointer;font-family:Georgia,"Noto Serif KR",serif;font-size:24px;list-style:none}.faq p{color:var(--muted);max-width:760px}.faq summary::-webkit-details-marker{display:none}
-.final{background:#dcd6ca}.final .wrap{padding-top:120px;padding-bottom:120px}.final h2{font-family:Georgia,"Noto Serif KR",serif;font-weight:400;font-size:clamp(48px,7vw,96px);line-height:1;letter-spacing:-.06em;margin:0 0 34px;max-width:1000px}.final p{font-size:18px;max-width:680px}.note{font-size:12px!important;color:var(--muted);margin-top:20px}
-footer{padding:34px 0;border-top:1px solid var(--line);font-size:12px;color:var(--muted)}footer .wrap{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
-.reveal{opacity:0;transform:translateY(18px);transition:.75s ease}.reveal.on{opacity:1;transform:none}
-@media(max-width:850px){.wrap{width:min(calc(100% - 32px),var(--max))}.nav small{display:none}.hero{grid-template-columns:1fr;gap:35px;padding:55px 0 64px;min-height:auto}.hero h1{font-size:clamp(50px,15vw,74px)}.hero-media{height:60vh;order:-1}.section{padding:82px 0}.scenes,.steps,.compare,.projects{grid-template-columns:1fr}.scene{min-height:0}.steps{border-top:0}.step,.step:not(:first-child){padding:22px 0;border-right:0;border-top:1px solid var(--line)}.step h3{margin:14px 0 8px}.case-grid{grid-template-columns:1fr;gap:38px}.case-img{position:static}.ba{grid-template-columns:1fr}.process{grid-template-columns:1fr 1fr}.process div{border-top:1px solid var(--line);padding:18px 10px 18px 0}.compare article{border-right:0;border-bottom:1px solid var(--line)}.final .wrap,.turn .wrap{padding-top:82px;padding-bottom:82px}}
+:root{
+  --plaster:#ecebe6;
+  --sheet:#f6f5f1;
+  --concrete:#d8d6d0;
+  --ink:#151714;
+  --ink-2:#4e504a;
+  --ink-3:#676862;
+  --rule:rgba(21,23,20,.16);
+  --rule-strong:rgba(21,23,20,.5);
+  --night:#0e120e;
+  --night-2:#161b16;
+  --bone:#e8e6de;
+  --bone-2:rgba(232,230,222,.66);
+  --bone-rule:rgba(232,230,222,.18);
+  --oak:#9c6a3b;
+  --serif:"Noto Serif KR","Nanum Myeongjo","AppleMyungjo",serif;
+  --sans:"Pretendard Variable",Pretendard,-apple-system,BlinkMacSystemFont,"Apple SD Gothic Neo","Noto Sans KR","Malgun Gothic",sans-serif;
+  --pad:clamp(20px,4.2vw,64px);
+  --gap:clamp(16px,2vw,32px);
+  --ease:cubic-bezier(.16,1,.3,1);
+}
+*,*::before,*::after{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%;text-size-adjust:100%}
+@media (prefers-reduced-motion:no-preference){html{scroll-behavior:smooth}}
+body{margin:0;background:var(--plaster);color:var(--ink);font-family:var(--sans);font-size:16px;line-height:1.72;word-break:keep-all;overflow-wrap:break-word;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;overflow-x:clip}
+img{display:block;max-width:100%;height:auto}
+a{color:inherit}
+h1,h2,h3,p,figure,blockquote,ol,ul,dl,dd{margin:0}
+ol,ul{padding:0;list-style:none}
+h1,h2,h3{font-weight:inherit;text-wrap:balance}
+p{text-wrap:pretty}
+:focus-visible{outline:2px solid var(--oak);outline-offset:3px}
+.sr-only{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+.skip{position:absolute;left:12px;top:-60px;z-index:20;background:var(--ink);color:var(--plaster);padding:12px 16px;text-decoration:none;font-size:14px}
+.skip:focus{top:12px}
+.frame{width:100%;max-width:1520px;margin-inline:auto;padding-inline:var(--pad)}
+.grid{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));column-gap:var(--gap)}
+.d-br{display:none}
+.m-br{display:inline}
+
+/* shared type */
+.label{display:flex;align-items:center;gap:12px;font-size:12.5px;font-weight:500;letter-spacing:.01em;color:var(--ink-3)}
+.label::before{content:"";width:28px;height:1px;background:currentColor;opacity:.7}
+.on-dark .label{color:var(--bone-2)}
+.display{font-family:var(--serif);font-weight:300;letter-spacing:-.03em}
+.fine{font-size:13px;line-height:1.65;color:var(--ink-3)}
+.on-dark .fine{color:var(--bone-2)}
+
+/* actions */
+.btn{display:inline-flex;align-items:center;justify-content:space-between;gap:28px;min-height:54px;padding:0 20px 0 22px;background:var(--ink);color:var(--plaster);font-size:15px;font-weight:600;letter-spacing:-.005em;text-decoration:none;transition:background-color .35s var(--ease)}
+.btn:hover{background:#2a2d28}
+.btn .arr,.link .arr{display:inline-block;transition:transform .45s var(--ease)}
+.btn:hover .arr,.link:hover .arr{transform:translateX(5px)}
+.link{display:inline-flex;align-items:center;gap:10px;min-height:48px;font-size:15px;font-weight:600;text-decoration:underline;text-decoration-thickness:1px;text-underline-offset:7px}
+.on-dark .btn{background:var(--bone);color:var(--night)}
+.on-dark .btn:hover{background:#fff}
+
+/* ---------- masthead ---------- */
+.masthead{display:flex;align-items:center;justify-content:space-between;gap:24px;height:68px;padding-inline:var(--pad);border-bottom:1px solid var(--rule)}
+.wordmark{display:inline-flex;align-items:baseline;gap:12px;min-height:44px;padding-top:12px;text-decoration:none}
+.wordmark b{font-size:19px;font-weight:700;letter-spacing:-.02em}
+.wordmark span{font-size:12.5px;color:var(--ink-3)}
+.masthead nav{display:flex;align-items:center;gap:clamp(18px,2.4vw,36px)}
+.masthead nav a{display:inline-flex;align-items:center;min-height:44px;font-size:14px;color:var(--ink-2);text-decoration:none}
+.masthead nav a:hover{color:var(--ink)}
+.masthead nav .masthead__cta{color:var(--ink);font-weight:600;text-decoration:underline;text-decoration-thickness:1px;text-underline-offset:7px}
+
+/* ---------- hero spread ---------- */
+.spread{position:relative;display:grid;grid-template-columns:minmax(0,42fr) minmax(0,58fr);grid-template-rows:auto minmax(260px,1fr) auto auto;min-height:calc(100svh - 68px);padding-bottom:clamp(28px,4.5vh,56px)}
+.spread::after{content:"";position:absolute;top:0;bottom:0;left:42%;width:1px;background:var(--rule)}
+.spread__rh{display:flex;justify-content:space-between;gap:16px;padding-top:18px;padding-bottom:16px;font-size:12.5px;color:var(--ink-3)}
+.spread__rh b{font-weight:600;color:var(--ink)}
+.spread__rh--l{grid-column:1;grid-row:1;padding-left:var(--pad);padding-right:clamp(24px,3vw,48px)}
+.spread__rh--r{grid-column:2;grid-row:1;padding-left:clamp(24px,3vw,48px);padding-right:var(--pad)}
+.plate{position:relative;margin:0}
+.plate figcaption{font-size:12px;line-height:1.5;color:var(--ink-3);margin-top:10px}
+.plate--site figcaption{position:absolute;right:calc(100% + 16px);bottom:-3px;margin:0;text-align:right;white-space:nowrap}
+.plate--site{grid-column:1;grid-row:2;align-self:end;justify-self:end;width:clamp(140px,13.5vw,224px);margin-right:clamp(24px,3vw,48px)}
+.plate--site .plate__img{overflow:hidden;background:var(--concrete)}
+.plate--site img{width:100%;aspect-ratio:3/4;object-fit:cover;object-position:50% 74%;filter:saturate(.86)}
+.plate--online{grid-column:2;grid-row:2;margin-left:clamp(24px,3vw,48px);overflow:hidden;background:#1c201b;min-height:0}
+.plate--online img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 58%;transform:scale(1.04);will-change:transform}
+.spread__title{grid-column:1/-1;grid-row:3;display:grid;grid-template-columns:subgrid;font-family:var(--serif);font-weight:300;font-size:clamp(32px,3.85vw,64px);line-height:1.2;letter-spacing:-.034em;padding-top:clamp(26px,4vh,44px)}
+.spread__title>span{display:block}
+.spread__title .t-l{grid-column:1;padding-left:var(--pad);padding-right:24px}
+.spread__title .t-r{grid-column:2;padding-left:clamp(24px,3vw,48px);padding-right:var(--pad)}
+.spread__owner{grid-column:1;grid-row:4;align-self:end;padding-left:var(--pad);padding-right:clamp(24px,3vw,48px);padding-top:22px;font-size:14px;line-height:1.7;color:var(--ink-2);max-width:30em}
+.spread__owner b{color:var(--ink);font-weight:600}
+.spread__foot{grid-column:2;grid-row:4;display:flex;align-items:flex-end;justify-content:space-between;gap:clamp(24px,3vw,56px);padding-left:clamp(24px,3vw,48px);padding-right:var(--pad);padding-top:22px}
+.spread__lede{font-size:clamp(15px,1.1vw,16.5px);line-height:1.78;color:var(--ink-2);max-width:31em}
+.spread__actions{display:flex;flex-direction:column;align-items:flex-start;gap:4px;flex:none}
+
+/* load choreography (hero only) */
+.js .spread .plate__img,.js .plate--online{clip-path:inset(100% 0 0 0);transition:clip-path 1.25s var(--ease)}
+.js .plate--site .plate__img{transition-delay:.18s}
+.js .spread__title>span,.js .spread__owner,.js .spread__foot,.js .spread__rh,.js .plate figcaption{opacity:0;transform:translateY(10px);transition:opacity .9s var(--ease),transform .9s var(--ease)}
+.js .spread__title .t-l{transition-delay:.35s}
+.js .spread__title .t-r{transition-delay:.5s}
+.js .spread__owner,.js .spread__foot,.js .plate figcaption{transition-delay:.7s}
+.js .spread__rh{transition-delay:.1s}
+.is-loaded .spread .plate__img,.is-loaded .plate--online{clip-path:inset(0 0 0 0)}
+.is-loaded .spread__title>span,.is-loaded .spread__owner,.is-loaded .spread__foot,.is-loaded .spread__rh,.is-loaded .plate figcaption{opacity:1;transform:none}
+
+/* ---------- problem ---------- */
+.problem{padding:clamp(104px,15vh,176px) 0 clamp(72px,10vh,120px)}
+.problem__grid{grid-template-rows:auto 1fr}
+.problem__head{grid-column:1/8;grid-row:1}
+.problem__title{margin-top:28px;font-size:clamp(26px,2.55vw,40px);line-height:1.42;letter-spacing:-.028em}
+.problem__title em{font-style:normal;color:var(--ink-3)}
+.beats{grid-column:1/7;grid-row:2;margin-top:clamp(56px,9vh,104px)}
+.beat{display:flex;flex-direction:column;justify-content:center;min-height:56vh;padding:40px 0;border-top:1px solid var(--rule)}
+.beat__no{font-size:12.5px;font-variant-numeric:tabular-nums;color:var(--ink-3)}
+.beat__line{margin-top:16px;font-family:var(--serif);font-weight:300;font-size:clamp(36px,4.3vw,68px);line-height:1.17;letter-spacing:-.04em}
+.beat--peak .beat__line{font-size:clamp(40px,5.1vw,82px)}
+.beat--quiet{min-height:44vh}
+.beat--quiet .beat__line{font-size:clamp(24px,2.3vw,34px);line-height:1.4;letter-spacing:-.025em;color:var(--ink-2)}
+.beat__note{margin-top:22px;max-width:27em;color:var(--ink-2)}
+.feed{grid-column:8/13;grid-row:1/3;align-self:start;position:sticky;top:7vh;height:86vh;display:flex;flex-direction:column}
+.feed__window{position:relative;flex:1;overflow:hidden;-webkit-mask-image:linear-gradient(#000 0,#000 52%,transparent 96%);mask-image:linear-gradient(#000 0,#000 52%,transparent 96%)}
+.feed__grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:3px;transform:translate3d(0,calc((var(--p,0) - 1) * 33.333%),0);filter:saturate(calc(1 - var(--p,0) * .55))}
+.feed__grid>*{aspect-ratio:1;width:100%;height:auto;object-fit:cover}
+.feed__empty{border:1px dashed var(--rule-strong);display:flex;align-items:flex-end;padding:10px;font-size:11.5px;color:var(--ink-3)}
+.feed figcaption{flex:none;padding-top:12px;font-size:12px;color:var(--ink-3);display:flex;justify-content:space-between;gap:12px}
+
+/* ---------- turn ---------- */
+.turn{background:var(--night);color:var(--bone);padding:clamp(120px,22vh,232px) 0 clamp(96px,16vh,176px)}
+.turn__title{grid-column:1/-1;font-size:clamp(32px,5.5vw,92px);line-height:1.17;letter-spacing:-.045em}
+.turn__title .ln{display:block;overflow:hidden;padding-bottom:.08em;margin-bottom:-.08em}
+.turn__title .ln>span{display:inline-block}
+.js .turn__title .ln>span{transform:translateY(108%);transition:transform 1.2s var(--ease)}
+.js .turn__title .ln:nth-child(2)>span{transition-delay:.12s}
+.js .turn__title .ln:nth-child(3)>span{transition-delay:.24s}
+.turn.is-in .turn__title .ln>span{transform:none}
+.turn__promises{grid-column:7/13;display:grid;grid-template-columns:1fr 1fr;gap:var(--gap);margin-top:clamp(72px,12vh,140px)}
+.turn__promises p{padding-top:18px;border-top:1px solid var(--bone-rule);font-size:clamp(15px,1.15vw,17px);line-height:1.7;color:var(--bone-2)}
+.turn__promises b{display:block;color:var(--bone);font-weight:600;margin-bottom:6px}
+
+/* ---------- method ---------- */
+.method{padding:clamp(104px,15vh,176px) 0 clamp(48px,8vh,96px)}
+.method__head{grid-column:1/9}
+.section-title{margin-top:28px;font-size:clamp(30px,3.5vw,56px);line-height:1.24;letter-spacing:-.035em}
+.method__body{margin-top:clamp(24px,4vh,48px)}
+.method__rail{grid-column:1/6;grid-row:1;position:sticky;top:0;height:100vh;align-self:start;display:flex;flex-direction:column;justify-content:center;gap:40px}
+.method__words{position:relative;height:1.22em;overflow:hidden;font-family:var(--serif);font-weight:300;font-size:clamp(56px,7.2vw,122px);line-height:1.1;letter-spacing:-.05em}
+.method__words span{position:absolute;left:0;top:0;transform:translateY(135%);transition:transform 1s var(--ease)}
+.method__words span.is-past{transform:translateY(-135%)}
+.method__words span.is-active{transform:none}
+.method__index{display:flex;gap:22px;font-size:12.5px;color:var(--ink-3)}
+.method__index li{position:relative;padding-top:12px;transition:color .4s}
+.method__index li::before{content:"";position:absolute;left:0;top:0;width:100%;height:1px;background:var(--rule);transform-origin:left}
+.method__index li.is-active{color:var(--ink)}
+.method__index li.is-active::before{background:var(--ink);height:2px}
+.method__steps{grid-column:7/13;grid-row:1}
+.step{display:flex;flex-direction:column;justify-content:center;min-height:84vh;padding:56px 0;border-top:1px solid var(--rule)}
+.step:first-child{border-top:0}
+.step__kicker{display:flex;gap:12px;font-size:12.5px;color:var(--ink-3);font-variant-numeric:tabular-nums}
+.step__en{display:none;font-family:var(--serif);font-weight:300;font-size:clamp(44px,12vw,64px);line-height:1.1;letter-spacing:-.05em;margin-top:8px}
+.step h3{margin-top:16px;font-family:var(--serif);font-weight:400;font-size:clamp(23px,2.1vw,32px);line-height:1.38;letter-spacing:-.025em}
+.step__text{margin-top:16px;max-width:29em;color:var(--ink-2)}
+.step__artifact{margin-top:40px}
+.sheet{background:var(--sheet);padding:clamp(22px,2.4vw,32px);box-shadow:0 1px 0 rgba(21,23,20,.06)}
+.sheet__label{display:flex;justify-content:space-between;gap:12px;font-size:12px;color:var(--ink-3);padding-bottom:14px;border-bottom:1px solid var(--rule)}
+.memo li{display:flex;gap:18px;padding:15px 0;border-bottom:1px solid var(--rule);font-family:var(--serif);font-size:clamp(16px,1.25vw,19px);line-height:1.5}
+.memo li:last-child{border-bottom:0;padding-bottom:0}
+.memo li span{font-family:var(--sans);font-size:12px;color:var(--ink-3);padding-top:4px;flex:none}
+.sort{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;margin-top:18px}
+.sort__group h4{margin:0 0 10px;font-size:13px;font-weight:600}
+.sort__group h4 small{font-weight:400;color:var(--ink-3);margin-left:6px}
+.sort__group ul{display:grid;gap:6px}
+.sort__group li{position:relative}
+.sort__group img{width:100%;aspect-ratio:4/3;object-fit:cover}
+.sort__group li.is-pick::after{content:"대표";position:absolute;left:6px;top:6px;padding:2px 7px;background:var(--ink);color:var(--sheet);font-size:11px;font-weight:600}
+.tree{margin-top:4px}
+.tree li{display:grid;grid-template-columns:7.5em 1fr;gap:16px;padding:14px 0 14px 22px;border-bottom:1px solid var(--rule);position:relative;font-size:14.5px;line-height:1.55}
+.tree li::before{content:"";position:absolute;left:0;top:0;bottom:0;width:1px;background:var(--ink)}
+.tree li::after{content:"";position:absolute;left:0;top:50%;width:12px;height:1px;background:var(--ink)}
+.tree li:last-child::before{bottom:50%}
+.tree li:last-child{border-bottom:0}
+.tree b{font-family:var(--serif);font-weight:400;font-size:17px}
+.tree span{color:var(--ink-2)}
+.show{display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);gap:clamp(18px,2.4vw,32px);align-items:end}
+.show img{width:100%;border:1px solid var(--rule)}
+.show__url{font-family:var(--serif);font-weight:300;font-size:clamp(24px,2.3vw,34px);letter-spacing:-.03em;line-height:1.2}
+.show__url small{display:block;margin-top:12px;font-family:var(--sans);font-size:13px;letter-spacing:0;color:var(--ink-3);line-height:1.6}
+
+/* ---------- case ---------- */
+.case{background:var(--night);color:var(--bone);padding:clamp(112px,17vh,190px) 0 clamp(96px,14vh,160px)}
+.case__open{align-items:end}
+.case__titleblock{grid-column:1/9;grid-row:1;padding-bottom:clamp(8px,4vh,48px)}
+.case__client{margin-top:22px;font-size:14px;color:var(--bone-2)}
+.case__title{margin-top:clamp(36px,6vh,64px);font-size:clamp(28px,3.15vw,52px);line-height:1.26;letter-spacing:-.035em}
+.case__lede{margin-top:32px;max-width:31em;font-size:clamp(15px,1.15vw,17px);line-height:1.8;color:var(--bone-2)}
+.case__hang{grid-column:9/13;grid-row:1;position:relative}
+.case__hang img{width:100%;mix-blend-mode:lighten}
+.case__hang figcaption{position:absolute;right:0;bottom:6%;font-size:12px;color:var(--bone-2);text-align:right}
+.chapter-head{display:flex;align-items:baseline;justify-content:space-between;gap:24px;flex-wrap:wrap;padding-top:22px;border-top:1px solid var(--bone-rule)}
+.chapter-head h3{font-family:var(--serif);font-weight:300;font-size:clamp(26px,2.6vw,40px);letter-spacing:-.03em;line-height:1.3}
+.chapter-head p{font-size:13px;color:var(--bone-2)}
+.before{margin-top:clamp(96px,15vh,180px)}
+.before__grid{margin-top:clamp(40px,6vh,64px);row-gap:clamp(56px,9vh,104px);align-items:start}
+.src figcaption,.src__cap{margin-top:16px;font-size:13.5px;line-height:1.65;color:var(--bone-2);max-width:26em}
+.src figcaption b,.src__cap b{display:block;color:var(--bone);font-weight:600;font-size:14px;margin-bottom:2px}
+.src--photos{grid-column:1/8;grid-row:1}
+.photos{display:grid;grid-template-columns:1.05fr 1.5fr .95fr;gap:12px;align-items:end}
+.photos img{width:100%;object-fit:cover}
+.photos .p1{aspect-ratio:9/16}
+.photos .p2{aspect-ratio:640/594}
+.photos .p3{aspect-ratio:3/4;margin-bottom:22%}
+.src--insta{grid-column:9/13;grid-row:1;margin-top:clamp(40px,12vh,140px)}
+.insta{border:1px solid var(--bone-rule);padding:14px}
+.insta__bar{display:flex;justify-content:space-between;font-size:12.5px;color:var(--bone-2);padding-bottom:12px}
+.insta__bar b{color:var(--bone);font-weight:600}
+.insta__grid{display:grid;grid-template-columns:repeat(3,1fr);gap:2px}
+.insta__grid img{aspect-ratio:1;object-fit:cover;width:100%}
+.src--story{grid-column:1/6;grid-row:2;align-self:center}
+.story__quote{font-family:var(--serif);font-weight:300;font-size:clamp(22px,2vw,30px);line-height:1.45;letter-spacing:-.025em}
+.story__facts{margin-top:24px;display:grid;gap:0;border-top:1px solid var(--bone-rule)}
+.story__facts div{display:grid;grid-template-columns:6.5em 1fr;gap:12px;padding:11px 0;border-bottom:1px solid var(--bone-rule);font-size:13.5px}
+.story__facts dt{color:var(--bone-2)}
+.src--pdf{grid-column:7/13;grid-row:2}
+.pdf{position:relative;aspect-ratio:900/640;margin:0 10% 14% 0}
+.pdf img{position:absolute;width:86%;box-shadow:0 18px 40px rgba(0,0,0,.45)}
+.pdf img:nth-child(1){left:0;top:0}
+.pdf img:nth-child(2){left:7%;top:9%}
+.pdf img:nth-child(3){left:14%;top:18%}
+.bridge{margin-top:clamp(104px,16vh,190px);text-align:center}
+.bridge p{font-family:var(--serif);font-weight:300;font-size:clamp(26px,3vw,48px);letter-spacing:-.035em;line-height:1.3}
+.bridge__line{width:1px;height:clamp(64px,12vh,120px);margin:28px auto 0;background:var(--bone-rule);position:relative;overflow:hidden}
+.bridge__line::after{content:"";position:absolute;inset:0;background:var(--bone);transform:scaleY(0);transform-origin:top;transition:transform 1.4s var(--ease)}
+.bridge.is-in .bridge__line::after{transform:scaleY(1)}
+.after{margin-top:clamp(40px,7vh,72px)}
+.after__index{margin-top:20px;display:flex;flex-wrap:wrap;gap:6px 0;font-size:14px;color:var(--bone)}
+.after__index li:not(:last-child)::after{content:"·";margin:0 12px;color:var(--bone-2)}
+.after__grid{margin-top:clamp(44px,7vh,72px);row-gap:clamp(56px,10vh,112px);align-items:end}
+.shot img{width:100%;outline:1px solid var(--bone-rule)}
+.shot figcaption{margin-top:14px;font-size:13.5px;line-height:1.65;color:var(--bone-2);max-width:30em}
+.shot figcaption b{color:var(--bone);font-weight:600;margin-right:8px}
+.shot--hero{grid-column:1/10}
+.cap-side{grid-column:10/13;align-self:end;font-size:13.5px;line-height:1.7;color:var(--bone-2)}
+.cap-side b{display:block;color:var(--bone);font-weight:600;margin-bottom:4px}
+.shot--about{grid-column:2/7}
+.shot--night{grid-column:7/13;margin-bottom:-6vh}
+.shot--works{grid-column:1/8}
+.shot--how{grid-column:8/13;margin-bottom:12vh}
+.js .rv{clip-path:inset(0 0 100% 0);transition:clip-path 1.3s var(--ease)}
+.rv.is-in{clip-path:inset(0 0 0 0)}
+.shot img,.photos img,.feed__grid img{transition:transform 1.2s var(--ease)}
+.shot:hover img{transform:scale(1.012)}
+.case__close{margin-top:clamp(112px,17vh,200px);align-items:end}
+.case__close blockquote{grid-column:1/8;font-family:var(--serif);font-weight:300;font-size:clamp(30px,3.6vw,58px);line-height:1.28;letter-spacing:-.035em}
+.case__cta{grid-column:9/13;display:flex;flex-direction:column;align-items:flex-start;gap:18px}
+
+/* ---------- journey ---------- */
+.journey{padding:clamp(112px,17vh,190px) 0}
+.journey__head{grid-column:1/9}
+.journey__sub{margin-top:22px;max-width:30em;color:var(--ink-2);font-size:clamp(15px,1.15vw,17px)}
+.path{position:relative;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));margin-top:clamp(64px,10vh,112px)}
+.path::before{content:"";position:absolute;left:0;right:0;top:44px;height:1px;background:var(--ink)}
+.path::after{content:"";position:absolute;right:-1px;top:40px;border-left:9px solid var(--ink);border-top:4.5px solid transparent;border-bottom:4.5px solid transparent}
+.path li{position:relative;padding-right:var(--gap)}
+.path__where{display:block;height:44px;font-size:13px;font-weight:600;color:var(--ink-2);padding-top:6px}
+.path__node{position:absolute;left:0;top:39px;width:11px;height:11px;border-radius:50%;border:1px solid var(--ink);background:var(--plaster)}
+.path li.is-us .path__node{background:var(--ink)}
+.path__what{display:block;margin-top:38px;font-family:var(--serif);font-weight:300;font-size:clamp(40px,5vw,84px);line-height:1.08;letter-spacing:-.045em}
+.path__note{display:block;margin-top:18px;max-width:20em;font-size:15px;line-height:1.7;color:var(--ink-2)}
+.path li.is-us .path__note b{color:var(--ink)}
+.journey__foot{margin-top:clamp(64px,10vh,104px);padding-top:20px;border-top:1px solid var(--rule);display:flex;justify-content:space-between;gap:24px;flex-wrap:wrap;font-size:15px;color:var(--ink-2)}
+.journey__foot b{color:var(--ink);font-weight:600}
+
+/* ---------- diy ---------- */
+.diy{background:var(--sheet);padding:clamp(104px,15vh,176px) 0}
+.diy__q{grid-column:1/6;font-size:clamp(34px,4.1vw,66px);line-height:1.2;letter-spacing:-.04em}
+.diy__a{grid-column:7/13;padding-top:12px}
+.diy__yes{font-family:var(--serif);font-weight:400;font-size:clamp(22px,1.9vw,28px);letter-spacing:-.02em}
+.diy__a>p:not(.diy__yes){margin-top:18px;max-width:30em;color:var(--ink-2)}
+.chain{margin-top:48px}
+.chain__groups{display:grid;grid-template-columns:3fr 1fr;gap:8px;font-size:12px;color:var(--ink-3)}
+.chain__groups span{padding-bottom:10px;border-bottom:1px solid var(--rule-strong)}
+.chain ol{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:8px;counter-reset:c}
+.chain li{position:relative;padding:14px 10px 0 0;font-family:var(--serif);font-size:clamp(15px,1.2vw,18px);line-height:1.45;counter-increment:c}
+.chain li::before{content:counter(c);display:block;font-family:var(--sans);font-size:11.5px;color:var(--ink-3);margin-bottom:6px}
+.chain li:not(:last-child)::after{content:"→";position:absolute;right:2px;top:12px;font-family:var(--sans);font-size:13px;color:var(--ink-3)}
+.chain li:last-child{color:var(--ink-2)}
+.diy__close{margin-top:48px !important;padding-left:18px;border-left:2px solid var(--ink);color:var(--ink) !important;font-size:clamp(16px,1.2vw,18px)}
+
+/* ---------- effort ---------- */
+.effort{padding:clamp(112px,17vh,190px) 0 clamp(96px,14vh,160px)}
+.effort__head{grid-column:1/7}
+.three{grid-column:1/-1;margin-top:clamp(48px,8vh,88px);border-top:1px solid var(--ink)}
+.three li{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));column-gap:var(--gap);align-items:baseline;padding:clamp(22px,3.4vh,34px) 0;border-bottom:1px solid var(--rule)}
+.three__no{grid-column:1/2;font-family:var(--serif);font-weight:300;font-size:clamp(20px,1.7vw,26px);color:var(--ink-3);font-variant-numeric:tabular-nums}
+.three__name{grid-column:2/8;font-family:var(--serif);font-weight:300;font-size:clamp(30px,3.6vw,58px);letter-spacing:-.04em;line-height:1.15}
+.three__note{grid-column:8/13;font-size:15px;color:var(--ink-2)}
+.statement{grid-column:3/13;margin-top:clamp(96px,16vh,180px);font-size:clamp(32px,4.4vw,72px);line-height:1.22;letter-spacing:-.045em}
+.statement .muted{color:var(--ink-3)}
+.flow-wrap{grid-column:1/-1;margin-top:clamp(96px,15vh,170px)}
+.flow-legend{display:flex;flex-wrap:wrap;gap:8px 28px;font-size:13px;color:var(--ink-2)}
+.flow-legend span{display:inline-flex;align-items:center;gap:10px}
+.dot{width:11px;height:11px;border-radius:50%;border:1px solid var(--ink);background:var(--plaster);display:inline-block;flex:none}
+.dot--owner{background:var(--oak);border-color:var(--oak)}
+.flow{position:relative;display:grid;grid-template-columns:repeat(7,minmax(0,1fr));margin-top:36px}
+.flow::before{content:"";position:absolute;left:0;right:0;top:5px;height:1px;background:var(--ink)}
+.flow li{position:relative;padding:30px 12px 0 0}
+.flow li .dot{position:absolute;left:0;top:0}
+.flow__n{display:block;font-size:12px;color:var(--ink-3);font-variant-numeric:tabular-nums}
+.flow__t{display:block;margin-top:4px;font-size:15.5px;font-weight:600;line-height:1.45}
+.flow__o{display:block;margin-top:8px;font-size:13px;line-height:1.55;color:var(--oak)}
+.effort__cta{grid-column:1/-1;margin-top:clamp(64px,10vh,104px)}
+
+/* ---------- inquiry ---------- */
+.inquiry{background:var(--concrete);padding:clamp(112px,17vh,190px) 0}
+.inquiry__head{grid-column:1/7}
+.inquiry__lede{margin-top:24px;max-width:30em;color:var(--ink-2);font-size:clamp(15px,1.15vw,17px)}
+.intake{grid-column:1/7;margin-top:clamp(48px,8vh,80px);border-top:1px solid var(--ink)}
+.intake div{display:grid;grid-template-columns:8.5em 1fr;gap:16px;align-items:baseline;padding:16px 0;border-bottom:1px solid var(--rule-strong)}
+.intake dt{font-family:var(--serif);font-size:clamp(19px,1.6vw,23px);letter-spacing:-.02em}
+.intake dd{font-size:14.5px;color:var(--ink-2)}
+.inquiry__note{grid-column:1/7;margin-top:24px}
+.proof{grid-column:8/13;grid-row:1/4;align-self:center}
+.proof img{width:100%}
+.proof figcaption{margin-top:14px;font-size:13px;line-height:1.65;color:var(--ink-2)}
+.proof figcaption b{color:var(--ink);font-weight:600}
+
+/* ---------- scope ---------- */
+.scope{padding:clamp(112px,17vh,190px) 0 clamp(88px,12vh,140px)}
+.scope__head{grid-column:1/5}
+.spec{grid-column:6/13;background:var(--sheet);padding:clamp(24px,3vw,48px)}
+.spec__top{display:flex;justify-content:space-between;align-items:flex-end;gap:24px;flex-wrap:wrap;padding-bottom:26px;border-bottom:1px solid var(--ink)}
+.spec__name{font-size:14px;color:var(--ink-2);line-height:1.6}
+.spec__name b{display:block;font-size:13px;letter-spacing:.14em;color:var(--ink);font-weight:700}
+.spec__price{font-family:var(--serif);font-weight:300;font-size:clamp(42px,4.6vw,72px);line-height:1;letter-spacing:-.04em;font-variant-numeric:tabular-nums}
+.spec__price small{font-family:var(--sans);font-size:13px;font-weight:600;letter-spacing:.08em;margin-left:10px;color:var(--ink-2)}
+.spec__rows>div{display:grid;grid-template-columns:8em 1fr;gap:20px;padding:22px 0;border-bottom:1px solid var(--rule)}
+.spec__rows>div:last-child{border-bottom:0;padding-bottom:0}
+.spec__rows dt{font-size:13px;font-weight:600}
+.spec__rows dd{font-size:14.5px;color:var(--ink-2)}
+.incl{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:0 24px}
+.incl li{padding:6px 0 6px 18px;position:relative;color:var(--ink)}
+.incl li::before{content:"";position:absolute;left:0;top:50%;width:9px;height:1px;background:var(--ink-3)}
+
+/* ---------- faq ---------- */
+.faq{padding:clamp(48px,8vh,96px) 0 clamp(112px,17vh,190px)}
+.faq__head{grid-column:1/5}
+.faq__list{grid-column:6/13;border-top:1px solid var(--ink)}
+.faq details{border-bottom:1px solid var(--rule)}
+.faq summary{display:flex;justify-content:space-between;align-items:center;gap:24px;min-height:72px;padding:18px 0;cursor:pointer;list-style:none;font-family:var(--serif);font-size:clamp(18px,1.45vw,21px);letter-spacing:-.02em;line-height:1.45}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"";flex:none;width:14px;height:14px;background:linear-gradient(var(--ink),var(--ink)) center/14px 1px no-repeat,linear-gradient(var(--ink),var(--ink)) center/1px 14px no-repeat;transition:transform .45s var(--ease)}
+.faq details[open] summary::after{transform:rotate(45deg)}
+.faq details p{padding:0 0 26px;max-width:36em;color:var(--ink-2)}
+
+/* ---------- preview ---------- */
+.preview{background:var(--night);color:var(--bone);padding:clamp(112px,17vh,190px) 0 clamp(96px,14vh,160px)}
+.preview__img{grid-column:1/5;align-self:end}
+.preview__img img{width:100%;aspect-ratio:4/5;object-fit:cover}
+.preview__img figcaption{margin-top:12px;font-size:12px;color:var(--bone-2)}
+.preview__body{grid-column:6/13}
+.preview__title{margin-top:28px;font-size:clamp(34px,4.3vw,70px);line-height:1.2;letter-spacing:-.045em}
+.preview__lede{margin-top:28px;max-width:30em;color:var(--bone-2);font-size:clamp(15px,1.15vw,17px)}
+.includes{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:var(--gap);margin-top:44px}
+.includes div{padding-top:16px;border-top:1px solid var(--bone-rule)}
+.includes dt{font-weight:600;font-size:15px}
+.includes dd{margin-top:6px;font-size:13.5px;line-height:1.6;color:var(--bone-2)}
+.preview__actions{display:flex;flex-wrap:wrap;align-items:center;gap:12px 32px;margin-top:48px}
+.preview__fine{margin-top:22px;max-width:36em}
+
+/* ---------- colophon ---------- */
+.colophon{background:var(--night);color:var(--bone);padding:0 0 clamp(28px,5vh,48px)}
+.tb{display:grid;grid-template-columns:2.2fr repeat(4,minmax(0,1fr));border:1px solid var(--bone-rule)}
+.tb>div{padding:16px 18px;border-left:1px solid var(--bone-rule);font-size:13px;line-height:1.6}
+.tb>div:first-child{border-left:0}
+.tb dt{font-size:11.5px;color:var(--bone-2);margin-bottom:4px}
+.tb dd a{display:flex;align-items:center;min-height:44px;width:fit-content;text-decoration:underline;text-decoration-color:var(--bone-rule);text-underline-offset:5px}
+.tb dd a:hover{text-decoration-color:currentColor}
+.tb__brand b{font-size:17px;letter-spacing:-.03em}
+.tb__brand p{margin-top:6px;color:var(--bone-2);font-size:13px}
+.colophon__end{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;margin-top:18px;font-size:12px;color:var(--bone-2)}
+
+/* ---------- responsive ---------- */
+@media (min-width:860px){.d-br{display:inline}.m-br{display:none}}
+@media (max-width:1100px){
+  .masthead nav a:not(.masthead__cta){display:none}
+  .feed{grid-column:8/13}
+  .tb{grid-template-columns:repeat(3,minmax(0,1fr))}
+  .tb>div:first-child{grid-column:1/-1;border-bottom:1px solid var(--bone-rule)}
+  .tb>div:nth-child(2){border-left:0}
+}
+@media (max-width:859px){
+  body{font-size:15.5px}
+  .grid{grid-template-columns:minmax(0,1fr)}
+  .grid>*{grid-column:1/-1 !important;grid-row:auto !important}
+  .masthead{height:58px}
+  .wordmark span{display:none}
+
+  .spread{grid-template-columns:minmax(0,1fr);grid-template-rows:none;min-height:0;padding-bottom:40px}
+  .spread::after,.spread__rh{display:none}
+  .plate--online{grid-column:1;grid-row:1;margin:0;height:min(66vw,420px)}
+  .plate--online figcaption{display:none}
+  .plate--site{grid-column:1;grid-row:1;align-self:end;justify-self:end;width:26vw;max-width:150px;margin:0 var(--pad) -36px 0;z-index:2;border:4px solid var(--plaster);border-bottom:0}
+  .plate--site figcaption{display:none}
+  .spread__title{grid-column:1;grid-row:2;display:block;font-size:clamp(25px,8.1vw,36px);line-height:1.24;padding-top:22px}
+  .spread__title .t-l{padding:0 var(--pad)}
+  .spread__title .t-r{padding:.4em var(--pad) 0}
+  .spread__owner{display:none}
+  .spread__foot{grid-column:1;grid-row:3;flex-direction:column;align-items:stretch;gap:24px;padding:18px var(--pad) 0}
+  .spread__actions{align-items:stretch}
+  .spread__actions .btn{width:100%;max-width:460px}
+
+  .problem__head,.beats{grid-row:auto}
+  .feed{position:relative;top:auto;height:auto;margin-top:44px;order:0}
+  .feed__window{height:320px;flex:none}
+  .beats{margin-top:24px}
+  .beat{min-height:0;padding:44px 0}
+  .beat--quiet{min-height:0}
+
+  .turn__title{font-size:clamp(30px,9.4vw,44px)}
+  .turn__promises{grid-template-columns:minmax(0,1fr);gap:28px}
+
+  .method__rail{display:none}
+  .step{min-height:0;padding:56px 0}
+  .step:first-child{border-top:1px solid var(--rule)}
+  .step__en{display:block}
+  .step__kicker .k-en{display:none}
+  .sort{gap:8px}
+  .tree li{grid-template-columns:1fr;gap:2px}
+  .show{grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr)}
+
+  .case__hang{margin-top:40px;max-width:420px;justify-self:center}
+  .case__hang figcaption{position:static;margin-top:8px;text-align:left}
+  .case__titleblock{padding-bottom:0}
+  .before__grid{row-gap:64px}
+  .src--insta{margin-top:0}
+  .pdf{margin-right:12%}
+  .after__grid{row-gap:56px}
+  .shot--night,.shot--how{margin-bottom:0}
+  .cap-side{margin-top:-36px}
+  .case__cta{margin-top:40px}
+
+  .path{grid-template-columns:minmax(0,1fr);row-gap:44px;padding-left:34px}
+  .path::before{left:5px;right:auto;top:8px;bottom:8px;width:1px;height:auto}
+  .path::after{right:auto;left:1px;top:auto;bottom:0;border-left:4.5px solid transparent;border-right:4.5px solid transparent;border-top:9px solid var(--ink);border-bottom:0}
+  .path__where{height:auto;padding-top:0}
+  .path__node{left:-34px;top:4px}
+  .path__what{margin-top:6px}
+
+  .chain ol{grid-template-columns:minmax(0,1fr);gap:0}
+  .chain__groups{display:none}
+  .chain li{display:flex;gap:14px;align-items:baseline;padding:13px 0;border-bottom:1px solid var(--rule)}
+  .chain li::before{margin:0;flex:none;width:1.2em}
+  .chain li:not(:last-child)::after{display:none}
+  .chain li:last-child{border-bottom:0;border-top:1px solid var(--rule-strong);margin-top:-1px}
+
+  .statement{font-size:clamp(30px,8.6vw,40px)}
+  .three li{grid-template-columns:2.4em 1fr;row-gap:6px}
+  .three__no{grid-column:1}
+  .three__name{grid-column:2}
+  .three__note{grid-column:2}
+  .flow{grid-template-columns:minmax(0,1fr);padding-left:34px}
+  .flow::before{left:5px;right:auto;top:6px;bottom:6px;width:1px;height:auto}
+  .flow li{padding:0 0 22px}
+  .flow li .dot{left:-34px;top:6px}
+  .flow__t{margin-top:0}
+
+  .intake div{grid-template-columns:5.6em 1fr}
+  .proof{margin-top:56px;max-width:420px}
+  .spec{margin-top:40px}
+  .spec__rows>div{grid-template-columns:minmax(0,1fr);gap:8px}
+  .incl{grid-template-columns:minmax(0,1fr)}
+  .faq__list{margin-top:36px}
+  .preview__img{max-width:300px;margin-bottom:56px}
+  .includes{grid-template-columns:minmax(0,1fr);gap:0}
+  .includes div{padding:14px 0}
+  .preview__actions{flex-direction:column;align-items:stretch}
+  .preview__actions .btn{width:100%;max-width:460px}
+  .preview__actions .link{align-self:flex-start}
+  .tb{grid-template-columns:minmax(0,1fr) minmax(0,1fr)}
+  .tb>div{border-left:0;border-top:1px solid var(--bone-rule)}
+  .tb>div:nth-child(even){border-left:1px solid var(--bone-rule)}
+  .tb>div:first-child{border-top:0}
+}
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{transition:none !important;animation:none !important}
+  .js .spread .plate__img,.js .plate--online,.js .rv{clip-path:none !important}
+  .js .spread__title>span,.js .spread__owner,.js .spread__foot,.js .spread__rh,.js .plate figcaption{opacity:1 !important;transform:none !important}
+  .js .turn__title .ln>span{transform:none !important}
+  .plate--online img{transform:none !important}
+  .feed__grid{transform:none !important;filter:none !important}
+  .feed__empty{display:none}
+  .bridge__line::after{transform:none !important}
+}
 </style>
 </head>
 <body>
-<header class="wrap nav"><a class="brand" href="https://wethru.com/">WeThru.</a><small>INTERIOR PORTFOLIO SERVICE</small><a class="btn" href="#preview">우리 업체 기준으로 보기</a></header>
-<main>
-<section class="wrap hero">
-<div>
-<div class="eyebrow">For Interior & Remodeling Owners</div>
-<h1>현장은 사장님이 보세요.<br><em>온라인은 저희가 정리하겠습니다.</em></h1>
-<p>시공사진과 작업은 충분한데 홈페이지까지 챙길 시간은 없는 대표님을 위해, 이미 가지고 계신 자료를 바탕으로 <b>작업과 강점이 제대로 보이는 자사 영업 포트폴리오</b>를 만들어드립니다.</p>
-<div class="actions"><a class="btn dark" href="#preview">우리 업체라면 어떻게 보일지 확인하기</a><a class="btn" href="#case">실제 제작 사례 보기</a></div>
-</div>
-<div class="hero-media"><img src="./ikki-archive/assets/cafe_tree.webp" alt="IKKI Archive 실내 조경 프로젝트"><div class="tag">실제 제작 사례 · IKKI Archive</div></div>
+<a class="skip" href="#main">본문으로 건너뛰기</a>
+
+<header class="masthead">
+  <a class="wordmark" href="./" aria-label="WeThru 인테리어 포트폴리오 처음으로"><b>WeThru</b><span>인테리어·리모델링 포트폴리오</span></a>
+  <nav aria-label="주요 메뉴">
+    <a href="#method">일하는 방식</a>
+    <a href="#case">제작 사례</a>
+    <a href="#scope">범위와 비용</a>
+    <a href="#faq">자주 묻는 질문</a>
+    <a class="masthead__cta" href="#preview">문의하기</a>
+  </nav>
+</header>
+
+<main id="main">
+
+<!-- ======== HERO : a spread. left page = 현장, right page = 온라인 ======== -->
+<section class="spread" aria-labelledby="hero-title">
+  <p class="spread__rh spread__rh--l"><b>현장</b><span>사장님의 일</span></p>
+  <p class="spread__rh spread__rh--r"><b>온라인</b><span>WeThru의 일</span></p>
+
+  <figure class="plate plate--site">
+    <div class="plate__img"><img src="./ikki-archive/img/10.jpg" width="360" height="640" alt="전시장 플랜터에 고사리를 심고 있는 시공 현장" fetchpriority="high"></div>
+    <figcaption>대구 엑스코 시공 현장, 2025<br>ikki archive</figcaption>
+  </figure>
+
+  <figure class="plate plate--online">
+    <img src="./assets/hero-cafe-1800.webp" srcset="./assets/hero-cafe-1000.webp 1000w, ./assets/hero-cafe-1800.webp 1800w" sizes="(min-width: 860px) 58vw, 100vw" width="1800" height="1367" alt="송정동 대형 카페 한가운데 큰 나무와 그 아래 고사리, 흰 꽃 식재 — ikki archive 시공" fetchpriority="high">
+  </figure>
+
+  <h1 class="spread__title" id="hero-title">
+    <span class="t-l">현장은<br>사장님이 보세요.</span>
+    <span class="t-r">온라인은<br>저희가 정리하겠습니다.</span>
+  </h1>
+
+  <p class="spread__owner">사장님이 하실 일은 <b>시공사진 몇 장, 기본 정보, 짧은 대화.</b><br>정리와 구성, 문구와 제작은 저희가 맡습니다.</p>
+
+  <div class="spread__foot">
+    <p class="spread__lede">시공사진과 작업은 충분한데 홈페이지까지 챙길 시간은 없는 대표님을 위해, 이미 가지고 계신 자료를 바탕으로 작업과 강점이 제대로 보이는 자사 영업 포트폴리오를 만들어드립니다.</p>
+    <div class="spread__actions">
+      <a class="btn" href="#preview">우리 업체 기준으로 보기 <span class="arr" aria-hidden="true">→</span></a>
+      <a class="link" href="#case">실제 제작 사례 보기</a>
+    </div>
+  </div>
 </section>
 
-<section class="section"><div class="wrap reveal">
-<div class="kicker">The real problem</div><h2>일이 없어서 홈페이지를 못 만드는 게 아닙니다.<br>현장이 바빠서 온라인까지 챙길 시간이 없는 겁니다.</h2>
-<p class="lead">홈페이지가 필요하다는 말을 들어도 먼저 드는 생각은 대개 비슷합니다. “그래서 그걸 내가 언제 하지?”</p>
-<div class="scenes">
-<div class="scene"><b>사진은 많은데</b><p>휴대폰, 인스타, 카톡에 시공사진은 수백 장. 고객에게 보여줄 때마다 다시 찾습니다.</p></div>
-<div class="scene"><b>인스타는 있는데</b><p>현장과 견적을 보다 보면 업로드는 밀립니다. 몇 달 전 게시물이 마지막이어도 이상하지 않습니다.</p></div>
-<div class="scene"><b>하루가 이미 꽉 찼는데</b><p>현장, 견적, 전화, 자재 확인만 해도 하루가 끝납니다. 홈페이지 기획까지 할 여유는 없습니다.</p></div>
-<div class="scene"><b>또 관리하라고?</b><p>새로운 관리자 화면, 매일 올릴 콘텐츠, 복잡한 운영 업무가 생긴다면 굳이 시작하고 싶지 않습니다.</p></div>
-</div></div></section>
+<!-- ======== PROBLEM ======== -->
+<section class="problem" aria-labelledby="problem-title">
+  <div class="frame grid problem__grid">
+    <header class="problem__head">
+      <p class="label">바쁜 현장의 사정</p>
+      <h2 class="problem__title display" id="problem-title">일이 없어서 홈페이지를 못 만드는 게 아닙니다.<br class="d-br"> <em>현장이 바빠서,<br class="d-br"> 온라인까지 챙길 시간이 없는 겁니다.</em></h2>
+    </header>
 
-<section class="turn"><div class="wrap reveal"><h2>그래서 홈페이지를 하나 더<br>관리하라고 말씀드리는 게 아닙니다.</h2><p>사진과 기본 정보, 그리고 짧은 대화. 그 다음부터는 WeThru가 사업을 듣고, 흩어진 자료를 정리하고, 고객이 이해할 수 있는 순서로 웹에 옮깁니다.</p></div></section>
+    <figure class="feed" aria-hidden="true">
+      <div class="feed__window">
+        <div class="feed__grid">
+          <span class="feed__empty">올리지 못한 현장</span><span class="feed__empty"></span><span class="feed__empty"></span>
+          <span class="feed__empty"></span><span class="feed__empty">올리지 못한 현장</span><span class="feed__empty"></span>
+          <img src="./ikki-archive/img/01.jpg" width="361" height="640" alt="" loading="lazy" decoding="async">
+          <img src="./ikki-archive/img/03.jpg" width="640" height="381" alt="" loading="lazy" decoding="async">
+          <img src="./ikki-archive/img/02.jpg" width="640" height="594" alt="" loading="lazy" decoding="async">
+          <img src="./ikki-archive/img/05.jpg" width="480" height="640" alt="" loading="lazy" decoding="async">
+          <img src="./assets/thumb-cafe.webp" width="480" height="480" alt="" loading="lazy" decoding="async">
+          <img src="./ikki-archive/img/08.jpg" width="512" height="640" alt="" loading="lazy" decoding="async">
+          <img src="./ikki-archive/img/07.jpg" width="480" height="640" alt="" loading="lazy" decoding="async">
+          <img src="./ikki-archive/img/09.jpg" width="480" height="640" alt="" loading="lazy" decoding="async">
+          <img src="./ikki-archive/img/10.jpg" width="360" height="640" alt="" loading="lazy" decoding="async">
+          <img src="./assets/thumb-hang.webp" width="480" height="617" alt="" loading="lazy" decoding="async">
+          <img src="./ikki-archive/img/04.jpg" width="512" height="594" alt="" loading="lazy" decoding="async">
+          <img src="./ikki-archive/img/06.jpg" width="640" height="381" alt="" loading="lazy" decoding="async">
+        </div>
+      </div>
+      <figcaption><span>사진 · ikki archive 시공 기록</span><span>일부 사진 studio xyz</span></figcaption>
+    </figure>
 
-<section class="section"><div class="wrap reveal">
-<div class="kicker">How WeThru works</div><h2>웹페이지를 만들기 전에,<br>사장님의 일을 먼저 봅니다.</h2>
-<div class="steps">
-<div class="step"><span class="num">01 / UNDERSTAND</span><h3>이해합니다</h3><p>어떤 일을 해왔고, 어떤 현장을 잘하며, 고객이 왜 이 업체를 선택하는지 듣습니다.</p></div>
-<div class="step"><span class="num">02 / ORGANIZE</span><h3>정리합니다</h3><p>사진, 소개, 경력, 작업 방식처럼 이미 있는 자료를 고객이 보기 좋은 순서로 다시 묶습니다.</p></div>
-<div class="step"><span class="num">03 / BUILD</span><h3>구조화합니다</h3><p>사진만 나열하지 않습니다. 프로젝트, 대표 이야기, 강점, 상담 동선을 하나의 흐름으로 설계합니다.</p></div>
-<div class="step"><span class="num">04 / SHOW</span><h3>보이게 만듭니다</h3><p>모바일과 PC에서 바로 볼 수 있는 사장님 이름의 포트폴리오 사이트로 구현하고 배포합니다.</p></div>
-</div></div></section>
+    <ol class="beats">
+      <li class="beat">
+        <span class="beat__no">01</span>
+        <p class="beat__line">사진은 쌓입니다.</p>
+        <p class="beat__note">휴대폰, 카톡, 인스타에 시공사진만 수백 장. 고객에게 보여줄 때마다 다시 찾습니다.</p>
+      </li>
+      <li class="beat">
+        <span class="beat__no">02</span>
+        <p class="beat__line">정리는 밀립니다.</p>
+        <p class="beat__note">현장, 견적, 전화만 해도 하루가 끝납니다. 올려야지 하던 사진은 다음 주로, 또 다음 달로 넘어갑니다.</p>
+      </li>
+      <li class="beat beat--peak">
+        <span class="beat__no">03</span>
+        <p class="beat__line">좋은 작업은<br>과거 게시물 속으로<br>내려갑니다.</p>
+        <p class="beat__note">인스타는 있지만 마지막 게시물은 몇 달 전. 가장 자신 있는 현장이 피드 아래쪽에 묻혀 있습니다.</p>
+      </li>
+      <li class="beat beat--quiet">
+        <span class="beat__no">04</span>
+        <p class="beat__line">여기에 홈페이지까지 관리할 생각을 하면,<br class="d-br"> 시작부터 귀찮아집니다.</p>
+      </li>
+    </ol>
+  </div>
+</section>
 
-<section class="section" id="case"><div class="wrap reveal">
-<div class="kicker">Case 01 · IKKI Archive</div><h2>없던 것을 만들어낸 게 아니라,<br>이미 있었지만 제대로 보이지 않던 것을 정리했습니다.</h2>
-<div class="case-grid">
-<div class="case-img"><img src="./ikki-archive/img/03.jpg" alt="IKKI Archive 양산 주거공간 시공 사례"></div>
-<div class="case-copy">
-<h3>흩어진 작업을 하나의 이야기로.</h3>
-<p>IKKI에는 이미 좋은 시공사진과 작업 지역, 대표의 디자인 배경, 시공 과정과 다양한 프로젝트가 있었습니다. WeThru가 한 일은 그것을 새로 꾸며내는 것이 아니라 <b>고객이 한 번에 이해할 수 있도록 한곳에 연결하는 것</b>이었습니다.</p>
-<div class="ba"><div><strong>BEFORE</strong><ul><li>시공사진이 각각 존재</li><li>Instagram 게시물에 작업 기록</li><li>대표의 철학과 경력 존재</li><li>서비스와 상담 정보가 흩어짐</li></ul></div><div><strong>AFTER</strong><ul><li>Projects</li><li>About / 대표 이야기</li><li>서비스와 Process</li><li>문의에 필요한 정보와 상담 동선</li></ul></div></div>
-<p class="quote">“잘하고 있는 일을,<br>고객이 제대로 볼 수 있게.”</p>
-<a class="btn case-link" href="./ikki-archive/" target="_blank" rel="noopener">IKKI 실제 제작 페이지 보기 ↗</a>
-</div></div>
-<div class="projects">
-<figure><img src="./ikki-archive/img/01.jpg" alt="동래구 카페 시공"><figcaption>동래구 카페 · 2025</figcaption></figure>
-<figure><img src="./ikki-archive/img/02.jpg" alt="울산 주거공간 시공"><figcaption>울산 주거공간 · 2025</figcaption></figure>
-<figure><img src="./ikki-archive/img/05.jpg" alt="대구 엑스코 전시장 시공"><figcaption>대구 엑스코 제2전시장 · 2025</figcaption></figure>
-</div>
-</div></section>
+<!-- ======== TURN ======== -->
+<section class="turn on-dark" data-inview aria-labelledby="turn-title">
+  <div class="frame grid">
+    <h2 class="turn__title display" id="turn-title">
+      <span class="ln"><span>그래서<br class="m-br"> 홈페이지를 하나 더</span></span>
+      <span class="ln"><span>관리하라고<br class="m-br"> 말씀드리는 게</span></span>
+      <span class="ln"><span>아닙니다.</span></span>
+    </h2>
+    <div class="turn__promises">
+      <p><b>사진 몇 장과 기본 정보만 주세요.</b>나머지는 저희가 정리합니다. 정리되지 않은 상태 그대로 괜찮습니다.</p>
+      <p><b>새로운 관리 업무를 만들지 않습니다.</b>매일 글을 올리는 사이트가 아니라, 작업과 강점을 한 번 제대로 정리해두는 포트폴리오입니다.</p>
+    </div>
+  </div>
+</section>
 
-<section class="section"><div class="wrap reveal">
-<div class="kicker">Instagram + Website + Consultation</div><h2>“인스타그램이 있는데<br>홈페이지가 왜 필요하죠?”</h2>
-<p class="lead">대체하려는 게 아닙니다. 각각 하는 일이 다릅니다.</p>
-<div class="compare">
-<article><span class="kicker">01</span><div class="big">Instagram</div><p><b>발견되는 곳.</b><br>새로운 작업과 일상을 빠르게 보여주고 처음 관심을 만듭니다.</p></article>
-<article><span class="kicker">02</span><div class="big">Website</div><p><b>더 깊게 보는 곳.</b><br>관심이 생긴 고객이 프로젝트, 작업 방식, 대표의 차이를 한 번에 확인합니다.</p></article>
-<article><span class="kicker">03</span><div class="big">Consultation</div><p><b>결정하는 곳.</b><br>충분히 확인하고 온 고객과 대표가 직접 범위와 조건을 이야기합니다.</p></article>
-</div>
-<p style="margin-top:28px;color:var(--muted)">플랫폼을 버리는 것이 아니라, 플랫폼에서 관심을 가진 사람이 <b>사장님 이름의 공간에서 더 깊게 확인할 다음 단계</b>를 만드는 겁니다.</p>
-</div></section>
+<!-- ======== METHOD ======== -->
+<section class="method" id="method" aria-labelledby="method-title">
+  <div class="frame">
+    <div class="grid">
+      <header class="method__head">
+        <p class="label">WeThru가 일하는 순서</p>
+        <h2 class="section-title display" id="method-title">웹페이지를 만들기 전에,<br>사장님의 일을 먼저 봅니다.</h2>
+      </header>
+    </div>
+    <div class="grid method__body">
+      <div class="method__rail" aria-hidden="true">
+        <div class="method__words"><span class="is-active">Understand</span><span>Organize</span><span>Build</span><span>Show</span></div>
+        <ol class="method__index"><li class="is-active">Understand</li><li>Organize</li><li>Build</li><li>Show</li></ol>
+      </div>
 
-<section class="section"><div class="wrap reveal">
-<div class="kicker">Not just coding</div><h2>“유튜브 보고 직접 만들거나,<br>아는 사람에게 부탁하면 안 되나요?”</h2>
-<p class="lead">물론 가능합니다. WeThru의 차이는 코드를 대신 치는 데 있지 않습니다. <b>사업을 듣고 → 고객이 선택할 이유를 찾아내고 → 정보를 구조화하고 → 그것을 웹으로 표현하는 것.</b> 홈페이지는 그 결과물입니다.</p>
-</div></section>
+      <div class="method__steps">
+        <article class="step" data-step="0">
+          <p class="step__kicker"><span>1 / 4</span><span class="k-en">Understand</span></p>
+          <p class="step__en" aria-hidden="true">Understand</p>
+          <h3>사장님의 사업과 작업을 먼저 이해합니다.</h3>
+          <p class="step__text">어떤 현장을 잘하는지, 고객이 왜 이 업체를 고르는지, 어떤 기준으로 일하시는지. 짧은 대화로 먼저 듣습니다.</p>
+          <div class="step__artifact sheet">
+            <p class="sheet__label"><span>첫 대화에서 여쭤보는 것</span><span>메모</span></p>
+            <ol class="memo">
+              <li><span>Q1</span>가장 자신 있는 현장은 어디였나요?</li>
+              <li><span>Q2</span>고객이 계약을 결정한 이유는 무엇이었나요?</li>
+              <li><span>Q3</span>다른 업체와 다르게 하는 한 가지가 있다면요?</li>
+              <li><span>Q4</span>주로 어느 지역, 어떤 규모의 공사를 하시나요?</li>
+            </ol>
+          </div>
+        </article>
 
-<section class="section"><div class="wrap reveal">
-<div class="kicker">Low effort for the owner</div><h2>사장님이 준비할 건<br>생각보다 많지 않습니다.</h2>
-<p class="lead">기존 시공사진 + 업체 기본 정보 + 짧은 대화. 완벽하게 정리해서 주실 필요도 없습니다. 정리하는 것부터 저희 일입니다.</p>
-<div class="process">
-<div><span>01</span><b>자료 확인</b></div><div><span>02</span><b>짧은 인터뷰</b></div><div><span>03</span><b>구조·카피 설계</b></div><div><span>04</span><b>1차 제작</b></div><div><span>05</span><b>대표 피드백</b></div><div><span>06</span><b>수정</b></div><div><span>07</span><b>최종 배포</b></div>
-</div>
-</div></section>
+        <article class="step" data-step="1">
+          <p class="step__kicker"><span>2 / 4</span><span class="k-en">Organize</span></p>
+          <p class="step__en" aria-hidden="true">Organize</p>
+          <h3>흩어진 사진과 정보를 고객 관점에서 다시 정리합니다.</h3>
+          <p class="step__text">휴대폰과 인스타, 카톡에 나뉜 사진을 모아 공간 유형과 지역별로 묶고, 고객이 먼저 봐야 할 대표 사진을 고릅니다.</p>
+          <div class="step__artifact sheet">
+            <p class="sheet__label"><span>공간 유형별 정리 · 대표 사진 선택</span><span>ikki archive 사진</span></p>
+            <div class="sort">
+              <div class="sort__group"><h4>상업공간<small>카페</small></h4><ul>
+                <li class="is-pick"><img src="./ikki-archive/img/01.jpg" width="361" height="640" alt="동래구 카페 이끼 언덕" loading="lazy" decoding="async"></li>
+                <li><img src="./ikki-archive/img/08.jpg" width="512" height="640" alt="동래구 카페 실내" loading="lazy" decoding="async"></li></ul></div>
+              <div class="sort__group"><h4>주거공간<small>양산·울산</small></h4><ul>
+                <li class="is-pick"><img src="./ikki-archive/img/03.jpg" width="640" height="381" alt="경남 양산 주거공간 유리 구조물 속 나무" loading="lazy" decoding="async"></li>
+                <li><img src="./ikki-archive/img/02.jpg" width="640" height="594" alt="울산 주거공간 수납장 하부 이끼정원" loading="lazy" decoding="async"></li></ul></div>
+              <div class="sort__group"><h4>전시<small>대구 EXCO</small></h4><ul>
+                <li class="is-pick"><img src="./ikki-archive/img/05.jpg" width="480" height="640" alt="대구 엑스코 전시 부스 곡선 플랜터" loading="lazy" decoding="async"></li>
+                <li><img src="./ikki-archive/img/10.jpg" width="360" height="640" alt="대구 엑스코 시공 현장" loading="lazy" decoding="async"></li></ul></div>
+            </div>
+          </div>
+        </article>
 
-<section class="section"><div class="wrap reveal">
-<div class="kicker">Better inquiries, not just more</div><h2>문의가 많아지는 것보다,<br>상담할 가치가 있는 문의를 받는 구조.</h2>
-<p class="lead">지역, 평수, 예산, 공사 범위, 희망 일정, 참고 레퍼런스처럼 상담 전에 필요한 정보를 받을 수 있게 구성할 수 있습니다. 무조건 문의가 늘어난다고 약속하지 않습니다. 대신 고객이 상담 전에 사장님의 작업과 차이를 충분히 보고, 필요한 정보를 갖고 연락할 수 있게 만듭니다.</p>
-</div></section>
+        <article class="step" data-step="2">
+          <p class="step__kicker"><span>3 / 4</span><span class="k-en">Build</span></p>
+          <p class="step__en" aria-hidden="true">Build</p>
+          <h3>프로젝트, 대표 이야기, 강점, 상담 동선을 구조화합니다.</h3>
+          <p class="step__text">사진만 나열하지 않습니다. 고객이 어떤 순서로 보고, 어디서 마음을 정하고, 어떻게 연락하게 될지 흐름을 설계합니다.</p>
+          <div class="step__artifact sheet">
+            <p class="sheet__label"><span>사이트 구조</span><span>기본 구성</span></p>
+            <ol class="tree">
+              <li><b>첫 화면</b><span>대표 작업 한 장과, 무엇을 하는 곳인지 한 문장</span></li>
+              <li><b>프로젝트</b><span>시공사례 8~12개 — 지역, 공간 유형, 연도</span></li>
+              <li><b>소개</b><span>대표 이야기, 경력, 일하는 기준</span></li>
+              <li><b>과정</b><span>상담부터 시공까지의 순서</span></li>
+              <li><b>문의</b><span>상담 전에 받을 정보와 연락 방법</span></li>
+            </ol>
+          </div>
+        </article>
 
-<section class="section"><div class="wrap reveal faq">
-<div class="kicker">FAQ</div><h2>대표님들이 먼저 묻는 것.</h2>
-<details open><summary>제가 준비해야 할 게 많지 않나요?</summary><p>기존 시공사진과 업체 기본 정보가 있으면 시작할 수 있습니다. 자료가 깔끔하게 정리되어 있지 않아도 됩니다. 짧은 인터뷰 후 구성, 문구, 디자인, 구현은 WeThru가 진행합니다.</p></details>
-<details><summary>홈페이지를 계속 제가 관리해야 하나요?</summary><p>매일 콘텐츠를 올리는 운영형 사이트가 아니라, 대표님의 작업과 강점을 정리해두는 포트폴리오를 기본으로 설계합니다. 오픈 후 수정과 유지관리는 계약된 범위에 따라 진행하며 ‘평생 무료 수정’이나 ‘무제한 AS’를 약속하지 않습니다.</p></details>
-<details><summary>인스타그램이나 네이버 블로그가 있는데도 필요한가요?</summary><p>둘 중 하나를 없애는 서비스가 아닙니다. SNS와 블로그는 발견과 지속적인 소통에 강하고, 자사 사이트는 관심이 생긴 고객이 업체의 프로젝트와 차이를 한 번에 깊게 확인하는 역할을 합니다.</p></details>
-<details><summary>직접 만들면 더 싸지 않나요?</summary><p>맞습니다. 직접 만들 수 있다면 제작비를 줄일 수 있습니다. 다만 WeThru는 단순 제작보다 사업과 작업을 듣고, 무엇을 보여줘야 하는지 정리하는 과정까지 함께 제공합니다. 대표님의 시간이 어디에 더 가치 있게 쓰이는지를 기준으로 판단하시면 됩니다.</p></details>
-<details><summary>제작 범위와 가격은 어떻게 되나요?</summary><p>현재 인테리어 포트폴리오 파일럿은 75만원을 기준으로 상담하고 있습니다. 기본 범위는 모바일 대응, Hero, 업체/대표 소개, 서비스, 시공사례 약 8~12개, 문의 CTA, 기본 검색 설정, SNS 공유용 OG, 1회 수정, 기본 배포입니다. 페이지·기능 추가와 별도 유지관리는 범위 확인 후 안내합니다.</p></details>
-<details><summary>프리뷰는 완성 홈페이지를 무료로 만들어주는 건가요?</summary><p>아닙니다. 대표 화면, 일부 프로젝트, 업체에 맞는 방향성을 보여드리는 Preview입니다. 전체 사이트 설계와 제작은 진행 결정 후 시작합니다.</p></details>
-</div></section>
+        <article class="step" data-step="3">
+          <p class="step__kicker"><span>4 / 4</span><span class="k-en">Show</span></p>
+          <p class="step__en" aria-hidden="true">Show</p>
+          <h3>사장님 이름의 자사 포트폴리오로 만듭니다.</h3>
+          <p class="step__text">휴대폰과 PC에서 바로 열리는, 업체 이름의 사이트로 공개합니다. 플랫폼에 흩어진 작업물을 사장님 이름의 공간에 쌓습니다.</p>
+          <div class="step__artifact show">
+            <img src="./assets/ikki-site-hero-m.webp" width="600" height="1298" alt="ikkiarchive.com 모바일 첫 화면" loading="lazy" decoding="async">
+            <p class="show__url">ikkiarchive.com<small>ikki archive의 실제 사이트. 인스타그램 프로필이나 상담 대화에서 이 주소 하나로 작업 전체를 보여줄 수 있습니다.</small></p>
+          </div>
+        </article>
+      </div>
+    </div>
+  </div>
+</section>
 
-<section class="final" id="preview"><div class="wrap reveal">
-<div class="kicker">Preview Request</div><h2>우리 업체라면<br>어떻게 보일지 먼저 보세요.</h2>
-<p>홈페이지부터 계약하라고 말씀드리지 않습니다. 현재 공개된 작업과 기본 정보를 바탕으로, 어떤 방향으로 정리할 수 있을지 먼저 이야기해보세요.</p>
-<div class="actions" style="margin-top:32px"><a class="btn dark" href="https://wethru.com/" target="_blank" rel="noopener">포트폴리오 방향 상담받기 ↗</a><a class="btn" href="./ikki-archive/" target="_blank" rel="noopener">실제 사례 다시 보기</a></div>
-<p class="note">Preview는 완성 사이트 전체 제공이 아닌 대표 화면·일부 프로젝트·방향성 제안 범위입니다.</p>
-</div></section>
+<!-- ======== CASE STUDY ======== -->
+<section class="case on-dark" id="case" aria-labelledby="case-title">
+  <div class="frame grid case__open">
+    <div class="case__titleblock">
+      <p class="label">제작 사례 · ikki archive</p>
+      <p class="case__client">부산 · 실내조경, 이끼정원, 행잉 작품</p>
+      <h2 class="case__title display" id="case-title">없던 것을<br class="m-br"> 만들어낸 게 아니라,<br> 이미 있었지만<br class="m-br"> 제대로 보이지 않던 것을<br> 정리했습니다.</h2>
+      <p class="case__lede">ikki archive에는 이미 좋은 시공사진과 인스타그램 기록, 프로젝트를 정리한 포트폴리오 자료, 공간 디자이너 출신 대표의 이력이 있었습니다. 다만 서로 다른 곳에 흩어져 있었습니다.</p>
+    </div>
+    <figure class="case__hang">
+      <img class="rv" data-inview src="./ikki-archive/assets/hang_all.webp" width="1460" height="1876" alt="천장에 매단 원뿔형 행잉 식물 작품" loading="lazy" decoding="async">
+      <figcaption>행잉 작품, 2024<br>ikki archive</figcaption>
+    </figure>
+  </div>
+
+  <!-- before -->
+  <div class="frame before">
+    <div class="chapter-head"><h3>Before — 있었지만, 흩어져 있던 것</h3><p>네 곳에 나뉘어 있던 자료</p></div>
+    <div class="grid before__grid">
+      <figure class="src src--photos">
+        <div class="photos">
+          <img class="p1 rv" data-inview src="./ikki-archive/img/01.jpg" width="361" height="640" alt="동래구 카페, 계단을 따라 흘러내리는 이끼 언덕" loading="lazy" decoding="async">
+          <img class="p2 rv" data-inview src="./ikki-archive/img/02.jpg" width="640" height="594" alt="울산 주거공간, 수납 가구 하부의 이끼와 돌, 흰 꽃" loading="lazy" decoding="async">
+          <img class="p3 rv" data-inview src="./ikki-archive/img/07.jpg" width="480" height="640" alt="울산 주거공간, 이끼와 잎이 넓은 식물" loading="lazy" decoding="async">
+        </div>
+        <figcaption><b>시공사진</b>동래구 카페, 울산 주거공간 — 현장마다 찍어둔 사진이 게시물 단위로 나뉘어 있었습니다.</figcaption>
+      </figure>
+
+      <figure class="src src--insta">
+        <div class="insta">
+          <p class="insta__bar"><b>@ikki_archive</b><span>Instagram</span></p>
+          <div class="insta__grid">
+            <img src="./ikki-archive/img/09.jpg" width="480" height="640" alt="" loading="lazy" decoding="async">
+            <img src="./ikki-archive/img/03.jpg" width="640" height="381" alt="" loading="lazy" decoding="async">
+            <img src="./ikki-archive/img/05.jpg" width="480" height="640" alt="" loading="lazy" decoding="async">
+            <img src="./ikki-archive/img/08.jpg" width="512" height="640" alt="" loading="lazy" decoding="async">
+            <img src="./assets/thumb-cafe.webp" width="480" height="480" alt="" loading="lazy" decoding="async">
+            <img src="./ikki-archive/img/10.jpg" width="360" height="640" alt="" loading="lazy" decoding="async">
+          </div>
+        </div>
+        <figcaption><b>Instagram</b>꾸준히 쌓인 작업 기록. 다만 최신순으로만 보이고, 오래된 대표작은 아래로 내려갑니다.</figcaption>
+      </figure>
+
+      <div class="src src--story">
+        <p class="story__quote">“공간 디자이너 출신이<br>직접 설계하고 시공합니다.”</p>
+        <dl class="story__facts">
+          <div><dt>작업 지역</dt><dd>부산, 경남, 울산</dd></div>
+          <div><dt>시공 전</dt><dd>3D 시안으로 먼저 맞춰 봅니다</dd></div>
+          <div><dt>수상</dt><dd>2017 한국공간디자인 공모전 동상</dd></div>
+        </dl>
+        <p class="src__cap"><b>대표의 철학과 경력</b>고객이 처음 보는 화면에서는 잘 드러나지 않던 이야기.</p>
+      </div>
+
+      <figure class="src src--pdf">
+        <div class="pdf">
+          <img src="./assets/ikki-pf-13.webp" width="900" height="640" alt="" loading="lazy" decoding="async">
+          <img src="./assets/ikki-pf-26.webp" width="900" height="640" alt="" loading="lazy" decoding="async">
+          <img src="./assets/ikki-pf-19.webp" width="900" height="640" alt="ikki archive 포트폴리오 문서 중 한 페이지" loading="lazy" decoding="async">
+        </div>
+        <figcaption><b>포트폴리오 자료</b>프로젝트별로 정리해 둔 문서. 사진, 인스타그램과는 따로 보관되어 있었습니다.</figcaption>
+      </figure>
+    </div>
+  </div>
+
+  <div class="frame bridge" data-inview>
+    <p>흩어져 있던 것을,<br>업체 이름의 한 곳으로.</p>
+    <div class="bridge__line" aria-hidden="true"></div>
+  </div>
+
+  <!-- after -->
+  <div class="frame after">
+    <div class="chapter-head"><h3>After — 하나의 사이트 안에서</h3><p>ikkiarchive.com</p></div>
+    <ul class="after__index" aria-label="정리한 구성">
+      <li>Projects</li><li>About</li><li>Process</li><li>Contact</li><li>대표 철학</li><li>작업 스타일</li><li>문의 동선</li>
+    </ul>
+    <div class="grid after__grid">
+      <figure class="shot shot--hero"><img class="rv" data-inview src="./assets/ikki-site-hero.webp" width="1600" height="1000" alt="ikkiarchive.com 첫 화면: 공간에 숲을 들입니다" loading="lazy" decoding="async"></figure>
+      <p class="cap-side"><b>첫 화면</b>대표 작품 한 점과 한 문장. 무엇을 하는 곳인지 첫 화면에서 바로 보입니다.</p>
+
+      <figure class="shot shot--about"><img class="rv" data-inview src="./assets/ikki-site-about.webp" width="1200" height="821" alt="ikkiarchive.com 소개: 공간 디자이너 출신이 직접 설계하고 시공합니다" loading="lazy" decoding="async"><figcaption><b>About · 대표 철학</b>공간 디자이너 출신이라는 배경과 작업 지역, 수상 이력을 첫 문단에 놓았습니다.</figcaption></figure>
+      <figure class="shot shot--night"><img class="rv" data-inview src="./assets/ikki-site-night.webp" width="1400" height="915" alt="ikkiarchive.com 대표 프로젝트: 송정동 대형 카페" loading="lazy" decoding="async"><figcaption><b>작업 스타일</b>대표 프로젝트 하나를 크게. 장소, 시기, 의뢰처, 설계와 시공까지 함께 적었습니다.</figcaption></figure>
+
+      <figure class="shot shot--works"><img class="rv" data-inview src="./assets/ikki-site-works.webp" width="1400" height="921" alt="ikkiarchive.com 시공 사례 목록" loading="lazy" decoding="async"><figcaption><b>Projects</b>시공 사례 10건. 지역과 연도, 공간 유형을 붙이고 인스타그램 원본 게시물로 연결했습니다.</figcaption></figure>
+      <figure class="shot shot--how"><img class="rv" data-inview src="./assets/ikki-site-how.webp" width="1400" height="751" alt="ikkiarchive.com 문의 및 시공 과정" loading="lazy" decoding="async"><figcaption><b>Process · 문의 동선</b>문의 과정과 시공 과정을 나눠, 상담 전에 무엇을 준비하면 되는지 알려줍니다.</figcaption></figure>
+    </div>
+  </div>
+
+  <div class="frame grid case__close">
+    <blockquote class="display">잘하고 있는 일을,<br>고객이 제대로 볼 수 있게.</blockquote>
+    <div class="case__cta">
+      <a class="btn" href="https://ikkiarchive.com/" target="_blank" rel="noopener">ikkiarchive.com 실제 사이트 보기 <span class="arr" aria-hidden="true">↗</span></a>
+      <p class="fine">ikki archive가 운영 중인 실제 사이트입니다. 사진과 정보는 모두 ikki archive가 원래 가지고 있던 자료입니다.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ======== JOURNEY ======== -->
+<section class="journey" aria-labelledby="journey-title">
+  <div class="frame">
+    <div class="grid">
+      <header class="journey__head">
+        <p class="label">인스타그램과 홈페이지</p>
+        <h2 class="section-title display" id="journey-title">인스타그램을 그만두라는<br>이야기가 아닙니다.</h2>
+        <p class="journey__sub">인스타에서 관심을 가진 고객이 더 깊게 볼 곳을 만듭니다. 각자 하는 일이 다릅니다.</p>
+      </header>
+    </div>
+    <ol class="path">
+      <li><span class="path__where">Instagram</span><span class="path__node" aria-hidden="true"></span><span class="path__what">발견</span><span class="path__note">지나가다 작업을 처음 봅니다. 관심은 여기서 시작됩니다.</span></li>
+      <li class="is-us"><span class="path__where">홈페이지 — WeThru가 만드는 곳</span><span class="path__node" aria-hidden="true"></span><span class="path__what">깊이 보기</span><span class="path__note"><b>프로젝트, 작업 방식, 대표의 차이를</b> 한 번에 확인합니다.</span></li>
+      <li><span class="path__where">상담</span><span class="path__node" aria-hidden="true"></span><span class="path__what">결정</span><span class="path__note">충분히 보고 온 고객과 범위와 조건을 이야기합니다.</span></li>
+    </ol>
+    <p class="journey__foot"><span>플랫폼에 흩어진 작업물을, <b>사장님 이름의 공간</b>에 쌓습니다.</span><span>인스타그램은 그대로 두셔도 됩니다.</span></p>
+  </div>
+</section>
+
+<!-- ======== DIY ======== -->
+<section class="diy" aria-labelledby="diy-title">
+  <div class="frame grid">
+    <h2 class="diy__q display" id="diy-title">“직접 만들면<br>안 되나요?”</h2>
+    <div class="diy__a">
+      <p class="diy__yes">물론 가능합니다.</p>
+      <p>요즘은 도구가 좋아서, 시간만 있다면 직접 만드실 수 있습니다. 다만 WeThru의 역할은 웹페이지 코드를 대신 치는 것만이 아닙니다.</p>
+      <div class="chain">
+        <p class="chain__groups" aria-hidden="true"><span>보이지 않는 준비</span><span>보이는 결과물</span></p>
+        <ol>
+          <li>사업을 듣고</li>
+          <li>고객이 선택하는 이유를 찾고</li>
+          <li>정보를 구조화하고</li>
+          <li>웹으로 표현합니다</li>
+        </ol>
+      </div>
+      <p>도구는 마지막 칸을 도와줍니다. 저희는 앞의 세 칸부터 함께합니다.</p>
+      <p class="diy__close">직접 할 수 있는 일이지만, 대표님의 시간이 어디에 쓰이는 게 더 가치 있는지를 기준으로 판단하시면 됩니다.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ======== EFFORT ======== -->
+<section class="effort" id="effort" aria-labelledby="effort-title">
+  <div class="frame grid">
+    <header class="effort__head">
+      <p class="label">사장님이 하실 일</p>
+      <h2 class="section-title display" id="effort-title">준비하실 건<br>세 가지면 됩니다.</h2>
+    </header>
+    <ol class="three">
+      <li><span class="three__no">01</span><span class="three__name">기존 시공사진</span><span class="three__note">휴대폰에 있는 그대로 보내주셔도 됩니다.</span></li>
+      <li><span class="three__no">02</span><span class="three__name">업체 기본 정보</span><span class="three__note">상호, 지역, 연락처, 주로 하는 공사.</span></li>
+      <li><span class="three__no">03</span><span class="three__name">짧은 대화</span><span class="three__note">어떻게 일하시는지 편하게 말씀해주세요.</span></li>
+    </ol>
+    <p class="statement display"><span class="muted">정리해서 주실<br class="m-br"> 필요도 없습니다.</span><br>정리하는 것부터<br class="m-br"> 저희 일입니다.</p>
+
+    <div class="flow-wrap">
+      <p class="flow-legend"><span><i class="dot dot--owner" aria-hidden="true"></i>사장님이 함께하는 단계</span><span><i class="dot" aria-hidden="true"></i>WeThru가 하는 단계</span></p>
+      <ol class="flow">
+        <li><i class="dot" aria-hidden="true"></i><span class="flow__n">1</span><span class="flow__t">자료 확인</span></li>
+        <li><i class="dot dot--owner" aria-hidden="true"></i><span class="flow__n">2</span><span class="flow__t">인터뷰</span><span class="flow__o">사장님 — 짧은 대화</span></li>
+        <li><i class="dot" aria-hidden="true"></i><span class="flow__n">3</span><span class="flow__t">구조·카피 설계</span></li>
+        <li><i class="dot" aria-hidden="true"></i><span class="flow__n">4</span><span class="flow__t">1차 제작</span></li>
+        <li><i class="dot dot--owner" aria-hidden="true"></i><span class="flow__n">5</span><span class="flow__t">대표 피드백</span><span class="flow__o">사장님 — 보시고 고칠 곳만 말씀해주세요</span></li>
+        <li><i class="dot" aria-hidden="true"></i><span class="flow__n">6</span><span class="flow__t">수정</span></li>
+        <li><i class="dot" aria-hidden="true"></i><span class="flow__n">7</span><span class="flow__t">최종 배포</span></li>
+      </ol>
+    </div>
+    <p class="effort__cta"><a class="link" href="#preview">우리 업체 기준으로 보기 <span class="arr" aria-hidden="true">→</span></a></p>
+  </div>
+</section>
+
+<!-- ======== INQUIRY ======== -->
+<section class="inquiry" aria-labelledby="inquiry-title">
+  <div class="frame grid">
+    <header class="inquiry__head">
+      <p class="label">문의의 질</p>
+      <h2 class="section-title display" id="inquiry-title">문의가 많은 것보다,<br>상담할 가치가 있는 문의를.</h2>
+      <p class="inquiry__lede">상담 전에 필요한 정보를 미리 받을 수 있게 문의 동선을 설계합니다. 같은 질문을 전화로 처음부터 다시 묻지 않아도 됩니다.</p>
+    </header>
+    <dl class="intake">
+      <div><dt>지역</dt><dd>갈 수 있는 현장인지 먼저 압니다.</dd></div>
+      <div><dt>평수</dt><dd>공사 규모를 미리 가늠합니다.</dd></div>
+      <div><dt>예산</dt><dd>서로 맞는 범위인지 확인합니다.</dd></div>
+      <div><dt>공사 범위</dt><dd>부분 공사인지, 전체 공사인지 구분합니다.</dd></div>
+      <div><dt>희망 일정</dt><dd>일정이 맞는지 먼저 봅니다.</dd></div>
+      <div><dt>레퍼런스</dt><dd>원하는 분위기를 사진으로 받습니다.</dd></div>
+    </dl>
+    <p class="inquiry__note fine">문의가 늘어난다고 약속하지 않습니다. 대신 고객이 작업을 충분히 보고, 필요한 정보를 갖고 연락하게 만듭니다.</p>
+    <figure class="proof">
+      <img src="./assets/ikki-site-form.webp" width="700" height="1148" alt="ikkiarchive.com 상담 신청 양식: 이름, 연락처, 공간 종류, 공간 크기, 내용" loading="lazy" decoding="async">
+      <figcaption><b>실제 적용 — ikki archive 상담 신청.</b> 공간 종류와 크기, 원하는 분위기와 일정, 예산을 상담 전에 받습니다.</figcaption>
+    </figure>
+  </div>
+</section>
+
+<!-- ======== SCOPE ======== -->
+<section class="scope" id="scope" aria-labelledby="scope-title">
+  <div class="frame grid">
+    <header class="scope__head">
+      <p class="label">범위와 비용</p>
+      <h2 class="section-title display" id="scope-title">무엇이 포함되는지,<br>시작 전에 분명하게.</h2>
+    </header>
+    <div class="spec">
+      <div class="spec__top">
+        <p class="spec__name"><b>PILOT</b>인테리어 포트폴리오</p>
+        <p class="spec__price">750,000<small>KRW</small></p>
+      </div>
+      <dl class="spec__rows">
+        <div><dt>기본 범위</dt><dd><ul class="incl">
+          <li>모바일 대응</li><li>첫 화면(Hero)</li><li>업체·대표 소개</li><li>서비스 소개</li><li>시공사례 약 8~12개</li><li>신뢰 요소</li><li>문의 CTA</li><li>기본 SEO</li><li>SNS 공유 이미지(OG)</li><li>수정 1회</li><li>기본 배포</li>
+        </ul></dd></div>
+        <div><dt>별도 범위</dt><dd>추가 페이지, 추가 기능, 유지관리는 필요한 범위를 확인한 뒤 따로 안내합니다.</dd></div>
+        <div><dt>수정과 관리</dt><dd>수정 횟수와 오픈 이후의 관리 조건은 시작 전에 정확히 정하고 진행합니다.</dd></div>
+      </dl>
+    </div>
+  </div>
+</section>
+
+<!-- ======== FAQ ======== -->
+<section class="faq" id="faq" aria-labelledby="faq-title">
+  <div class="frame grid">
+    <header class="faq__head">
+      <p class="label">자주 묻는 질문</p>
+      <h2 class="section-title display" id="faq-title">대표님들이<br>먼저 묻는 것.</h2>
+    </header>
+    <div class="faq__list">
+      <details><summary>제가 준비해야 할 게 많지 않나요?</summary><p>기존 시공사진과 업체 기본 정보가 있으면 시작할 수 있습니다. 깔끔하게 정리되어 있지 않아도 됩니다. 짧은 대화 뒤 구성, 문구, 디자인, 제작은 WeThru가 진행합니다.</p></details>
+      <details><summary>오픈하고 나면 제가 계속 관리해야 하나요?</summary><p>매일 콘텐츠를 올리는 운영형 사이트가 아니라, 작업과 강점을 정리해두는 포트폴리오를 기본으로 설계합니다. 오픈 이후의 수정과 유지관리는 별도 범위로, 필요할 때 조건을 안내드립니다.</p></details>
+      <details><summary>인스타그램이나 블로그가 있는데도 필요한가요?</summary><p>둘 중 하나를 없애는 서비스가 아닙니다. 인스타그램과 블로그는 발견과 소통에 강하고, 자사 사이트는 관심이 생긴 고객이 프로젝트와 업체의 차이를 한 번에 깊게 확인하는 곳입니다.</p></details>
+      <details><summary>처음 보는 곳에 맡겨도 괜찮을까요?</summary><p>그래서 실제 결과물부터 보여드립니다. ikkiarchive.com을 직접 확인해보시고, 프리뷰로 우리 업체에 맞는 방향을 먼저 보신 뒤 결정하셔도 됩니다.</p></details>
+      <details><summary>프리뷰는 홈페이지를 무료로 만들어주는 건가요?</summary><p>아닙니다. 대표 화면과 일부 프로젝트로, 업체에 맞는 방향을 먼저 보여드리는 단계입니다. 전체 사이트 설계와 제작은 진행을 결정하신 뒤 시작합니다.</p></details>
+    </div>
+  </div>
+</section>
+
+<!-- ======== PREVIEW / CONTACT ======== -->
+<section class="preview on-dark" id="preview" aria-labelledby="preview-title">
+  <div class="frame grid">
+    <figure class="preview__img">
+      <img src="./ikki-archive/img/08.jpg" width="512" height="640" alt="카페 실내 한쪽, 단 위 이끼 언덕을 바라보는 사람" loading="lazy" decoding="async">
+      <figcaption>동래구 카페, 2025 — ikki archive</figcaption>
+    </figure>
+    <div class="preview__body">
+      <p class="label">프리뷰 요청</p>
+      <h2 class="preview__title display" id="preview-title">우리 업체라면<br>어떻게 보일지,<br>먼저 확인해보세요.</h2>
+      <p class="preview__lede">인스타그램 주소나 시공사진 몇 장이면 충분합니다. 대표 화면과 일부 프로젝트로, 업체에 맞는 방향을 먼저 보여드립니다.</p>
+      <dl class="includes">
+        <div><dt>대표 화면</dt><dd>업체의 첫인상이 될 한 화면</dd></div>
+        <div><dt>일부 프로젝트</dt><dd>실제 시공사진으로 구성한 사례 몇 개</dd></div>
+        <div><dt>방향 제안</dt><dd>무엇을 앞에 보여줄지에 대한 제안</dd></div>
+      </dl>
+      <div class="preview__actions">
+        <a class="btn" href="https://pf.kakao.com/_wRVBX/chat" target="_blank" rel="noopener">카카오톡으로 프리뷰 요청하기 <span class="arr" aria-hidden="true">↗</span></a>
+        <a class="link" href="https://forms.gle/d66adwLQzBpE8VDg6" target="_blank" rel="noopener">상담 폼 작성하기 <span class="arr" aria-hidden="true">↗</span></a>
+      </div>
+      <p class="preview__fine fine">프리뷰는 완성 사이트가 아니라 대표 화면, 일부 프로젝트, 방향 제안까지입니다. 전체 제작은 보시고 결정하시면 됩니다. 운영시간 평일 10:00–19:00.</p>
+    </div>
+  </div>
+</section>
 </main>
-<footer><div class="wrap"><b>WeThru.</b><span>바쁜 대표가 이미 잘하고 있는 일을, 온라인에서 제대로 보이게 정리합니다.</span><span>© 2026 WeThru</span></div></footer>
+
+<footer class="colophon on-dark">
+  <div class="frame">
+    <dl class="tb">
+      <div class="tb__brand"><dt class="sr-only">브랜드</dt><dd><b>WeThru</b><p>바쁜 대표가 이미 잘하고 있는 일을, 온라인에서 제대로 보이게 정리합니다.</p></dd></div>
+      <div><dt>운영사</dt><dd>주식회사 나이츄얼랩스<br>대표자 선윤성</dd></div>
+      <div><dt>사업자등록번호</dt><dd>292-88-03773</dd></div>
+      <div><dt>문의</dt><dd><a href="https://pf.kakao.com/_wRVBX/chat" target="_blank" rel="noopener">카카오톡 위쓰루 채널</a><a href="mailto:ceo@nitual.com">ceo@nitual.com</a></dd></div>
+      <div><dt>운영시간</dt><dd>평일 10:00–19:00<a href="https://wethru.com/" target="_blank" rel="noopener">wethru.com</a></dd></div>
+    </dl>
+    <p class="colophon__end"><span>© 2026 WeThru</span><span>사례 사진 · ikki archive (일부 studio xyz)</span></p>
+  </div>
+</footer>
+
 <script>
-const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting)e.target.classList.add('on')}),{threshold:.12});
-document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+(() => {
+  const d = document, root = d.documentElement;
+  const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const wide = matchMedia('(min-width: 860px)');
+
+  const ready = () => requestAnimationFrame(() => root.classList.add('is-loaded'));
+  const heroImg = d.querySelector('.plate--online img');
+  if (heroImg && !heroImg.complete) { heroImg.addEventListener('load', ready, { once: true }); setTimeout(ready, 900); } else ready();
+
+  const io = new IntersectionObserver(entries => entries.forEach(e => {
+    if (e.isIntersecting) { e.target.classList.add('is-in'); io.unobserve(e.target); }
+  }), { rootMargin: '0px 0px -10% 0px' });
+  d.querySelectorAll('[data-inview]').forEach(el => io.observe(el));
+
+  const words = [...d.querySelectorAll('.method__words span')];
+  const marks = [...d.querySelectorAll('.method__index li')];
+  const setStep = i => {
+    words.forEach((w, j) => { w.classList.toggle('is-active', j === i); w.classList.toggle('is-past', j < i); });
+    marks.forEach((m, j) => m.classList.toggle('is-active', j === i));
+  };
+  const so = new IntersectionObserver(entries => entries.forEach(e => { if (e.isIntersecting) setStep(+e.target.dataset.step); }), { rootMargin: '-48% 0px -48% 0px' });
+  d.querySelectorAll('.step').forEach(s => so.observe(s));
+
+  if (reduce) return;
+  const feed = d.querySelector('.feed__grid'), feedBox = d.querySelector('.feed'), problem = d.querySelector('.problem');
+  const clamp = v => Math.min(1, Math.max(0, v));
+  let ticking = false;
+  const update = () => {
+    ticking = false;
+    const vh = innerHeight, y = scrollY;
+    if (heroImg && y < vh * 1.3) heroImg.style.transform = `translate3d(0, ${(y * 0.07).toFixed(1)}px, 0) scale(1.04)`;
+    if (feed) {
+      let p;
+      if (wide.matches) { const r = problem.getBoundingClientRect(); p = clamp((vh * 0.5 - r.top) / (r.height - vh * 0.6)); }
+      else { const r = feedBox.getBoundingClientRect(); p = clamp((vh * 0.85 - r.top) / (vh * 0.8)); }
+      feed.style.setProperty('--p', p.toFixed(3));
+    }
+  };
+  addEventListener('scroll', () => { if (!ticking) { ticking = true; requestAnimationFrame(update); } }, { passive: true });
+  addEventListener('resize', update);
+  update();
+})();
 </script>
-</body></html>
+</body>
+</html>
