@@ -118,6 +118,10 @@ p{text-wrap:pretty}
 .spread__foot{grid-column:2;grid-row:4;display:flex;align-items:flex-end;justify-content:space-between;gap:clamp(24px,3vw,56px);padding-left:clamp(24px,3vw,48px);padding-right:var(--pad);padding-top:22px}
 .spread__lede{font-size:clamp(15px,1.1vw,16.5px);line-height:1.78;color:var(--ink-2);max-width:31em}
 .spread__actions{display:flex;flex-direction:column;align-items:flex-start;gap:4px;flex:none}
+.spread__svc{display:flex;flex-wrap:wrap;align-items:baseline;gap:2px 12px;margin-bottom:10px;font-size:12.5px;color:var(--ink-3)}
+.spread__svc b{font-size:11.5px;font-weight:700;letter-spacing:.16em;color:var(--ink)}
+.plate__tag{position:absolute;left:14px;bottom:14px;z-index:1;margin:0 !important;padding:6px 10px;background:rgba(14,18,14,.66);color:var(--bone) !important;font-size:12px;line-height:1.4}
+.plate__tag b{font-weight:600;margin-right:6px}
 
 /* load choreography (hero only) */
 .js .spread .plate__img,.js .plate--online{clip-path:inset(100% 0 0 0);transition:clip-path 1.25s var(--ease)}
@@ -212,72 +216,29 @@ p{text-wrap:pretty}
 .show__url{font-family:var(--serif);font-weight:300;font-size:clamp(24px,2.3vw,34px);letter-spacing:-.03em;line-height:1.2}
 .show__url small{display:block;margin-top:12px;font-family:var(--sans);font-size:13px;letter-spacing:0;color:var(--ink-3);line-height:1.6}
 
-/* ---------- case ---------- */
-.case{background:var(--night);color:var(--bone);padding:clamp(112px,17vh,190px) 0 clamp(96px,14vh,160px)}
-.case__open{align-items:end}
-.case__titleblock{grid-column:1/9;grid-row:1;padding-bottom:clamp(8px,4vh,48px)}
-.case__client{margin-top:22px;font-size:14px;color:var(--bone-2)}
-.case__title{margin-top:clamp(36px,6vh,64px);font-size:clamp(28px,3.15vw,52px);line-height:1.26;letter-spacing:-.035em}
-.case__lede{margin-top:32px;max-width:31em;font-size:clamp(15px,1.15vw,17px);line-height:1.8;color:var(--bone-2)}
-.case__hang{grid-column:9/13;grid-row:1;position:relative}
-.case__hang img{width:100%;mix-blend-mode:lighten}
-.case__hang figcaption{position:absolute;right:0;bottom:6%;font-size:12px;color:var(--bone-2);text-align:right}
-.chapter-head{display:flex;align-items:baseline;justify-content:space-between;gap:24px;flex-wrap:wrap;padding-top:22px;border-top:1px solid var(--bone-rule)}
-.chapter-head h3{font-family:var(--serif);font-weight:300;font-size:clamp(26px,2.6vw,40px);letter-spacing:-.03em;line-height:1.3}
-.chapter-head p{font-size:13px;color:var(--bone-2)}
-.before{margin-top:clamp(96px,15vh,180px)}
-.before__grid{margin-top:clamp(40px,6vh,64px);row-gap:clamp(56px,9vh,104px);align-items:start}
-.src figcaption,.src__cap{margin-top:16px;font-size:13.5px;line-height:1.65;color:var(--bone-2);max-width:26em}
-.src figcaption b,.src__cap b{display:block;color:var(--bone);font-weight:600;font-size:14px;margin-bottom:2px}
-.src--photos{grid-column:1/8;grid-row:1}
-.photos{display:grid;grid-template-columns:1.05fr 1.5fr .95fr;gap:12px;align-items:end}
-.photos img{width:100%;object-fit:cover}
-.photos .p1{aspect-ratio:9/16}
-.photos .p2{aspect-ratio:640/594}
-.photos .p3{aspect-ratio:3/4;margin-bottom:22%}
-.src--insta{grid-column:9/13;grid-row:1;margin-top:clamp(40px,12vh,140px)}
-.insta{border:1px solid var(--bone-rule);padding:14px}
-.insta__bar{display:flex;justify-content:space-between;font-size:12.5px;color:var(--bone-2);padding-bottom:12px}
-.insta__bar b{color:var(--bone);font-weight:600}
-.insta__grid{display:grid;grid-template-columns:repeat(3,1fr);gap:2px}
-.insta__grid img{aspect-ratio:1;object-fit:cover;width:100%}
-.src--story{grid-column:1/6;grid-row:2;align-self:center}
-.story__quote{font-family:var(--serif);font-weight:300;font-size:clamp(22px,2vw,30px);line-height:1.45;letter-spacing:-.025em}
-.story__facts{margin-top:24px;display:grid;gap:0;border-top:1px solid var(--bone-rule)}
-.story__facts div{display:grid;grid-template-columns:6.5em 1fr;gap:12px;padding:11px 0;border-bottom:1px solid var(--bone-rule);font-size:13.5px}
-.story__facts dt{color:var(--bone-2)}
-.src--pdf{grid-column:7/13;grid-row:2}
-.pdf{position:relative;aspect-ratio:900/640;margin:0 10% 14% 0}
-.pdf img{position:absolute;width:86%;box-shadow:0 18px 40px rgba(0,0,0,.45)}
-.pdf img:nth-child(1){left:0;top:0}
-.pdf img:nth-child(2){left:7%;top:9%}
-.pdf img:nth-child(3){left:14%;top:18%}
-.bridge{margin-top:clamp(104px,16vh,190px);text-align:center}
-.bridge p{font-family:var(--serif);font-weight:300;font-size:clamp(26px,3vw,48px);letter-spacing:-.035em;line-height:1.3}
-.bridge__line{width:1px;height:clamp(64px,12vh,120px);margin:28px auto 0;background:var(--bone-rule);position:relative;overflow:hidden}
-.bridge__line::after{content:"";position:absolute;inset:0;background:var(--bone);transform:scaleY(0);transform-origin:top;transition:transform 1.4s var(--ease)}
-.bridge.is-in .bridge__line::after{transform:scaleY(1)}
-.after{margin-top:clamp(40px,7vh,72px)}
-.after__index{margin-top:20px;display:flex;flex-wrap:wrap;gap:6px 0;font-size:14px;color:var(--bone)}
-.after__index li:not(:last-child)::after{content:"·";margin:0 12px;color:var(--bone-2)}
-.after__grid{margin-top:clamp(44px,7vh,72px);row-gap:clamp(56px,10vh,112px);align-items:end}
-.shot img{width:100%;outline:1px solid var(--bone-rule)}
-.shot figcaption{margin-top:14px;font-size:13.5px;line-height:1.65;color:var(--bone-2);max-width:30em}
-.shot figcaption b{color:var(--bone);font-weight:600;margin-right:8px}
-.shot--hero{grid-column:1/10}
-.cap-side{grid-column:10/13;align-self:end;font-size:13.5px;line-height:1.7;color:var(--bone-2)}
-.cap-side b{display:block;color:var(--bone);font-weight:600;margin-bottom:4px}
-.shot--about{grid-column:2/7}
-.shot--night{grid-column:7/13;margin-bottom:-6vh}
-.shot--works{grid-column:1/8}
-.shot--how{grid-column:8/13;margin-bottom:12vh}
-.js .rv{clip-path:inset(0 0 100% 0);transition:clip-path 1.3s var(--ease)}
-.rv.is-in{clip-path:inset(0 0 0 0)}
-.shot img,.photos img,.feed__grid img{transition:transform 1.2s var(--ease)}
-.shot:hover img{transform:scale(1.012)}
-.case__close{margin-top:clamp(112px,17vh,200px);align-items:end}
-.case__close blockquote{grid-column:1/8;font-family:var(--serif);font-weight:300;font-size:clamp(30px,3.6vw,58px);line-height:1.28;letter-spacing:-.035em}
-.case__cta{grid-column:9/13;display:flex;flex-direction:column;align-items:flex-start;gap:18px}
+/* ---------- client case teaser ---------- */
+.case{background:var(--night);color:var(--bone);padding:clamp(104px,15vh,176px) 0}
+.case__bar{display:flex;justify-content:space-between;align-items:center;gap:0 24px;flex-wrap:wrap;border-bottom:1px solid var(--bone-rule)}
+.case__bar .label{color:var(--bone);font-weight:600;letter-spacing:.06em}
+.case__body{margin-top:clamp(48px,8vh,88px);grid-template-rows:auto 1fr}
+.case__head{grid-column:1/6;grid-row:1}
+.case__kind{font-size:13px;font-weight:600;color:var(--bone-2)}
+.case__name{margin-top:14px;font-size:clamp(52px,6.4vw,108px);line-height:.98;letter-spacing:-.06em}
+.case__meta{margin-top:18px;font-size:14px;color:var(--bone-2)}
+.case__copy{grid-column:1/6;grid-row:2;align-self:end;padding-top:48px}
+.case__quote{font-family:var(--serif);font-weight:300;font-size:clamp(20px,1.75vw,27px);line-height:1.5;letter-spacing:-.025em}
+.case__lede{margin-top:20px;max-width:30em;font-size:clamp(15px,1.1vw,16.5px);line-height:1.78;color:var(--bone-2)}
+.case__scope{margin-top:26px;padding-top:14px;border-top:1px solid var(--bone-rule);font-size:13.5px;line-height:1.6}
+.case__scope dt{color:var(--bone-2);font-size:12px;margin-bottom:2px}
+.case__copy .btn{margin-top:32px}
+.case__visual{grid-column:7/13;grid-row:1/3;position:relative;padding-bottom:clamp(64px,9vw,128px)}
+.cv__tag{font-size:12px;line-height:1.5;color:var(--bone-2)}
+.cv__after .cv__tag{margin-bottom:10px;text-align:right;color:var(--bone)}
+.cv__after img{width:100%;outline:1px solid var(--bone-rule)}
+.cv__before{position:absolute;left:calc(var(--gap) * -2);bottom:0;width:36%;padding:8px;background:var(--night);border:1px solid var(--bone-rule)}
+.cv__grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:2px}
+.cv__grid img{width:100%;aspect-ratio:1;object-fit:cover;filter:saturate(.8)}
+.cv__before .cv__tag{margin-top:8px}
 
 /* ---------- journey ---------- */
 .journey{padding:clamp(112px,17vh,190px) 0}
@@ -525,7 +486,7 @@ button.btn{border:0;font-family:inherit;cursor:pointer}
 /* ---------- responsive ---------- */
 @media (min-width:860px){.d-br{display:inline}.m-br{display:none}.d-only{display:inline}.m-only{display:none}}
 @media (max-width:1100px){
-  .masthead nav a:not(.masthead__cta){display:none}
+  .masthead nav a:not(.masthead__cta):not(.nav-cases){display:none}
   .feed{grid-column:8/13}
   .tb{grid-template-columns:repeat(3,minmax(0,1fr))}
   .tb>div:first-child{grid-column:1/-1;border-bottom:1px solid var(--bone-rule)}
@@ -541,7 +502,7 @@ button.btn{border:0;font-family:inherit;cursor:pointer}
   .spread{grid-template-columns:minmax(0,1fr);grid-template-rows:none;min-height:0;padding-bottom:40px}
   .spread::after,.spread__rh{display:none}
   .plate--online{grid-column:1;grid-row:1;margin:0;height:min(66vw,420px)}
-  .plate--online figcaption{display:none}
+  .plate__tag{left:var(--pad);bottom:12px}
   .plate--site{grid-column:1;grid-row:1;align-self:end;justify-self:end;width:26vw;max-width:150px;margin:0 var(--pad) -36px 0;z-index:2;border:4px solid var(--plaster);border-bottom:0}
   .plate--site figcaption{display:none}
   .spread__title{grid-column:1;grid-row:2;display:block;font-size:clamp(25px,8.1vw,36px);line-height:1.24;padding-top:22px}
@@ -571,16 +532,11 @@ button.btn{border:0;font-family:inherit;cursor:pointer}
   .tree li{grid-template-columns:1fr;gap:2px}
   .show{grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr)}
 
-  .case__hang{margin-top:40px;max-width:420px;justify-self:center}
-  .case__hang figcaption{position:static;margin-top:8px;text-align:left}
-  .case__titleblock{padding-bottom:0}
-  .before__grid{row-gap:64px}
-  .src--insta{margin-top:0}
-  .pdf{margin-right:12%}
-  .after__grid{row-gap:56px}
-  .shot--night,.shot--how{margin-bottom:0}
-  .cap-side{margin-top:-36px}
-  .case__cta{margin-top:40px}
+  .case__visual{margin-top:36px;padding-bottom:0}
+  .cv__after .cv__tag{text-align:left}
+  .cv__before{position:relative;left:auto;bottom:auto;width:62%;max-width:280px;margin:-28px 0 0 auto}
+  .case__copy{padding-top:36px}
+  .case__copy .btn{width:100%;max-width:460px}
 
   .path{grid-template-columns:minmax(0,1fr);row-gap:44px;padding-left:34px}
   .path::before{left:5px;right:auto;top:8px;bottom:8px;width:1px;height:auto}
@@ -644,13 +600,12 @@ button.btn{border:0;font-family:inherit;cursor:pointer}
 }
 @media (prefers-reduced-motion:reduce){
   *,*::before,*::after{transition:none !important;animation:none !important}
-  .js .spread .plate__img,.js .plate--online,.js .rv{clip-path:none !important}
+  .js .spread .plate__img,.js .plate--online{clip-path:none !important}
   .js .spread__title>span,.js .spread__owner,.js .spread__foot,.js .spread__rh,.js .plate figcaption{opacity:1 !important;transform:none !important}
   .js .turn__title .ln>span{transform:none !important}
   .plate--online img{transform:none !important}
   .feed__grid{transform:none !important;filter:none !important}
   .feed__empty{display:none}
-  .bridge__line::after{transform:none !important}
   .js .day .ruler__axis{transform:none !important}
   .js .day .ev{opacity:1 !important;transform:none !important}
 }
@@ -662,11 +617,11 @@ button.btn{border:0;font-family:inherit;cursor:pointer}
 <header class="masthead">
   <a class="wordmark" href="./" aria-label="WeThru 인테리어 포트폴리오 처음으로"><b>WeThru</b><span>인테리어·리모델링 포트폴리오</span></a>
   <nav aria-label="주요 메뉴">
-    <a href="#labor">하는 일</a>
-    <a href="#case">제작 사례</a>
-    <a href="#pricing">비용</a>
-    <a href="#faq">자주 묻는 질문</a>
-    <a class="masthead__cta" href="#apply"><span class="d-only">우리 업체 기준으로 보기</span><span class="m-only">상담 신청</span></a>
+    <a href="#labor">서비스</a>
+    <a class="nav-cases" href="./cases/">고객 사례</a>
+    <a href="#pricing">가격</a>
+    <a href="#faq">FAQ</a>
+    <a class="masthead__cta" href="#apply">상담하기</a>
   </nav>
 </header>
 
@@ -679,11 +634,12 @@ button.btn{border:0;font-family:inherit;cursor:pointer}
 
   <figure class="plate plate--site">
     <div class="plate__img"><img src="./ikki-archive/img/10.jpg" width="360" height="640" alt="전시장 플랜터에 고사리를 심고 있는 시공 현장" fetchpriority="high"></div>
-    <figcaption>대구 엑스코 시공 현장, 2025<br>ikki archive</figcaption>
+    <figcaption>고객 사례 · ikki archive<br>대구 엑스코 시공 현장, 2025</figcaption>
   </figure>
 
   <figure class="plate plate--online">
-    <img src="./assets/hero-cafe-1800.webp" srcset="./assets/hero-cafe-1000.webp 1000w, ./assets/hero-cafe-1800.webp 1800w" sizes="(min-width: 860px) 58vw, 100vw" width="1800" height="1367" alt="송정동 대형 카페 한가운데 큰 나무와 그 아래 고사리, 흰 꽃 식재 — ikki archive 시공" fetchpriority="high">
+    <img src="./assets/hero-cafe-1800.webp" srcset="./assets/hero-cafe-1000.webp 1000w, ./assets/hero-cafe-1800.webp 1800w" sizes="(min-width: 860px) 58vw, 100vw" width="1800" height="1367" alt="송정동 대형 카페 한가운데 큰 나무와 그 아래 고사리, 흰 꽃 식재 — WeThru 고객사 ikki archive의 시공" fetchpriority="high">
+    <figcaption class="plate__tag"><b>고객 사례</b> ikki archive의 시공 사진</figcaption>
   </figure>
 
   <h1 class="spread__title" id="hero-title">
@@ -694,10 +650,13 @@ button.btn{border:0;font-family:inherit;cursor:pointer}
   <p class="spread__owner">사장님이 하실 일은 <b>시공사진 몇 장, 기본 정보, 짧은 대화.</b><br>계속 미뤄두던 온라인 정리는 처음부터 끝까지 저희가 맡습니다.</p>
 
   <div class="spread__foot">
-    <p class="spread__lede">시공사진과 작업은 충분한데 홈페이지까지 챙길 시간은 없는 대표님을 위해, 이미 가지고 계신 자료를 바탕으로 작업과 강점이 제대로 보이는 자사 영업 포트폴리오를 만들어드립니다.</p>
+    <div class="spread__copy">
+      <p class="spread__svc"><b>INTERIOR PORTFOLIO</b><span>인테리어·리모델링 업체 자사 홈페이지 제작</span></p>
+      <p class="spread__lede">시공사진과 작업은 충분한데 홈페이지까지 챙길 시간은 없는 대표님을 위해, 이미 가지고 계신 자료를 바탕으로 작업과 강점이 제대로 보이는 자사 영업 포트폴리오를 만들어드립니다.</p>
+    </div>
     <div class="spread__actions">
       <a class="btn" href="#apply">우리 업체 기준으로 보기 <span class="arr" aria-hidden="true">→</span></a>
-      <a class="link" href="#case">실제 제작 사례 보기</a>
+      <a class="link" href="#case">고객 사례 보기</a>
     </div>
   </div>
 </section>
@@ -819,7 +778,7 @@ button.btn{border:0;font-family:inherit;cursor:pointer}
           <img src="./ikki-archive/img/06.jpg" width="640" height="381" alt="" loading="lazy" decoding="async">
         </div>
       </div>
-      <figcaption><span>사진 · ikki archive 시공 기록</span><span>일부 사진 studio xyz</span></figcaption>
+      <figcaption><span>사진 · 고객 사례 ikki archive의 시공 기록</span><span>일부 사진 studio xyz</span></figcaption>
     </figure>
 
     <ol class="beats">
@@ -899,7 +858,7 @@ button.btn{border:0;font-family:inherit;cursor:pointer}
           <h3>흩어진 자료에서, 고객이 선택할 이유를 찾습니다.</h3>
           <p class="step__text">휴대폰과 인스타, 카톡에 나뉜 사진을 모아 공간 유형별로 묶고, 고객이 먼저 봐야 할 대표 사진과 강점을 고릅니다.</p>
           <div class="step__artifact sheet">
-            <p class="sheet__label"><span>공간 유형별 정리 · 대표 사진 선택</span><span>ikki archive 사진</span></p>
+            <p class="sheet__label"><span>공간 유형별 정리 · 대표 사진 선택</span><span>예시 · 고객 사례 ikki archive</span></p>
             <div class="sort">
               <div class="sort__group"><h4>상업공간<small>카페</small></h4><ul>
                 <li class="is-pick"><img src="./ikki-archive/img/01.jpg" width="361" height="640" alt="동래구 카페 이끼 언덕" loading="lazy" decoding="async"></li>
@@ -938,7 +897,7 @@ button.btn{border:0;font-family:inherit;cursor:pointer}
           <p class="step__text">휴대폰과 PC에서 바로 열리는, 업체 이름의 사이트로 공개합니다. 플랫폼에 흩어진 작업물을 사장님 이름의 공간에 쌓습니다.</p>
           <div class="step__artifact show">
             <img src="./assets/ikki-site-hero-m.webp" width="600" height="1298" alt="ikkiarchive.com 모바일 첫 화면" loading="lazy" decoding="async">
-            <p class="show__url">ikkiarchive.com<small>ikki archive의 실제 사이트. 인스타그램 프로필이나 상담 대화에서 이 주소 하나로 작업 전체를 보여줄 수 있습니다.</small></p>
+            <p class="show__url">ikkiarchive.com<small>예시 · WeThru가 만든 고객사 ikki archive의 사이트. 인스타그램 프로필이나 상담 대화에서 이 주소 하나로 작업 전체를 보여줄 수 있습니다.</small></p>
           </div>
         </article>
       </div>
@@ -946,38 +905,26 @@ button.btn{border:0;font-family:inherit;cursor:pointer}
   </div>
 </section>
 
-<!-- ======== CASE STUDY ======== -->
+<!-- ======== CLIENT CASE (teaser; full story lives in ./cases/ikki-archive/) ======== -->
 <section class="case on-dark" id="case" aria-labelledby="case-title">
-  <div class="frame grid case__open">
-    <div class="case__titleblock">
-      <p class="label">제작 사례 · ikki archive</p>
-      <p class="case__client">부산 · 실내조경, 이끼정원, 행잉 작품</p>
-      <h2 class="case__title display" id="case-title">없던 것을<br class="m-br"> 만들어낸 게 아니라,<br> 이미 있었지만<br class="m-br"> 제대로 보이지 않던 것을<br> 정리했습니다.</h2>
-      <p class="case__lede">ikki archive에는 이미 좋은 시공사진과 인스타그램 기록, 프로젝트를 정리한 포트폴리오 자료, 공간 디자이너 출신 대표의 이력이 있었습니다. 다만 서로 다른 곳에 흩어져 있었습니다.</p>
+  <div class="frame">
+    <div class="case__bar">
+      <p class="label">고객 사례 · CLIENT CASE 01</p>
+      <a class="link" href="./cases/">고객 사례 전체 보기 <span class="arr" aria-hidden="true">→</span></a>
     </div>
-    <figure class="case__hang">
-      <img class="rv" data-inview src="./ikki-archive/assets/hang_all.webp" width="1460" height="1876" alt="천장에 매단 원뿔형 행잉 식물 작품" loading="lazy" decoding="async">
-      <figcaption>행잉 작품, 2024<br>ikki archive</figcaption>
-    </figure>
-  </div>
-
-  <!-- before -->
-  <div class="frame before">
-    <div class="chapter-head"><h3>Before — 있었지만, 흩어져 있던 것</h3><p>네 곳에 나뉘어 있던 자료</p></div>
-    <div class="grid before__grid">
-      <figure class="src src--photos">
-        <div class="photos">
-          <img class="p1 rv" data-inview src="./ikki-archive/img/01.jpg" width="361" height="640" alt="동래구 카페, 계단을 따라 흘러내리는 이끼 언덕" loading="lazy" decoding="async">
-          <img class="p2 rv" data-inview src="./ikki-archive/img/02.jpg" width="640" height="594" alt="울산 주거공간, 수납 가구 하부의 이끼와 돌, 흰 꽃" loading="lazy" decoding="async">
-          <img class="p3 rv" data-inview src="./ikki-archive/img/07.jpg" width="480" height="640" alt="울산 주거공간, 이끼와 잎이 넓은 식물" loading="lazy" decoding="async">
+    <div class="grid case__body">
+      <div class="case__head">
+        <p class="case__kind">WeThru 고객 제작 사례</p>
+        <h2 class="case__name display" id="case-title">ikki archive</h2>
+        <p class="case__meta">부산 · 공간 디자인 · 플랜테리어</p>
+      </div>
+      <figure class="case__visual">
+        <div class="cv__after">
+          <p class="cv__tag">After · WeThru가 제작한 ikki archive 사이트</p>
+          <img src="./assets/ikki-site-hero.webp" width="1600" height="1000" alt="WeThru가 제작한 ikkiarchive.com 첫 화면" loading="lazy" decoding="async">
         </div>
-        <figcaption><b>시공사진</b>동래구 카페, 울산 주거공간 — 현장마다 찍어둔 사진이 게시물 단위로 나뉘어 있었습니다.</figcaption>
-      </figure>
-
-      <figure class="src src--insta">
-        <div class="insta">
-          <p class="insta__bar"><b>@ikki_archive</b><span>Instagram</span></p>
-          <div class="insta__grid">
+        <div class="cv__before">
+          <div class="cv__grid" aria-hidden="true">
             <img src="./ikki-archive/img/09.jpg" width="480" height="640" alt="" loading="lazy" decoding="async">
             <img src="./ikki-archive/img/03.jpg" width="640" height="381" alt="" loading="lazy" decoding="async">
             <img src="./ikki-archive/img/05.jpg" width="480" height="640" alt="" loading="lazy" decoding="async">
@@ -985,59 +932,15 @@ button.btn{border:0;font-family:inherit;cursor:pointer}
             <img src="./assets/thumb-cafe.webp" width="480" height="480" alt="" loading="lazy" decoding="async">
             <img src="./ikki-archive/img/10.jpg" width="360" height="640" alt="" loading="lazy" decoding="async">
           </div>
+          <p class="cv__tag">Before · Instagram에 흩어진 시공사진</p>
         </div>
-        <figcaption><b>Instagram</b>꾸준히 쌓인 작업 기록. 다만 최신순으로만 보이고, 오래된 대표작은 아래로 내려갑니다.</figcaption>
       </figure>
-
-      <div class="src src--story">
-        <p class="story__quote">“공간 디자이너 출신이<br>직접 설계하고 시공합니다.”</p>
-        <dl class="story__facts">
-          <div><dt>작업 지역</dt><dd>부산, 경남, 울산</dd></div>
-          <div><dt>시공 전</dt><dd>3D 시안으로 먼저 맞춰 봅니다</dd></div>
-          <div><dt>수상</dt><dd>2017 한국공간디자인 공모전 동상</dd></div>
-        </dl>
-        <p class="src__cap"><b>대표의 철학과 경력</b>고객이 처음 보는 화면에서는 잘 드러나지 않던 이야기.</p>
+      <div class="case__copy">
+        <blockquote class="case__quote">“이미 좋은 작업과 사진은 충분했습니다.<br class="d-br"> 문제는 고객이 그것을 한 번에 볼 수 있는 곳이 없었다는 것.”</blockquote>
+        <p class="case__lede">WeThru는 흩어진 프로젝트와 대표의 이야기, 작업 방식과 상담 동선을 하나의 자사 포트폴리오로 정리했습니다.</p>
+        <dl class="case__scope"><dt>WeThru가 한 일</dt><dd>전략 정리 · 정보 구조 · 카피 · 웹 디자인 · 개발 · 상담 동선</dd></dl>
+        <a class="btn" href="./cases/ikki-archive/">고객 사례 자세히 보기 <span class="arr" aria-hidden="true">→</span></a>
       </div>
-
-      <figure class="src src--pdf">
-        <div class="pdf">
-          <img src="./assets/ikki-pf-13.webp" width="900" height="640" alt="" loading="lazy" decoding="async">
-          <img src="./assets/ikki-pf-26.webp" width="900" height="640" alt="" loading="lazy" decoding="async">
-          <img src="./assets/ikki-pf-19.webp" width="900" height="640" alt="ikki archive 포트폴리오 문서 중 한 페이지" loading="lazy" decoding="async">
-        </div>
-        <figcaption><b>포트폴리오 자료</b>프로젝트별로 정리해 둔 문서. 사진, 인스타그램과는 따로 보관되어 있었습니다.</figcaption>
-      </figure>
-    </div>
-  </div>
-
-  <div class="frame bridge" data-inview>
-    <p>흩어져 있던 것을,<br>업체 이름의 한 곳으로.</p>
-    <div class="bridge__line" aria-hidden="true"></div>
-  </div>
-
-  <!-- after -->
-  <div class="frame after">
-    <div class="chapter-head"><h3>After — 하나의 사이트 안에서</h3><p>ikkiarchive.com</p></div>
-    <ul class="after__index" aria-label="정리한 구성">
-      <li>Projects</li><li>About</li><li>Process</li><li>Contact</li><li>대표 철학</li><li>작업 스타일</li><li>문의 동선</li>
-    </ul>
-    <div class="grid after__grid">
-      <figure class="shot shot--hero"><img class="rv" data-inview src="./assets/ikki-site-hero.webp" width="1600" height="1000" alt="ikkiarchive.com 첫 화면: 공간에 숲을 들입니다" loading="lazy" decoding="async"></figure>
-      <p class="cap-side"><b>첫 화면</b>대표 작품 한 점과 한 문장. 무엇을 하는 곳인지 첫 화면에서 바로 보입니다.</p>
-
-      <figure class="shot shot--about"><img class="rv" data-inview src="./assets/ikki-site-about.webp" width="1200" height="821" alt="ikkiarchive.com 소개: 공간 디자이너 출신이 직접 설계하고 시공합니다" loading="lazy" decoding="async"><figcaption><b>About · 대표 철학</b>공간 디자이너 출신이라는 배경과 작업 지역, 수상 이력을 첫 문단에 놓았습니다.</figcaption></figure>
-      <figure class="shot shot--night"><img class="rv" data-inview src="./assets/ikki-site-night.webp" width="1400" height="915" alt="ikkiarchive.com 대표 프로젝트: 송정동 대형 카페" loading="lazy" decoding="async"><figcaption><b>작업 스타일</b>대표 프로젝트 하나를 크게. 장소, 시기, 의뢰처, 설계와 시공까지 함께 적었습니다.</figcaption></figure>
-
-      <figure class="shot shot--works"><img class="rv" data-inview src="./assets/ikki-site-works.webp" width="1400" height="921" alt="ikkiarchive.com 시공 사례 목록" loading="lazy" decoding="async"><figcaption><b>Projects</b>시공 사례 10건. 지역과 연도, 공간 유형을 붙이고 인스타그램 원본 게시물로 연결했습니다.</figcaption></figure>
-      <figure class="shot shot--how"><img class="rv" data-inview src="./assets/ikki-site-how.webp" width="1400" height="751" alt="ikkiarchive.com 문의 및 시공 과정" loading="lazy" decoding="async"><figcaption><b>Process · 문의 동선</b>문의 과정과 시공 과정을 나눠, 상담 전에 무엇을 준비하면 되는지 알려줍니다.</figcaption></figure>
-    </div>
-  </div>
-
-  <div class="frame grid case__close">
-    <blockquote class="display">잘하고 있는 일을,<br>고객이 제대로 볼 수 있게.</blockquote>
-    <div class="case__cta">
-      <a class="btn" href="https://ikkiarchive.com/" target="_blank" rel="noopener">ikkiarchive.com 실제 사이트 보기 <span class="arr" aria-hidden="true">↗</span></a>
-      <p class="fine">ikki archive가 운영 중인 실제 사이트입니다. 사진과 정보는 모두 ikki archive가 원래 가지고 있던 자료입니다.</p>
     </div>
   </div>
 </section>
@@ -1102,7 +1005,7 @@ button.btn{border:0;font-family:inherit;cursor:pointer}
     <p class="inquiry__note fine">문의가 늘어난다고 약속하지 않습니다. 대신 고객이 작업을 충분히 보고, 필요한 정보를 갖고 연락하게 만듭니다.</p>
     <figure class="proof">
       <img src="./assets/ikki-site-form.webp" width="700" height="1148" alt="ikkiarchive.com 상담 신청 양식: 이름, 연락처, 공간 종류, 공간 크기, 내용" loading="lazy" decoding="async">
-      <figcaption><b>실제 적용 — ikki archive 상담 신청.</b> 공간 종류와 크기, 원하는 분위기와 일정, 예산을 상담 전에 받습니다.</figcaption>
+      <figcaption><b>고객 사례 적용 — ikki archive 상담 신청.</b> 공간 종류와 크기, 원하는 분위기와 일정, 예산을 상담 전에 받습니다.</figcaption>
     </figure>
   </div>
 </section>
@@ -1175,7 +1078,7 @@ button.btn{border:0;font-family:inherit;cursor:pointer}
       <details><summary>직접 만들 수도 있지 않나요?</summary><p>가능합니다. 다만 WeThru의 핵심은 코드 작성보다, 사업을 듣고 고객이 이 업체를 선택하는 이유를 찾아 구조화하는 데 있습니다. 그 시간을 현장과 견적에 쓰시는 편이 나은지 기준으로 판단하시면 됩니다.</p></details>
       <details><summary>얼마인가요?</summary><p>기본 제작은 1,000,000 KRW입니다. 추가 페이지와 특수 기능은 별도입니다. 3D 시각화는 +300,000 KRW부터이며 공간 수와 난이도에 따라 견적을 드립니다.</p></details>
       <details><summary>프리뷰는 무엇인가요?</summary><p>신청 내용을 확인하고 진행이 맞다고 판단되면, 대표 화면과 일부 프로젝트, 업체에 맞는 방향을 먼저 보여드리는 단계입니다. 완성된 사이트를 미리 만들어드리는 것은 아닙니다.</p></details>
-      <details><summary>처음 보는 곳에 맡겨도 괜찮을까요?</summary><p>그래서 실제 결과물부터 보여드립니다. ikkiarchive.com을 직접 확인해보시고, 가격과 범위도 이 페이지에 그대로 적어두었습니다.</p></details>
+      <details><summary>처음 보는 곳에 맡겨도 괜찮을까요?</summary><p>그래서 실제 결과물부터 보여드립니다. 상단 메뉴의 ‘고객 사례’에서 WeThru가 제작한 사이트를 직접 확인해보시고, 가격과 범위도 이 페이지에 그대로 적어두었습니다.</p></details>
     </div>
   </div>
 </section>
@@ -1362,7 +1265,7 @@ button.btn{border:0;font-family:inherit;cursor:pointer}
         <p class="label">접수 완료</p>
         <h3 class="result__title">상담 신청이 접수되었습니다.</h3>
         <p class="result__lede">내용을 먼저 확인한 뒤, 필요한 부분만 여쭤보겠습니다.</p>
-        <div class="result__actions"><a class="link" href="https://ikkiarchive.com/" target="_blank" rel="noopener">그사이 실제 제작 사례 보기 <span class="arr" aria-hidden="true">↗</span></a></div>
+        <div class="result__actions"><a class="link" href="./cases/ikki-archive/">그사이 고객 사례 보기 <span class="arr" aria-hidden="true">→</span></a></div>
       </div>
 
       <div class="result" data-fallback hidden tabindex="-1">
@@ -1393,7 +1296,7 @@ button.btn{border:0;font-family:inherit;cursor:pointer}
       <div><dt>문의</dt><dd><a href="https://pf.kakao.com/_wRVBX/chat" target="_blank" rel="noopener">카카오톡 위쓰루 채널</a><a href="mailto:ceo@nitual.com">ceo@nitual.com</a></dd></div>
       <div><dt>운영시간</dt><dd>평일 10:00–19:00<a href="https://wethru.com/" target="_blank" rel="noopener">wethru.com</a></dd></div>
     </dl>
-    <p class="colophon__end"><span>© 2026 WeThru</span><span>사례 사진 · ikki archive (일부 studio xyz)</span></p>
+    <p class="colophon__end"><span>© 2026 WeThru</span><span>사례 사진 · 고객사 ikki archive (일부 studio xyz)</span></p>
   </div>
 </footer>
 
