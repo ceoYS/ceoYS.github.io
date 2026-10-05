@@ -252,7 +252,7 @@ svg.ar{width:.8em;height:.8em;flex:none;margin-left:.22em;vertical-align:-.04em;
 .note{margin:0;padding:7px var(--g) 0;font-size:11px;letter-spacing:0;color:var(--bone-2);text-align:center}
 .hrow{display:flex;align-items:center;gap:10px;height:54px;padding:0 var(--g)}
 .hrow .mark{margin-right:auto}
-.mark{font-family:var(--kr);font-weight:var(--kr-sw);font-size:20px;letter-spacing:-.03em;line-height:1}.mark.logo-mark{display:flex;align-items:center}.mark.logo-mark img{display:block;width:auto;height:38px;max-width:118px;object-fit:contain}
+.mark{font-family:var(--kr);font-weight:var(--kr-sw);font-size:20px;letter-spacing:-.03em;line-height:1}.mark.logo-mark{display:flex;align-items:center}.mark.logo-mark img{display:block;width:auto;height:36px;max-width:116px;object-fit:contain;filter:saturate(0) brightness(2.55) contrast(.76) sepia(.12)}
 .hnav{display:none}
 .hcall{display:inline-flex;align-items:center;gap:7px;height:36px;padding:0 14px;border-radius:999px;box-shadow:inset 0 0 0 1px var(--bone-3);font-size:13px;font-weight:500;white-space:nowrap}
 .wire{position:absolute;top:0;width:1px;z-index:2;background:linear-gradient(rgba(236,233,225,0),rgba(236,233,225,.5) 30%,rgba(236,233,225,.5));transform-origin:50% 0}
@@ -395,7 +395,7 @@ html[lang="en"] .tel{font-size:clamp(34px,9.6vw,100px)}
   -webkit-backdrop-filter:blur(14px);backdrop-filter:blur(14px);box-shadow:0 14px 34px rgba(0,0,0,.22);
   transform:translate(-50%,170%);transition:transform .5s cubic-bezier(.2,.8,.2,1)}
 .bar.on{transform:translate(-50%,0)}
-.bar .mark{font-size:19px;margin-right:4px}.bar .mark.logo-mark img{height:31px;max-width:98px}
+.bar .mark{font-size:19px;margin-right:4px}.bar .mark.logo-mark img{height:29px;max-width:92px;filter:saturate(0) brightness(2.55) contrast(.76) sepia(.12)}
 .bar nav{display:none}
 .bar .btn{height:40px;padding:0 16px;font-size:13.5px}
 
@@ -477,6 +477,26 @@ html[lang="en"] .tel{font-size:clamp(34px,9.6vw,100px)}
   .bar nav a:hover{color:var(--bone)}
   .toast{bottom:28px}
 }
+
+/* feedback polish: mobile navigation and pearl logo */
+.home-menu-toggle{display:flex;width:36px;height:36px;border:0;background:transparent;color:var(--bone);position:relative;padding:0;align-items:center;justify-content:center}
+.home-menu-toggle span{position:absolute;left:9px;width:18px;height:1px;background:currentColor;transition:all .24s ease}
+.home-menu-toggle span:first-child{top:14px}.home-menu-toggle span:last-child{top:21px}
+.home-menu-toggle[aria-expanded="true"] span:first-child{top:18px;transform:rotate(45deg)}
+.home-menu-toggle[aria-expanded="true"] span:last-child{top:18px;transform:rotate(-45deg)}
+.home-mobile-menu{position:fixed;z-index:39;top:54px;left:0;right:0;padding:12px var(--g) 22px;background:rgba(11,14,10,.96);color:var(--bone);backdrop-filter:blur(18px);border-bottom:1px solid var(--bone-3);transform:translateY(-120%);opacity:0;pointer-events:none;transition:transform .28s ease,opacity .28s ease}
+.home-mobile-menu[aria-hidden="false"]{transform:none;opacity:1;pointer-events:auto}
+.home-mobile-menu nav{display:grid}
+.home-mobile-menu a{display:flex;align-items:center;justify-content:space-between;padding:14px 0;border-bottom:1px solid var(--bone-3);font-family:var(--ui);font-size:16px;letter-spacing:.07em}
+@media(min-width:900px){.home-menu-toggle,.home-mobile-menu{display:none!important}}
+@media(max-width:899px){
+ .hrow{padding-left:18px;padding-right:14px}
+ .mark.logo-mark img{height:32px;max-width:104px}
+ .hcall{display:none}
+ .note{padding-left:18px;padding-right:18px}
+ .hcopy{padding-left:18px;padding-right:18px}
+}
+
 </style>
 </head>
 <body>
@@ -490,6 +510,7 @@ html[lang="en"] .tel{font-size:clamp(34px,9.6vw,100px)}
         <a class="mark logo-mark" id="mark" href="#hero" aria-label="ikki archive home"></a>
         <nav class="hnav" aria-label="주요 메뉴"><a href="projects.html">PROJECTS</a><a href="about.html">ABOUT</a><a href="process.html">PROCESS</a><a href="#contact">CONTACT</a></nav>
         <button type="button" class="lang" data-lang><span data-l="ko">KO</span><span data-l="en">EN</span></button>
+        <button type="button" class="home-menu-toggle" aria-label="메뉴 열기" aria-expanded="false" aria-controls="home-mobile-menu"><span></span><span></span></button>
         <a class="hcall" id="hcall" href="#"><span data-i="phone"></span><span data-t="call"></span></a>
       </div>
     </div>
@@ -506,6 +527,8 @@ html[lang="en"] .tel{font-size:clamp(34px,9.6vw,100px)}
     </div>
     <p class="cue" id="cue"><i></i><span></span></p>
   </section>
+
+<div class="home-mobile-menu" id="home-mobile-menu" aria-hidden="true"><nav><a href="projects.html">PROJECTS <span>↗</span></a><a href="about.html">ABOUT <span>↗</span></a><a href="process.html">PROCESS <span>↗</span></a><a href="#contact">CONTACT <span>↗</span></a></nav></div>
 
   <section class="intro" data-t-aria="aIntro">
     <p class="lead" id="intro"></p>
@@ -944,5 +967,5 @@ document.addEventListener('DOMContentLoaded', function () {
   if (window.gsap && window.ScrollTrigger) start(); else window.addEventListener('load', start);
 });
 </script>
-</body>
+<script>(()=>{const b=document.querySelector(".home-menu-toggle"),m=document.querySelector("#home-mobile-menu");if(!b||!m)return;const close=()=>{b.setAttribute("aria-expanded","false");b.setAttribute("aria-label","메뉴 열기");m.setAttribute("aria-hidden","true")};b.addEventListener("click",()=>{const open=b.getAttribute("aria-expanded")!=="true";b.setAttribute("aria-expanded",String(open));b.setAttribute("aria-label",open?"메뉴 닫기":"메뉴 열기");m.setAttribute("aria-hidden",String(!open))});m.querySelectorAll("a").forEach(a=>a.addEventListener("click",close));window.addEventListener("resize",()=>{if(innerWidth>=900)close()})})();</script></body>
 </html>
