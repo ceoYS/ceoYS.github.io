@@ -3,7 +3,7 @@
 const id=new URLSearchParams(location.search).get('id');const data=window.IKKI_PROJECTS.find(x=>x.id===id)||window.IKKI_PROJECTS[0];const enc=encodeURIComponent(data.mapQuery||data.location);
 const maps=data.mapQuery?'<div class="map-links"><a target="_blank" rel="noopener" href="https://map.naver.com/p/search/'+enc+'">NAVER MAP</a><a target="_blank" rel="noopener" href="https://map.kakao.com/?q='+enc+'">KAKAO MAP</a><a target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query='+enc+'">GOOGLE MAP</a></div>':'<p class="private-note">정확한 위치는 공개하지 않습니다.</p>';
 const visual=data.imageType==='sprite'
- ? '<div class="detail-sprite" style="background-image:url('+window.IKKI_MEDIA.portfolioSprite+');background-position:'+(data.spriteCol*25)+'% '+((data.spriteRow-1)*20)+'%"></div>'
+ ? '<div class="detail-sprite" style="background-image:url('+window.IKKI_MEDIA.portfolioRows[data.spriteRow-1]+');background-position:'+(data.spriteCol*25)+'% 50%"></div>'
  : '<img src="'+data.image+'" alt="'+data.title+'">';
 const outbound=data.instagram?'<a target="_blank" rel="noopener" href="'+data.instagram+'">Instagram 원문 ↗</a>':'';
 document.title=data.title+' | ikki archive';
