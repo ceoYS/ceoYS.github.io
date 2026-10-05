@@ -5,7 +5,7 @@
 const grid=document.querySelector('#project-grid'), count=document.querySelector('#archive-count');
 const esc=s=>String(s??'').replace(/[&<>"']/g,m=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[m]));
 const visual=p=>p.imageType==='sprite'
- ? '<span class="pdf-sprite" style="background-image:url('+window.IKKI_MEDIA.portfolioSprite+');background-position:'+(p.spriteCol*25)+'% '+((p.spriteRow-1)*20)+'%"></span>'
+ ? '<span class="pdf-sprite" style="background-image:url('+window.IKKI_MEDIA.portfolioRows[p.spriteRow-1]+');background-position:'+(p.spriteCol*25)+'% 50%"></span>'
  : '<img src="'+esc(p.image)+'" alt="'+esc(p.title)+'" loading="lazy">';
 function draw(f='all'){
  const items=window.IKKI_PROJECTS.filter(p=>f==='all'||p.category===f);
