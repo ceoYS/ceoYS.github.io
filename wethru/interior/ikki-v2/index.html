@@ -344,7 +344,7 @@ html[lang="en"] .night blockquote p{letter-spacing:-.01em}
 .svc-group li{padding:13px 0;border-bottom:1px solid var(--line);font-family:var(--kr);font-weight:var(--kr-sw);font-size:17px;letter-spacing:var(--kr-st)}
 .clients{margin-top:56px}
 .clients ul{margin:0;padding:0;list-style:none}
-.clients li{display:flex;justify-content:space-between;align-items:baseline;gap:14px;padding:12px 0;border-bottom:1px solid var(--line)}
+.clients li{display:flex;justify-content:flex-start;align-items:baseline;gap:14px;padding:12px 0;border-bottom:1px solid var(--line)}
 .clients li:first-child{border-top:1px solid var(--line)}
 .clients .n{display:inline-flex;align-items:baseline;font-family:var(--kr);font-weight:var(--kr-sw);font-size:17px;letter-spacing:var(--kr-st)}
 .clients a.n:hover span{text-decoration:underline;text-decoration-thickness:1px;text-underline-offset:4px}
@@ -484,6 +484,17 @@ html[lang="en"] .tel{font-size:clamp(34px,9.6vw,100px)}
   .contact .c1{grid-column:1 / 7}
   .contact .form{grid-column:8 / 13}
   .contact .tel{font-size:clamp(48px,5vw,64px)}
+}
+
+/* contact layout fix: keep the large phone number inside its own column */
+@media (min-width:900px){
+  .contact{grid-template-columns:minmax(0,1.45fr) minmax(360px,.65fr);column-gap:clamp(64px,7vw,140px)}
+  .contact .c1,.contact .form{grid-column:auto;min-width:0}
+  .contact .tel{font-size:clamp(54px,5vw,88px);max-width:100%;letter-spacing:-.055em}
+}
+@media (min-width:900px) and (max-width:1180px){
+  .contact{grid-template-columns:minmax(0,1.2fr) minmax(320px,.8fr);column-gap:48px}
+  .contact .tel{font-size:clamp(48px,5.1vw,68px)}
 }
 
 /* feedback polish: mobile navigation and pearl logo */
@@ -697,7 +708,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
   /* ---- structure (built once; text is filled in by paint) ---- */
   const P = CONFIG.hero.piece, piece = $('#piece'), wire = $('#wire'), pcap = $('#pcap'), hero = $('#hero');
-  $('#mark').innerHTML = '<img src="ikki-logo.svg" alt="ikki">'; $('#bar-mark').innerHTML = '<img src="ikki-logo.svg" alt="ikki">';
+  $('#mark').innerHTML = '<img src="ikki-logo.webp" alt="ikki">'; $('#bar-mark').innerHTML = '<img src="ikki-logo.webp" alt="ikki">';
   $('#hcall').href = tel; $('#bar-call').href = tel;
   $('#stamp').innerHTML = '<span></span>';
   $('#h1').innerHTML = CONFIG.hero.headline.map(() => '<span class="ln" aria-hidden="true"><span></span></span>').join('');
@@ -792,8 +803,7 @@ document.addEventListener('DOMContentLoaded', function () {
     ).join('');
     if (C.credits.length) {
       $('#cl').innerHTML = C.credits.map((c) =>
-        '<li>' + (c.url ? ext(c.url, '<span>' + esc(c.client) + '</span>', 'n', c.client + ' Instagram' + T.newTab) : '<b class="n">' + esc(c.client) + '</b>') +
-        (c.post ? '<a class="p" href="' + esc(c.post) + '" target="_blank" rel="noopener" aria-label="' + esc(c.project + ', ' + T.post + T.newTab) + '">' + esc(c.project) + '</a>' : '<span class="p">' + esc(c.project) + '</span>') + '</li>').join('');
+        '<li>' + (c.url ? ext(c.url, '<span>' + esc(c.client) + '</span>', 'n', c.client + ' Instagram' + T.newTab) : '<b class="n">' + esc(c.client) + '</b>') + '</li>').join('');
     } else $('#clients').hidden = true;
 
     /* contact */
