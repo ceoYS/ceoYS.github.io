@@ -11,8 +11,7 @@
 
 /* --- V2 archive / founder refinements --- */
 .archive-count{margin:-14px 0 24px;font-size:11px;letter-spacing:.14em;color:var(--ink2)}
-.pdf-card{aspect-ratio:1/1!important}.pdf-sprite{display:block;width:100%;height:100%;background-repeat:no-repeat;background-size:500% 100%;background-color:#ecece7;image-rendering:auto}
-.detail-sprite{width:100%;aspect-ratio:1/1;background-repeat:no-repeat;background-size:500% 100%;background-color:#ecece7;image-rendering:auto}
+.pdf-card{aspect-ratio:1/1!important;background:#f2f2ef}.pdf-card img.pdf-board{object-fit:contain!important;background:#f2f2ef;transform:none!important}.detail-image img.pdf-board{object-fit:contain!important;background:#f2f2ef;aspect-ratio:1/1;height:auto}
 .source-label{display:block;margin-top:10px;font-size:10.5px;letter-spacing:.08em;text-transform:uppercase;color:var(--ink2);opacity:.7}
 .detail-source{margin:20px 0 0}
 .founder-feature{display:grid;grid-template-columns:1fr;gap:34px;max-width:1180px;margin:0 auto}
