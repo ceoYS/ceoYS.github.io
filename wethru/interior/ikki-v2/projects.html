@@ -1,12 +1,13 @@
 <!doctype html><html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="robots" content="noindex,nofollow"><title>Projects | ikki archive</title><meta name="description" content="ikki archive의 플랜테리어, 조경, 전시 및 주거 프로젝트 아카이브."><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Hahmlet:wght@300;400&display=swap"><link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css"><link rel="stylesheet" href="site-pages.css"></head><body><header class="site-head"><a class="brand logo-brand" href="index.html" aria-label="ikki archive home"><img src="ikki-logo.svg" alt="ikki"></a><nav class="main-nav"><a href="projects.html">PROJECTS</a><a href="about.html">ABOUT</a><a href="process.html">PROCESS</a><a href="index.html#contact">CONTACT</a></nav><a class="call" href="tel:01094816769">전화 상담</a></header>
 <section class="hero-sub"><p class="kicker">Project archive · 2023—Now</p><h1>Projects</h1><p class="lead">2023년부터 이어온 포트폴리오와 최근 작업을 한곳에 모았습니다. 주거, 상업, 기업공간, 전시·박람회, 실외 조경을 분야별로 살펴볼 수 있습니다.</p></section>
 <main class="page"><div class="filters" aria-label="프로젝트 분류"><button class="on" data-filter="all">전체</button><button data-filter="residential">주거공간</button><button data-filter="commercial">상업공간</button><button data-filter="office">오피스·기업공간</button><button data-filter="exhibition">전시·박람회</button><button data-filter="outdoor">실외 조경</button></div><p class="archive-count" id="archive-count"></p><div class="grid" id="project-grid"></div></main><footer class="foot"><span>ikki archive · Busan / Gyeongnam / Ulsan</span><a href="https://www.instagram.com/ikki_archive/" target="_blank" rel="noopener">@ikki_archive</a></footer>
-<script src="media-data.js"></script><script src="site-data.js"></script><script>
+<script src="site-data.js"></script><script>
 const grid=document.querySelector('#project-grid'), count=document.querySelector('#archive-count');
 const esc=s=>String(s??'').replace(/[&<>"']/g,m=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[m]));
+const portfolioSrc=p=>'portfolio/portfolio-'+String((p.spriteRow-1)*5+p.spriteCol+1).padStart(2,'0')+'.svg';
 const visual=p=>p.imageType==='sprite'
- ? '<span class="pdf-sprite" style="background-image:url('+window.IKKI_MEDIA.portfolioRows[p.spriteRow-1]+');background-position:'+(p.spriteCol*25)+'% 50%"></span>'
- : '<img src="'+esc(p.image)+'" alt="'+esc(p.title)+'" loading="lazy">';
+ ? '<img class="pdf-board" src="'+portfolioSrc(p)+'" alt="'+esc(p.title)+' 포트폴리오 보드" loading="lazy" decoding="async">'
+ : '<img src="'+esc(p.image)+'" alt="'+esc(p.title)+'" loading="lazy" decoding="async">';
 function draw(f='all'){
  const items=window.IKKI_PROJECTS.filter(p=>f==='all'||p.category===f);
  count.textContent=items.length+' PROJECTS';
