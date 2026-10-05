@@ -1,0 +1,138 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>WeThru Interior — 현장은 사장님이, 온라인은 저희가 정리합니다</title>
+<meta name="description" content="시공은 잘하지만 온라인까지 챙길 시간은 없는 인테리어 대표님을 위한 자사 영업 포트폴리오 제작. 기존 사진과 기본 정보만 주시면 구조, 카피, 디자인, 구현까지 WeThru가 정리합니다.">
+<meta property="og:title" content="현장은 사장님이 보세요. 온라인은 저희가 정리하겠습니다.">
+<meta property="og:description" content="이미 잘하고 있는 일을, 고객이 제대로 볼 수 있게 만듭니다.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://ceoys.github.io/wethru/interior/">
+<meta property="og:image" content="https://ceoys.github.io/wethru/interior/ikki-archive/assets/cafe_tree.webp">
+<meta name="theme-color" content="#f1eee8">
+<style>
+:root{--paper:#f1eee8;--ink:#181816;--muted:#6e6b64;--line:#cbc6bb;--stone:#ded8cd;--dark:#1d211d;--max:1240px}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--paper);color:var(--ink);font-family:Arial,"Noto Sans KR",sans-serif;line-height:1.65;word-break:keep-all}
+a{color:inherit}.wrap{width:min(calc(100% - 48px),var(--max));margin:auto}.nav{height:78px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid var(--line)}
+.brand{font-weight:800;letter-spacing:-.04em;font-size:21px;text-decoration:none}.nav small{color:var(--muted);letter-spacing:.06em}.btn{display:inline-flex;align-items:center;justify-content:center;min-height:52px;padding:0 22px;border:1px solid var(--ink);text-decoration:none;font-size:14px;transition:.25s;background:transparent}.btn:hover{background:var(--ink);color:var(--paper)}.btn.dark{background:var(--ink);color:#fff}.btn.dark:hover{opacity:.82}
+.hero{min-height:calc(100svh - 78px);display:grid;grid-template-columns:1.12fr .88fr;gap:60px;align-items:center;padding:70px 0 80px}.eyebrow{font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:var(--muted);margin-bottom:24px}.hero h1{font-family:Georgia,"Noto Serif KR",serif;font-size:clamp(50px,7.1vw,104px);font-weight:400;line-height:.98;letter-spacing:-.065em;margin:0 0 34px}.hero h1 em{font-style:normal;color:#777268}.hero p{max-width:650px;font-size:18px;color:#55524d;margin:0 0 34px}.actions{display:flex;gap:10px;flex-wrap:wrap}.hero-media{position:relative;height:min(72vh,760px);overflow:hidden;background:#ddd}.hero-media img{width:100%;height:100%;object-fit:cover;filter:saturate(.82)}.hero-media .tag{position:absolute;left:16px;bottom:16px;background:rgba(241,238,232,.93);padding:10px 13px;font-size:12px}
+.section{padding:120px 0;border-top:1px solid var(--line)}.kicker{font-size:12px;letter-spacing:.14em;color:var(--muted);text-transform:uppercase}.section h2{font-family:Georgia,"Noto Serif KR",serif;font-weight:400;letter-spacing:-.045em;line-height:1.08;font-size:clamp(38px,5.2vw,72px);margin:18px 0 46px;max-width:950px}.lead{font-size:20px;max-width:780px;color:#4f4c47}
+.scenes{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--line);border:1px solid var(--line);margin-top:60px}.scene{background:var(--paper);padding:34px 28px;min-height:190px}.scene b{font-family:Georgia,"Noto Serif KR",serif;font-size:30px;font-weight:400}.scene p{color:var(--muted);font-size:14px;margin:18px 0 0}
+.turn{background:var(--dark);color:#eeeae2}.turn .wrap{padding-top:110px;padding-bottom:110px}.turn h2{font-family:Georgia,"Noto Serif KR",serif;font-size:clamp(44px,6vw,84px);font-weight:400;letter-spacing:-.05em;line-height:1.06;margin:0;max-width:1000px}.turn p{color:#bdbbb4;max-width:720px;font-size:18px;margin:32px 0 0}
+.steps{display:grid;grid-template-columns:repeat(4,1fr);margin-top:64px;border-top:1px solid var(--line)}.step{padding:26px 28px 30px 0;border-right:1px solid var(--line)}.step:not(:first-child){padding-left:28px}.num{font-size:11px;color:var(--muted);letter-spacing:.12em}.step h3{font-family:Georgia,"Noto Serif KR",serif;font-weight:400;font-size:27px;margin:36px 0 14px}.step p{font-size:14px;color:var(--muted);margin:0}
+.case-grid{display:grid;grid-template-columns:.82fr 1.18fr;gap:60px;align-items:start}.case-img{position:sticky;top:24px}.case-img img{width:100%;display:block;max-height:720px;object-fit:cover}.case-copy h3{font-family:Georgia,"Noto Serif KR",serif;font-size:42px;font-weight:400;margin:0 0 28px}.ba{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:36px 0}.ba>div{border-top:1px solid var(--line);padding-top:20px}.ba strong{font-size:12px;letter-spacing:.12em}.ba ul{padding:0;list-style:none;color:var(--muted);font-size:14px}.quote{font-family:Georgia,"Noto Serif KR",serif;font-size:30px;line-height:1.35;margin:42px 0}.case-link{display:inline-block;margin-top:10px}
+.projects{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:48px}.projects img{width:100%;aspect-ratio:4/5;object-fit:cover;display:block}.projects figure{margin:0}.projects figcaption{font-size:12px;color:var(--muted);margin-top:9px}
+.compare{display:grid;grid-template-columns:repeat(3,1fr);gap:0;border:1px solid var(--line);margin-top:52px}.compare article{padding:34px;border-right:1px solid var(--line)}.compare article:last-child{border:0}.compare .big{font-family:Georgia,"Noto Serif KR",serif;font-size:34px;margin:10px 0}.compare p{color:var(--muted);font-size:14px}
+.process{display:grid;grid-template-columns:repeat(7,1fr);gap:0;border-top:1px solid var(--line);margin-top:55px}.process div{padding:22px 12px 0 0}.process span{font-size:11px;color:var(--muted)}.process b{display:block;font-size:14px;margin-top:10px}
+.faq{max-width:900px}.faq details{border-top:1px solid var(--line);padding:25px 0}.faq details:last-child{border-bottom:1px solid var(--line)}.faq summary{cursor:pointer;font-family:Georgia,"Noto Serif KR",serif;font-size:24px;list-style:none}.faq p{color:var(--muted);max-width:760px}.faq summary::-webkit-details-marker{display:none}
+.final{background:#dcd6ca}.final .wrap{padding-top:120px;padding-bottom:120px}.final h2{font-family:Georgia,"Noto Serif KR",serif;font-weight:400;font-size:clamp(48px,7vw,96px);line-height:1;letter-spacing:-.06em;margin:0 0 34px;max-width:1000px}.final p{font-size:18px;max-width:680px}.note{font-size:12px!important;color:var(--muted);margin-top:20px}
+footer{padding:34px 0;border-top:1px solid var(--line);font-size:12px;color:var(--muted)}footer .wrap{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
+.reveal{opacity:0;transform:translateY(18px);transition:.75s ease}.reveal.on{opacity:1;transform:none}
+@media(max-width:850px){.wrap{width:min(calc(100% - 32px),var(--max))}.nav small{display:none}.hero{grid-template-columns:1fr;gap:35px;padding:55px 0 64px;min-height:auto}.hero h1{font-size:clamp(50px,15vw,74px)}.hero-media{height:60vh;order:-1}.section{padding:82px 0}.scenes,.steps,.compare,.projects{grid-template-columns:1fr}.scene{min-height:0}.steps{border-top:0}.step,.step:not(:first-child){padding:22px 0;border-right:0;border-top:1px solid var(--line)}.step h3{margin:14px 0 8px}.case-grid{grid-template-columns:1fr;gap:38px}.case-img{position:static}.ba{grid-template-columns:1fr}.process{grid-template-columns:1fr 1fr}.process div{border-top:1px solid var(--line);padding:18px 10px 18px 0}.compare article{border-right:0;border-bottom:1px solid var(--line)}.final .wrap,.turn .wrap{padding-top:82px;padding-bottom:82px}}
+</style>
+</head>
+<body>
+<header class="wrap nav"><a class="brand" href="https://wethru.com/">WeThru.</a><small>INTERIOR PORTFOLIO SERVICE</small><a class="btn" href="#preview">우리 업체 기준으로 보기</a></header>
+<main>
+<section class="wrap hero">
+<div>
+<div class="eyebrow">For Interior & Remodeling Owners</div>
+<h1>현장은 사장님이 보세요.<br><em>온라인은 저희가 정리하겠습니다.</em></h1>
+<p>시공사진과 작업은 충분한데 홈페이지까지 챙길 시간은 없는 대표님을 위해, 이미 가지고 계신 자료를 바탕으로 <b>작업과 강점이 제대로 보이는 자사 영업 포트폴리오</b>를 만들어드립니다.</p>
+<div class="actions"><a class="btn dark" href="#preview">우리 업체라면 어떻게 보일지 확인하기</a><a class="btn" href="#case">실제 제작 사례 보기</a></div>
+</div>
+<div class="hero-media"><img src="./ikki-archive/assets/cafe_tree.webp" alt="IKKI Archive 실내 조경 프로젝트"><div class="tag">실제 제작 사례 · IKKI Archive</div></div>
+</section>
+
+<section class="section"><div class="wrap reveal">
+<div class="kicker">The real problem</div><h2>일이 없어서 홈페이지를 못 만드는 게 아닙니다.<br>현장이 바빠서 온라인까지 챙길 시간이 없는 겁니다.</h2>
+<p class="lead">홈페이지가 필요하다는 말을 들어도 먼저 드는 생각은 대개 비슷합니다. “그래서 그걸 내가 언제 하지?”</p>
+<div class="scenes">
+<div class="scene"><b>사진은 많은데</b><p>휴대폰, 인스타, 카톡에 시공사진은 수백 장. 고객에게 보여줄 때마다 다시 찾습니다.</p></div>
+<div class="scene"><b>인스타는 있는데</b><p>현장과 견적을 보다 보면 업로드는 밀립니다. 몇 달 전 게시물이 마지막이어도 이상하지 않습니다.</p></div>
+<div class="scene"><b>하루가 이미 꽉 찼는데</b><p>현장, 견적, 전화, 자재 확인만 해도 하루가 끝납니다. 홈페이지 기획까지 할 여유는 없습니다.</p></div>
+<div class="scene"><b>또 관리하라고?</b><p>새로운 관리자 화면, 매일 올릴 콘텐츠, 복잡한 운영 업무가 생긴다면 굳이 시작하고 싶지 않습니다.</p></div>
+</div></div></section>
+
+<section class="turn"><div class="wrap reveal"><h2>그래서 홈페이지를 하나 더<br>관리하라고 말씀드리는 게 아닙니다.</h2><p>사진과 기본 정보, 그리고 짧은 대화. 그 다음부터는 WeThru가 사업을 듣고, 흩어진 자료를 정리하고, 고객이 이해할 수 있는 순서로 웹에 옮깁니다.</p></div></section>
+
+<section class="section"><div class="wrap reveal">
+<div class="kicker">How WeThru works</div><h2>웹페이지를 만들기 전에,<br>사장님의 일을 먼저 봅니다.</h2>
+<div class="steps">
+<div class="step"><span class="num">01 / UNDERSTAND</span><h3>이해합니다</h3><p>어떤 일을 해왔고, 어떤 현장을 잘하며, 고객이 왜 이 업체를 선택하는지 듣습니다.</p></div>
+<div class="step"><span class="num">02 / ORGANIZE</span><h3>정리합니다</h3><p>사진, 소개, 경력, 작업 방식처럼 이미 있는 자료를 고객이 보기 좋은 순서로 다시 묶습니다.</p></div>
+<div class="step"><span class="num">03 / BUILD</span><h3>구조화합니다</h3><p>사진만 나열하지 않습니다. 프로젝트, 대표 이야기, 강점, 상담 동선을 하나의 흐름으로 설계합니다.</p></div>
+<div class="step"><span class="num">04 / SHOW</span><h3>보이게 만듭니다</h3><p>모바일과 PC에서 바로 볼 수 있는 사장님 이름의 포트폴리오 사이트로 구현하고 배포합니다.</p></div>
+</div></div></section>
+
+<section class="section" id="case"><div class="wrap reveal">
+<div class="kicker">Case 01 · IKKI Archive</div><h2>없던 것을 만들어낸 게 아니라,<br>이미 있었지만 제대로 보이지 않던 것을 정리했습니다.</h2>
+<div class="case-grid">
+<div class="case-img"><img src="./ikki-archive/img/03.jpg" alt="IKKI Archive 양산 주거공간 시공 사례"></div>
+<div class="case-copy">
+<h3>흩어진 작업을 하나의 이야기로.</h3>
+<p>IKKI에는 이미 좋은 시공사진과 작업 지역, 대표의 디자인 배경, 시공 과정과 다양한 프로젝트가 있었습니다. WeThru가 한 일은 그것을 새로 꾸며내는 것이 아니라 <b>고객이 한 번에 이해할 수 있도록 한곳에 연결하는 것</b>이었습니다.</p>
+<div class="ba"><div><strong>BEFORE</strong><ul><li>시공사진이 각각 존재</li><li>Instagram 게시물에 작업 기록</li><li>대표의 철학과 경력 존재</li><li>서비스와 상담 정보가 흩어짐</li></ul></div><div><strong>AFTER</strong><ul><li>Projects</li><li>About / 대표 이야기</li><li>서비스와 Process</li><li>문의에 필요한 정보와 상담 동선</li></ul></div></div>
+<p class="quote">“잘하고 있는 일을,<br>고객이 제대로 볼 수 있게.”</p>
+<a class="btn case-link" href="./ikki-archive/" target="_blank" rel="noopener">IKKI 실제 제작 페이지 보기 ↗</a>
+</div></div>
+<div class="projects">
+<figure><img src="./ikki-archive/img/01.jpg" alt="동래구 카페 시공"><figcaption>동래구 카페 · 2025</figcaption></figure>
+<figure><img src="./ikki-archive/img/02.jpg" alt="울산 주거공간 시공"><figcaption>울산 주거공간 · 2025</figcaption></figure>
+<figure><img src="./ikki-archive/img/05.jpg" alt="대구 엑스코 전시장 시공"><figcaption>대구 엑스코 제2전시장 · 2025</figcaption></figure>
+</div>
+</div></section>
+
+<section class="section"><div class="wrap reveal">
+<div class="kicker">Instagram + Website + Consultation</div><h2>“인스타그램이 있는데<br>홈페이지가 왜 필요하죠?”</h2>
+<p class="lead">대체하려는 게 아닙니다. 각각 하는 일이 다릅니다.</p>
+<div class="compare">
+<article><span class="kicker">01</span><div class="big">Instagram</div><p><b>발견되는 곳.</b><br>새로운 작업과 일상을 빠르게 보여주고 처음 관심을 만듭니다.</p></article>
+<article><span class="kicker">02</span><div class="big">Website</div><p><b>더 깊게 보는 곳.</b><br>관심이 생긴 고객이 프로젝트, 작업 방식, 대표의 차이를 한 번에 확인합니다.</p></article>
+<article><span class="kicker">03</span><div class="big">Consultation</div><p><b>결정하는 곳.</b><br>충분히 확인하고 온 고객과 대표가 직접 범위와 조건을 이야기합니다.</p></article>
+</div>
+<p style="margin-top:28px;color:var(--muted)">플랫폼을 버리는 것이 아니라, 플랫폼에서 관심을 가진 사람이 <b>사장님 이름의 공간에서 더 깊게 확인할 다음 단계</b>를 만드는 겁니다.</p>
+</div></section>
+
+<section class="section"><div class="wrap reveal">
+<div class="kicker">Not just coding</div><h2>“유튜브 보고 직접 만들거나,<br>아는 사람에게 부탁하면 안 되나요?”</h2>
+<p class="lead">물론 가능합니다. WeThru의 차이는 코드를 대신 치는 데 있지 않습니다. <b>사업을 듣고 → 고객이 선택할 이유를 찾아내고 → 정보를 구조화하고 → 그것을 웹으로 표현하는 것.</b> 홈페이지는 그 결과물입니다.</p>
+</div></section>
+
+<section class="section"><div class="wrap reveal">
+<div class="kicker">Low effort for the owner</div><h2>사장님이 준비할 건<br>생각보다 많지 않습니다.</h2>
+<p class="lead">기존 시공사진 + 업체 기본 정보 + 짧은 대화. 완벽하게 정리해서 주실 필요도 없습니다. 정리하는 것부터 저희 일입니다.</p>
+<div class="process">
+<div><span>01</span><b>자료 확인</b></div><div><span>02</span><b>짧은 인터뷰</b></div><div><span>03</span><b>구조·카피 설계</b></div><div><span>04</span><b>1차 제작</b></div><div><span>05</span><b>대표 피드백</b></div><div><span>06</span><b>수정</b></div><div><span>07</span><b>최종 배포</b></div>
+</div>
+</div></section>
+
+<section class="section"><div class="wrap reveal">
+<div class="kicker">Better inquiries, not just more</div><h2>문의가 많아지는 것보다,<br>상담할 가치가 있는 문의를 받는 구조.</h2>
+<p class="lead">지역, 평수, 예산, 공사 범위, 희망 일정, 참고 레퍼런스처럼 상담 전에 필요한 정보를 받을 수 있게 구성할 수 있습니다. 무조건 문의가 늘어난다고 약속하지 않습니다. 대신 고객이 상담 전에 사장님의 작업과 차이를 충분히 보고, 필요한 정보를 갖고 연락할 수 있게 만듭니다.</p>
+</div></section>
+
+<section class="section"><div class="wrap reveal faq">
+<div class="kicker">FAQ</div><h2>대표님들이 먼저 묻는 것.</h2>
+<details open><summary>제가 준비해야 할 게 많지 않나요?</summary><p>기존 시공사진과 업체 기본 정보가 있으면 시작할 수 있습니다. 자료가 깔끔하게 정리되어 있지 않아도 됩니다. 짧은 인터뷰 후 구성, 문구, 디자인, 구현은 WeThru가 진행합니다.</p></details>
+<details><summary>홈페이지를 계속 제가 관리해야 하나요?</summary><p>매일 콘텐츠를 올리는 운영형 사이트가 아니라, 대표님의 작업과 강점을 정리해두는 포트폴리오를 기본으로 설계합니다. 오픈 후 수정과 유지관리는 계약된 범위에 따라 진행하며 ‘평생 무료 수정’이나 ‘무제한 AS’를 약속하지 않습니다.</p></details>
+<details><summary>인스타그램이나 네이버 블로그가 있는데도 필요한가요?</summary><p>둘 중 하나를 없애는 서비스가 아닙니다. SNS와 블로그는 발견과 지속적인 소통에 강하고, 자사 사이트는 관심이 생긴 고객이 업체의 프로젝트와 차이를 한 번에 깊게 확인하는 역할을 합니다.</p></details>
+<details><summary>직접 만들면 더 싸지 않나요?</summary><p>맞습니다. 직접 만들 수 있다면 제작비를 줄일 수 있습니다. 다만 WeThru는 단순 제작보다 사업과 작업을 듣고, 무엇을 보여줘야 하는지 정리하는 과정까지 함께 제공합니다. 대표님의 시간이 어디에 더 가치 있게 쓰이는지를 기준으로 판단하시면 됩니다.</p></details>
+<details><summary>제작 범위와 가격은 어떻게 되나요?</summary><p>현재 인테리어 포트폴리오 파일럿은 75만원을 기준으로 상담하고 있습니다. 기본 범위는 모바일 대응, Hero, 업체/대표 소개, 서비스, 시공사례 약 8~12개, 문의 CTA, 기본 검색 설정, SNS 공유용 OG, 1회 수정, 기본 배포입니다. 페이지·기능 추가와 별도 유지관리는 범위 확인 후 안내합니다.</p></details>
+<details><summary>프리뷰는 완성 홈페이지를 무료로 만들어주는 건가요?</summary><p>아닙니다. 대표 화면, 일부 프로젝트, 업체에 맞는 방향성을 보여드리는 Preview입니다. 전체 사이트 설계와 제작은 진행 결정 후 시작합니다.</p></details>
+</div></section>
+
+<section class="final" id="preview"><div class="wrap reveal">
+<div class="kicker">Preview Request</div><h2>우리 업체라면<br>어떻게 보일지 먼저 보세요.</h2>
+<p>홈페이지부터 계약하라고 말씀드리지 않습니다. 현재 공개된 작업과 기본 정보를 바탕으로, 어떤 방향으로 정리할 수 있을지 먼저 이야기해보세요.</p>
+<div class="actions" style="margin-top:32px"><a class="btn dark" href="https://wethru.com/" target="_blank" rel="noopener">포트폴리오 방향 상담받기 ↗</a><a class="btn" href="./ikki-archive/" target="_blank" rel="noopener">실제 사례 다시 보기</a></div>
+<p class="note">Preview는 완성 사이트 전체 제공이 아닌 대표 화면·일부 프로젝트·방향성 제안 범위입니다.</p>
+</div></section>
+</main>
+<footer><div class="wrap"><b>WeThru.</b><span>바쁜 대표가 이미 잘하고 있는 일을, 온라인에서 제대로 보이게 정리합니다.</span><span>© 2026 WeThru</span></div></footer>
+<script>
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting)e.target.classList.add('on')}),{threshold:.12});
+document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+</script>
+</body></html>
