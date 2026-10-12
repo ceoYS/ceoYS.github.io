@@ -96,8 +96,7 @@ const CONFIG = {
   spaceTypes: ["주거공간", "상업공간", "전시·팝업", "사무공간", "이끼정원", "행잉 인스톨레이션", "실외 조경"],
   bizInfo: { owner: "고동범", regNo: "" },
 
-  /* 2026-10-12 검토용: 사진 문자 상담, 공간별 보기, 자주 묻는 질문 (근거: 게시물 캡션, site-data.js, process.html) */
-  smsBody: "[ikki archive 상담 문의]\n1. 현장 위치: \n2. 공간 종류(주거, 카페·매장, 사무실, 전시 등): \n3. 대략적인 크기: \n4. 사진: 있으면 함께 보내 주세요",
+  /* 2026-10-12 검토용: 하단 상담 신청 버튼, 공간별 보기, 자주 묻는 질문 (근거: 게시물 캡션, site-data.js, process.html) */
   spacesTitle: "어떤 공간인가요?",
   spacesSub: "공간 종류를 고르면 그 분야 작업만 모아서 보여 드립니다.",
   spaces: [                                    // key = site-data.js의 category. 작업 수는 site-data.js에서 자동으로 셉니다
@@ -116,7 +115,6 @@ const CONFIG = {
     { q: "부산 밖에서도 작업하나요?", a: "주 작업 지역은 부산, 경남, 울산입니다. 대구, 서울, 경기, 전남 정읍, 제주 현장도 작업했습니다." },
     { q: "인테리어 업체와 함께 진행할 수 있나요?", a: "네. 송정동 대형 카페는 (주)아르텍, 대구 엑스코 부스는 tomsdesign, 울산 주거공간은 finearc 의뢰로 작업했습니다. 도면이나 SketchUp 파일을 보내 주시면 더 자세히 상담할 수 있습니다." }
   ],
-  contactNote: "가능한 정보부터 보내 주세요. 사진만 보내셔도 됩니다.",
 
   en: {
     notice: "",
@@ -182,7 +180,6 @@ const CONFIG = {
       { client: "오즈타일", project: "Partner" }
     ],
     spaceTypes: ["Residential", "Commercial", "Exhibition or pop-up", "Office", "Moss garden", "Hanging installation", "Outdoor landscaping"],
-    smsBody: "[ikki archive inquiry]\n1. Site location: \n2. Type of space (home, cafe or shop, office, exhibition...): \n3. Rough size: \n4. Photos: attach them if you have any",
     spacesTitle: "What kind of space?",
     spacesSub: "Pick one to see only that kind of work.",
     spaces: [
@@ -200,8 +197,7 @@ const CONFIG = {
       { q: "How is the price set?", a: "It depends on the size of the space and the design scope. Tell us your budget range first and we will fit the design and the scope to it." },
       { q: "Do you work outside Busan?", a: "We mainly work in Busan, South Gyeongsang and Ulsan. We have also worked on sites in Daegu, Seoul, Gyeonggi, Jeongeup and Jeju." },
       { q: "Can you work with our interior firm?", a: "Yes. The large cafe in Songjeong-dong was for (주)아르텍, the EXCO booth in Daegu for tomsdesign, and the Ulsan home for finearc. Send drawings or SketchUp files and we can go into more detail." }
-    ],
-    contactNote: "Send whatever you have so far. Photos alone are fine."
+    ]
   }
 };
 
@@ -426,7 +422,6 @@ html[lang="en"] .night blockquote p{letter-spacing:-.01em}
 html[lang="en"] .tel{font-size:clamp(34px,9.6vw,100px)}
 .tel:hover{color:#fff}
 .cbtns{display:flex;flex-wrap:wrap;gap:10px;margin:28px 0 0}
-.cnote{margin:16px 0 0;font-size:13px;line-height:1.6;color:var(--bone-2)}
 .form{margin:64px 0 0;padding:0}
 .form h3{margin:0 0 6px;font-family:var(--kr);font-weight:var(--kr-sw);font-size:21px;letter-spacing:var(--kr-st)}
 .form > p{margin:0 0 22px;font-size:13px;color:var(--bone-2)}
@@ -560,7 +555,7 @@ html[lang="en"] .tel{font-size:clamp(34px,9.6vw,100px)}
   .faq h2{font-size:clamp(40px,3.6vw,56px)}
   .faq-list{grid-column:4 / 13}
   .faq summary{font-size:21px;padding:22px 0}
-  .m-only,.bar .bar-sms{display:none!important}
+  .bar .bar-form{display:none!important}
 }
 
 @media (min-width:900px) and (max-width:1180px){
@@ -597,7 +592,7 @@ html[lang="en"] .tel{font-size:clamp(34px,9.6vw,100px)}
  .bar.on{transform:none}
  .bar .mark,.bar .lang{display:none}
  .bar .btn{flex:1 1 0;height:48px;padding:0 12px;font-size:14px}
- .bar .bar-sms{box-shadow:inset 0 0 0 1px rgba(236,233,225,.28)}
+ .bar .bar-form{box-shadow:inset 0 0 0 1px rgba(236,233,225,.28)}
  .hrow{padding-left:18px;padding-right:14px}
  .mark.logo-mark img{height:32px;max-width:104px}
  .hcall{display:none}
@@ -697,7 +692,6 @@ html[lang="en"] .tel{font-size:clamp(34px,9.6vw,100px)}
       <p class="sub" data-t="contactSub"></p>
       <a class="tel" id="tel" href="#"></a>
       <div class="cbtns" id="cbtns"></div>
-      <p class="cnote" id="cnote"></p>
     </div>
     <form class="form" id="form" novalidate>
       <h3 data-t="formH"></h3>
@@ -721,7 +715,7 @@ html[lang="en"] .tel{font-size:clamp(34px,9.6vw,100px)}
   <a class="mark logo-mark" href="#hero" id="bar-mark" aria-label="ikki archive home"></a>
   <nav aria-label="주요 메뉴"><a href="projects.html">PROJECTS</a><a href="about.html">ABOUT</a><a href="process.html">PROCESS</a><a href="#contact">CONTACT</a></nav>
   <button type="button" class="lang" data-lang><span data-l="ko">KO</span><span data-l="en">EN</span></button>
-  <a class="btn btn-line bar-sms" id="bar-sms" href="#"><span data-i="cam"></span><span data-t="sms"></span></a>
+  <a class="btn btn-line bar-form" id="bar-form" href="#form"><span data-i="pen"></span><span data-t="formCta"></span></a>
   <a class="btn btn-bone" id="bar-call" href="#"><span data-i="phone"></span><span data-t="call"></span></a>
 </div>
 
@@ -761,7 +755,7 @@ const UI = {
     zoom: ' 사진 크게 보기', post: '인스타그램 게시물', openPost: '인스타그램에서 보기', by: '사진 ', newTab: ' (새 창)',
     lb: '사진 크게 보기', prev: '이전 사진', next: '다음 사진', close: '닫기', pieceAria: ' 행잉 작품',
     rName: '상호', rOwner: '대표', rReg: '사업자등록번호', rPhone: '전화', rInsta: '인스타그램', rArea: '작업 지역',
-    sms: '사진 보내기', smsLong: '문자로 사진 보내기', askThis: '이런 작업 상담하기', refLabel: '참고한 작업: ',
+    formCta: '상담 신청', askThis: '이런 작업 상담하기', refLabel: '참고한 작업: ',
     spaceAria: (name, n) => name + ' 작업 ' + n + '건 보기',
     fine: (n) => '이 페이지는 ' + n + '에 보여드리려고 WeThru가 만든 시안입니다. 공식 사이트가 아닙니다.'
   },
@@ -780,7 +774,7 @@ const UI = {
     zoom: ', view larger', post: 'Instagram post', openPost: 'View on Instagram', by: 'Photo: ', newTab: ' (opens in a new tab)',
     lb: 'Photo viewer', prev: 'Previous photo', next: 'Next photo', close: 'Close', pieceAria: ' hanging installation',
     rName: 'Business', rOwner: 'Owner', rReg: 'Business reg. no.', rPhone: 'Phone', rInsta: 'Instagram', rArea: 'Area',
-    sms: 'Send photos', smsLong: 'Text us photos', askThis: 'Ask about work like this', refLabel: 'Reference: ',
+    formCta: 'Request', askThis: 'Ask about work like this', refLabel: 'Reference: ',
     spaceAria: (name, n) => 'See ' + n + ' projects: ' + name,
     fine: (n) => 'WeThru made this page as a draft to show ' + n + '. It is not the official site.'
   }
@@ -794,7 +788,7 @@ document.addEventListener('DOMContentLoaded', function () {
     phone: S('<path d="M5 4h3.2l1.6 4-2 1.3a10.5 10.5 0 0 0 6.9 6.9l1.3-2 4 1.6V19a1.6 1.6 0 0 1-1.7 1.6A15.6 15.6 0 0 1 3.4 5.7 1.6 1.6 0 0 1 5 4z"/>'),
     ig: S('<rect x="3.5" y="3.5" width="17" height="17" rx="5"/><circle cx="12" cy="12" r="3.8"/><circle cx="17" cy="7" r=".5" fill="currentColor"/>'),
     prev: S('<path d="M14.5 5.5 8 12l6.5 6.5"/>'), next: S('<path d="M9.5 5.5 16 12l-6.5 6.5"/>'), x: S('<path d="M6 6l12 12M18 6 6 18"/>'),
-    cam: S('<path d="M4 8h3l1.6-2.5h6.8L17 8h3v11H4z"/><circle cx="12" cy="13.2" r="3.4"/>')
+    pen: S('<path d="M5 19h3.5L18.2 9.3a2 2 0 0 0 0-2.8l-.7-.7a2 2 0 0 0-2.8 0L5 15.5z"/><path d="M13.5 7l3.5 3.5"/>')
   };
   const PRJ = window.IKKI_PROJECTS || [];
   const CAT_CHIP = { residential: 0, commercial: 1, exhibition: 2, office: 3, outdoor: 6 };   // site-data category → spaceTypes 순서
@@ -934,19 +928,12 @@ document.addEventListener('DOMContentLoaded', function () {
     $('#faq-list').innerHTML = (C.faq || []).map((f) => '<details><summary>' + esc(f.q) + '</summary><p>' + esc(f.a) + '</p></details>').join('');
     $('#faq').hidden = !(C.faq || []).length;
 
-    /* photo text: phones open the messages app with a filled-in form */
-    const sms = 'sms:' + CONFIG.phone.replace(/[^\d+]/g, '') + '?&body=' + encodeURIComponent(C.smsBody || '');
-    $('#bar-sms').href = sms;
-
     /* contact */
     const t = $('#tel'); t.href = tel; t.textContent = (lang === 'en' && C.phoneIntl ? C.phoneIntl : C.phone).replace(/-/g, ' ');
-    const cb = [];
-    if (C.smsBody) cb.push('<a class="btn btn-bone m-only" href="' + sms + '">' + I.cam + '<span>' + esc(T.smsLong) + '</span></a>');
-    cb.push('<a class="btn ' + (C.smsBody ? 'btn-line' : 'btn-bone') + '" href="' + tel + '">' + I.phone + '<span>' + esc(T.callNow) + '</span></a>');
+    const cb = ['<a class="btn btn-bone" href="' + tel + '">' + I.phone + '<span>' + esc(T.callNow) + '</span></a>'];
     if (dm) cb.push('<a class="btn btn-line" href="' + dm + '" target="_blank" rel="noopener">' + I.ig + '<span>' + esc(T.dm) + '</span></a>');
     if (C.kakaoUrl) cb.push('<a class="btn btn-line" href="' + esc(C.kakaoUrl) + '" target="_blank" rel="noopener"><span>' + esc(T.kakao) + '</span></a>');
     $('#cbtns').innerHTML = cb.join('');
-    $('#cnote').textContent = C.contactNote || ''; $('#cnote').hidden = !C.contactNote;
     const picked = ($('#chips input:checked') || {}).value;
     $('#chips').innerHTML = C.spaceTypes.map((s, i) => '<label><input type="radio" name="space" value="' + i + '"' + (String(i) === picked ? ' checked' : '') + '><span>' + esc(s) + '</span></label>').join('');
     $('#msg').textContent = '';
